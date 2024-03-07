@@ -1,0 +1,26 @@
+@import url(https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/reset.css);
+
+body {
+  background-color: #328cf3;
+}
+#container {
+  top: 50%;
+  left: 50%;
+  width: 90vw;
+  color: #051a32;
+  max-width: 600px;
+  font-size: 5vmin;
+  font-weight: 600;
+  position: absolute;
+  padding: 40px 20px;
+  border-radius: 5px;
+  line-height: 1.8em;
+  text-align: center;
+  background-color: #ffffff;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 180px rgba(255, 255, 255, 0.8);
+}
+#container span {
+  font-weight: 400;
+  color: #4b5969;
+}

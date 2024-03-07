@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="icon"
+      href="https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/favicon.png"
+    />
+    <title>Compare Dates</title>
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="dates">
+        <div class="dates-picker">
+          <input type="date" id="date-1" />
+          <span class="icon">&#128197;</span>
+        </div>
+        <div class="dates-picker">
+          <input type="date" id="date-2" />
+          <span class="icon">&#128197;</span>
+        </div>
+      </div>
+      <button id="check">Check</button>
+      <p id="result">Input some value to get started</p>
+    </div>
+
+    <!-- Script -->
+    <script>
+      let result = document.getElementById("result");
+      let btn = document.getElementById("check");
+      btn.addEventListener("click", () => {
+        let date1 = document.getElementById("date-1").value;
+        let date2 = document.getElementById("date-2").value;
+
+        //If any date input is empty
+        if (date1.length == 0 || date2.length == 0) {
+          result.innerHTML = "<span>please enter valid dates</span>";
+        }
+        //Else
+        else {
+          if (date1 > date2) {
+            result.innerHTML = "Date 1 is <b>greater</b> than Date 2";
+          } else if (date1 < date2) {
+            result.innerHTML = "Date 1 is <b>smaller</b> than Date 2";
+          } else if (date1 == date2) {
+            result.innerHTML = "Date 1 is <b>equal</b> to Date 2";
+          }
+        }
+      });
+      // Learnings from this project are listed below:
+      const myLearnings = [
+        "value",
+        "length",
+        "innerHTML",
+        "getElementById()",
+        "if...else if...else",
+        "Logical Operators (||)",
+        "addEventListener : click",
+        "Comparison Operators (==,>,<)",
+      ];
+    </script>
+    <script src="https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/mylearnings.js"></script>
+  </body>
+</html>

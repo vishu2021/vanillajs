@@ -1,0 +1,168 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, #62e2ff, #e9bdfe);
+}
+.btns-container {
+  user-select: none;
+}
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 10px;
+}
+
+section h1 {
+  font-size: 4rem;
+  font-family: sans-serif;
+  margin: 0;
+  color: #720808;
+  text-transform: uppercase;
+}
+
+section #timer {
+  font-size: 8rem;
+  margin: 20px;
+  font-weight: bold;
+  user-select: none;
+}
+
+section button {
+  background: transparent;
+  border: none;
+  padding: 20px;
+}
+
+button {
+  margin: 10px;
+  color: #fff;
+  width: 12rem;
+  cursor: pointer;
+  font-size: 30px;
+  border-radius: 100px;
+  transition: 1s all ease;
+  box-shadow: 0 0 80px rgba(0, 0, 0, 0.6);
+}
+
+#start-button {
+  background: #0002ff;
+}
+#start-button:hover {
+  background: #0000be;
+}
+#stop-button {
+  background: #af0021;
+}
+#stop-button:hover {
+  background: #760016;
+}
+#reset-button {
+  background: #006602;
+}
+#reset-button:hover {
+  background: #004801;
+}
+
+button[disabled] {
+  opacity: 0.3;
+  pointer-events: none;
+}
+.milliseconds-text {
+  display: inline-block;
+  min-width: 260px;
+  text-align: center;
+}
+.seconds-text,
+.minute-text {
+  display: inline-block;
+  min-width: 200px;
+  text-align: center;
+}
+/* Learning Box starts here */
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(#4b2146, #1419f9);
+  border-radius: 10px;
+}
+
+.learning-box {
+  padding: 0;
+  left: 10px;
+  z-index: 99;
+  bottom: 10px;
+  position: fixed;
+  max-width: 300px;
+  text-align: left;
+  border-radius: 10px;
+  pointer-events: none;
+  backdrop-filter: blur(9.5px);
+  background: rgba(0, 0, 63, 0.75);
+  -webkit-backdrop-filter: blur(9.5px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+/* width */
+.learning-box-list::-webkit-scrollbar {
+  width: 4px;
+}
+
+/* Track */
+.learning-box-list::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+/* Handle */
+.learning-box-list::-webkit-scrollbar-thumb {
+  background: #aaa;
+  border-radius: 10px;
+}
+
+.learning-box h3 {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 6px 14px;
+  margin: 0;
+}
+
+.learning-box-list {
+  margin: 0;
+  max-height: 90%;
+  overflow: auto;
+  padding: 0 14px 14px 26px;
+}
+
+.learning-box-list li {
+  color: #fff;
+  font-size: 12px;
+  font-weight: 500;
+  list-style: decimal;
+}
+
+@media screen and (max-width: 1000px) {
+  .learning-box {
+    display: none;
+  }
+}
+
+/* Learning Box ends here */

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/favicon.png"
+    />
+    <title>Active Class Siblings Buttons List</title>
+    <style>
+      @import url(https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/reset.css);
+
+      html {
+        height: 100%;
+      }
+      body {
+        height: 100%;
+        background-color: #333;
+      }
+      .wrapper {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      .btnContainer {
+        display: flex;
+        flex-direction: column;
+      }
+      .btn {
+        border: 8px solid rgb(158, 18, 18);
+        transition: 0.5s all ease;
+        display: inline-block;
+        border-radius: 100px;
+        padding: 20px 60px;
+        background: #fff;
+        text-align: center;
+        width: max-content;
+        user-select: none;
+        font-weight: bold;
+        cursor: pointer;
+        font-size: 30px;
+        margin: 10px 0;
+      }
+      .btn:active {
+        transform: scale(0.8);
+      }
+      .btn.btnActive {
+        color: #fff;
+        border-color: #fff;
+        transform: scale(1.2);
+        background-color: rgb(158, 18, 18);
+      }
+      h1 {
+        color: #fff;
+        font-size: 40px;
+        margin: 20px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <h1>Click on Buttons to switch Active State of Buttons</h1>
+      <div class="btnContainer">
+        <div class="btn">
+          <span class="btnActive"> Button 1 </span>
+        </div>
+
+        <div class="btn">
+          <span> Button 2 </span>
+        </div>
+
+        <div class="btn">
+          <span> Button 3 </span>
+        </div>
+
+        <div class="btn">
+          <span> Button 4 </span>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document.querySelectorAll(".btn").forEach(function (el) {
+        el.addEventListener("click", function (e) {
+          var btnAll = document.querySelectorAll(".btn");
+          let i = 0;
+          for (i = 0; i < btnAll.length; i++) {
+            if (btnAll[i].classList.contains("btnActive")) {
+              btnAll[i].classList.remove("btnActive");
+            }
+          }
+          el.classList.add("btnActive");
+        });
+      });
+      // Learnings from this project are listed below:
+      const myLearnings = [
+        "index",
+        "for loop",
+        "forEach()",
+        "classList.add()",
+        "querySelectorAll()",
+        "classList.remove()",
+        "if...else if...else",
+        "classList.contains()",
+        "addEventListener : click",
+        "Comparison Operators (<)",
+        "Arithmetic Operators (++)",
+      ];
+    </script>
+    <script src="https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/mylearnings.js"></script>
+  </body>
+</html>

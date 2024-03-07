@@ -1,0 +1,98 @@
+@import url(https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/reset.css);
+
+body {
+  background-color: #121317;
+}
+.container {
+  top: 50%;
+  left: 50%;
+  width: 60vmin;
+  font-size: 3vmin;
+  padding: 2.5em 2em;
+  position: absolute;
+  border-radius: 10px;
+  transform: translate(-50%, -50%);
+  background-color: rgba(32, 34, 41, 0.2);
+  box-shadow: 0 0 80px rgba(255, 255, 255, 0.2);
+}
+#output-color {
+  margin: auto;
+  display: grid;
+  width: 30vmin;
+  height: 30vmin;
+  position: relative;
+  border-radius: 50%;
+  place-items: center;
+  border: 0.5em solid #f5f5f5;
+}
+#output-color span {
+  display: block;
+  width: calc(100% - 20px);
+  height: calc(100% - 20px);
+  border-radius: 50%;
+}
+.show-color {
+  animation: pop 0.8s;
+}
+@keyframes pop {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+input[type="text"] {
+  width: 100%;
+  background-color: transparent;
+  border: 2.5px dashed #f5f5f5;
+  font-size: 1.3em;
+  padding: 0.8em 0;
+  margin: 1em 0;
+  border-radius: 8px;
+  color: #f5f5f5;
+  text-align: center;
+}
+input[type="text"]::-moz-selection {
+  background: transparent;
+}
+input[type="text"]::selection {
+  background: transparent;
+}
+.btns {
+  display: flex;
+  user-select: none;
+  justify-content: space-around;
+}
+.btns button {
+  font-size: 1em;
+  padding: 0.8em 1.7em;
+  border-radius: 7px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.4s all ease;
+}
+#gen-btn {
+  background-color: #18f98f;
+  color: #202229;
+  border: none;
+}
+#copy-btn {
+  border: 3px solid #18f98f;
+  background-color: transparent;
+  color: #18f98f;
+}
+.custom-alert {
+  background-color: rgba(255, 255, 255, 0.3);
+  font-size: 2.5vmin;
+  padding: 1em 1.5em;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  color: #f5f5f5;
+  transition: 0.5s;
+  transform: translateX(calc(100% + 10px));
+}
+.btns button:active {
+  transform: scale(0.9);
+}

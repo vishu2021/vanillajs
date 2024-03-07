@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="icon"
+      href="https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/favicon.png"
+    />
+    <title>Customize Ice Cream</title>
+    <!-- Stylesheet -->
+    <style>
+      @import url(https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/reset.css);
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: #dcacfe;
+      }
+      .wrapper {
+        top: 50%;
+        left: 50%;
+        width: 600px;
+        padding: 30px;
+        display: flex;
+        user-select: none;
+        position: absolute;
+        border-radius: 8px;
+        transform: translate(-50%, -50%);
+        background-color: rgb(255 255 255 / 15%);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+      }
+      .container {
+        width: 340px;
+        height: 350px;
+        flex: 0 0 auto;
+        position: relative;
+      }
+      .bowl {
+        left: 0;
+        right: 0;
+        width: 230px;
+        height: 90px;
+        margin: auto;
+        bottom: 90px;
+        position: absolute;
+        background-color: #d9f0fe;
+        border-radius: 0 0 150px 150px;
+      }
+      .bowl:before {
+        left: -5%;
+        width: 110%;
+        content: "";
+        height: 20px;
+        position: absolute;
+        border-radius: 20px;
+        background-color: #afddfa;
+      }
+      .base {
+        height: 40px;
+        width: 20px;
+        background-color: #afddfa;
+        position: absolute;
+        margin: auto;
+        left: 0;
+        right: 0;
+        top: 90px;
+      }
+      .base:after {
+        top: 30px;
+        left: -50px;
+        content: "";
+        height: 40px;
+        width: 120px;
+        position: absolute;
+        background-color: #d9f0fe;
+        border-radius: 50px 50px 0 0;
+      }
+      .scoop1 {
+        width: 130px;
+        height: 130px;
+        border-radius: 50%;
+        position: absolute;
+        background-size: 40px 150px;
+        background-color: #f45c96;
+        background-image: radial-gradient(
+          circle at 20px 12px,
+          #f8bd3d 25px,
+          transparent 25px
+        );
+        top: 20px;
+        left: 108px;
+      }
+      .scoop2 {
+        top: 100px;
+        right: 70px;
+        width: 130px;
+        height: 130px;
+        border-radius: 50%;
+        position: absolute;
+        background-color: #badc58;
+      }
+      .scoop3 {
+        top: 100px;
+        left: 70px;
+        width: 130px;
+        height: 130px;
+        border-radius: 50%;
+        position: absolute;
+        background-size: 25px 80px;
+        background-color: #f58619;
+        background-image: radial-gradient(
+          circle at 12.5px 17px,
+          #5c0003 20px,
+          transparent 21px
+        );
+      }
+      .btns {
+        display: flex;
+        flex: 0 0 auto;
+        flex-wrap: wrap;
+        align-items: center;
+        flex-direction: column;
+        width: calc(100% - 340px);
+        justify-content: space-around;
+      }
+      .btns button {
+        width: 100%;
+        border: none;
+        margin: 2px 0;
+        outline: none;
+        padding: 20px 0;
+        cursor: pointer;
+        font-size: 20px;
+        color: #ffffff;
+        border-radius: 50px;
+        transition: 1s all ease;
+        background-color: #52028c;
+        box-shadow: inset 2px -2px 20px rgba(214, 214, 214, 0.2),
+          inset -3px 3px 3px rgba(255, 255, 255, 0.4);
+      }
+      .btns button:hover {
+        background-color: #3a0063;
+      }
+      .btns button:active {
+        transform: scale(0.8);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="container">
+        <div class="scoop1"></div>
+        <div class="scoop2"></div>
+        <div class="scoop3"></div>
+        <div class="bowl">
+          <div class="base"></div>
+        </div>
+      </div>
+      <div class="btns">
+        <button id="btn-scoop1">Scoop 1</button>
+        <button id="btn-scoop2">Scoop 2</button>
+        <button id="btn-scoop3">Scoop 3</button>
+        <button id="btn-topping1">Topping 1</button>
+        <button id="btn-topping2">Topping 2</button>
+      </div>
+    </div>
+
+    <!-- Script -->
+    <script>
+      let scoop1 = document.querySelector(".scoop1");
+      let scoop2 = document.querySelector(".scoop2");
+      let scoop3 = document.querySelector(".scoop3");
+      let btnScoop1 = document.getElementById("btn-scoop1");
+      let btnScoop2 = document.getElementById("btn-scoop2");
+      let btnScoop3 = document.getElementById("btn-scoop3");
+      let btnTopping1 = document.getElementById("btn-topping1");
+      let btnTopping2 = document.getElementById("btn-topping2");
+      let colors = [
+        "#f45c96",
+        "#f8bd3d",
+        "#badc58",
+        "#5c0003",
+        "#f58619",
+        "#ebab70",
+      ];
+      let counter1 = 0;
+      let counter2 = 0;
+      let counter3 = 0;
+      let counter4 = 0;
+      let counter5 = 0;
+      function setCounterValue(counter) {
+        return counter < colors.length - 1 ? counter + 1 : 0;
+      }
+      btnScoop1.addEventListener("click", () => {
+        scoop1.style.backgroundColor = colors[counter1];
+        counter1 = setCounterValue(counter1);
+      });
+      btnScoop2.addEventListener("click", () => {
+        scoop2.style.backgroundColor = colors[counter2];
+        counter2 = setCounterValue(counter2);
+      });
+      btnScoop3.addEventListener("click", () => {
+        scoop3.style.backgroundColor = colors[counter3];
+        counter3 = setCounterValue(counter3);
+      });
+      btnTopping1.addEventListener("click", () => {
+        scoop1.style.backgroundImage = `radial-gradient(circle at 20px 18px, ${colors[counter4]} 25px, transparent 25px)`;
+        counter4 = setCounterValue(counter4);
+      });
+      btnTopping2.addEventListener("click", () => {
+        scoop3.style.backgroundImage = `radial-gradient(circle at 12.5px 17px, ${colors[counter5]} 20px, transparent 21px)`;
+        counter5 = setCounterValue(counter5);
+      });
+      // Learnings from this project are listed below:
+      const myLearnings = [
+        "length",
+        "return",
+        "[array]",
+        "Dynamic Styles",
+        "querySelector()",
+        "getElementById()",
+        "Backtick Literals (``)",
+        "addEventListener : click",
+        "Arithmetic Operators (-,+)",
+        "Comparison Operators (<,?)",
+      ];
+    </script>
+    <script src="https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/mylearnings.js"></script>
+  </body>
+</html>

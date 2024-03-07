@@ -1,0 +1,59 @@
+@import url(https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/reset.css);
+body {
+  background-color: #eeeeee;
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.menu {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  user-select: none;
+  transform: scale(2);
+}
+
+.toggle {
+  background-color: #30bdf2;
+  height: 80px;
+  width: 80px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.items {
+  display: flex;
+  flex-direction: row;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: 1s all ease;
+}
+.items > a {
+  display: flex;
+  background-color: white;
+  height: 80px;
+  width: 80px;
+  color: #b2b2b2;
+  text-decoration: none;
+  align-items: center;
+  transition: 1s all ease;
+  justify-content: center;
+}
+.toggle > .material-icons {
+  font-size: 60px;
+  transition: 1s all ease;
+}
+a > .material-icons {
+  font-size: 30px;
+  transition: 0.4s all ease;
+}
+a:hover > .material-icons {
+  font-size: 40px;
+  color: #00a3de;
+}

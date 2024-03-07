@@ -1,0 +1,186 @@
+@import url(https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/reset.css);
+/*=========================
+  Variables
+===========================*/
+:root {
+  --color-bg: #eeeef4;
+  --color-substrate: #f7eac0;
+  --color-text: #5d5a90;
+  --color-accent: #5748a7;
+  --color-secondary: #2ecc71;
+
+  --font: "Cascadia Code PL", sans-serif;
+}
+
+/*=========================
+  Common
+===========================*/
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  font-size: 20px;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text);
+  perspective: 25rem;
+}
+
+/*=========================
+  Card
+===========================*/
+
+.card {
+  width: 20rem;
+  position: relative;
+  text-align: center;
+  border-radius: 1rem;
+  padding: 0 1rem 3rem;
+  transition: transform 0.2s;
+  transform-style: preserve-3d;
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 3rem rgba(93, 90, 137, 0.5);
+}
+
+.card:before {
+  content: "";
+  display: block;
+  pointer-events: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  border-radius: inherit;
+  transform: rotate(-5deg) translateZ(-0.5rem);
+}
+
+.card > * {
+  position: relative;
+}
+
+.card__bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  border-radius: inherit;
+  overflow: hidden;
+}
+
+.card__bg:before,
+.card__bg:after {
+  content: "";
+  display: block;
+  pointer-events: none;
+  position: absolute;
+}
+
+.card__bg:before {
+  width: 120%;
+  height: 50%;
+  background: var(--color-substrate);
+  opacity: 0.7;
+  left: 50%;
+  top: 100%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+
+.card__bg:after {
+  left: 1rem;
+  top: 1rem;
+  right: 1rem;
+  bottom: 1rem;
+  border: solid 1px var(--color-secondary);
+  border-radius: 0.5rem;
+}
+
+/*=========================
+  Card Content
+===========================*/
+
+.card__title {
+  font-weight: 800;
+  font-size: 2.4rem;
+  color: var(--color-accent);
+  margin: 0 0 0.25em;
+}
+
+.card__text {
+  font-weight: 500;
+  line-height: 1.5;
+  margin: 0 0 2.5em;
+}
+
+.card__button {
+  background: var(--color-secondary);
+  font-family: var(--font);
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  height: 3rem;
+  padding: 0 2rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 1rem;
+  letter-spacing: 0.1em;
+  transform: translateZ(1.5rem);
+}
+
+/*=========================
+  Youtube
+===========================*/
+
+.card__youtube {
+  background: var(--color-secondary);
+  width: 7rem;
+  height: 4.5rem;
+  margin: 0 auto;
+  position: relative;
+  top: -1.25rem;
+  border-radius: 50% / 11%;
+  transform: translateZ(2rem);
+}
+
+.card__youtube:before,
+.card__youtube:after {
+  content: "";
+  display: block;
+  position: absolute;
+}
+
+.card__youtube:before {
+  top: 10%;
+  bottom: 10%;
+  left: -5%;
+  right: -5%;
+  border-radius: 5% / 50%;
+  background: inherit;
+}
+
+.card__youtube:after {
+  left: 50%;
+  top: 50%;
+  transform: translate(-40%, -50%);
+  border-left: solid #fff 1.2rem;
+  border-top: solid transparent 0.8rem;
+  border-bottom: solid transparent 0.8rem;
+}

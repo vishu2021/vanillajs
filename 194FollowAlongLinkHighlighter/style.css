@@ -1,0 +1,74 @@
+@import url(https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/reset.css);
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+h1 {
+  color: #fff;
+  font-size: 40px;
+  text-align: center;
+}
+body {
+  min-height: 100vh;
+  margin: 0;
+}
+
+.wrapper {
+  margin: 0 auto;
+  max-width: 1000px;
+  font-size: 20px;
+  line-height: 2;
+  position: relative;
+}
+.wrapper p {
+  color: #fff;
+  font-size: 20px;
+  line-height: 2;
+}
+.page-wrapper a {
+  color: black;
+  line-height: 1.8;
+  padding: 0px 20px;
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 100px;
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.highlight {
+  transition: all 0.2s;
+  border-bottom: 2px solid white;
+  position: absolute;
+  top: 0;
+  background: white;
+  left: 0;
+  z-index: -1;
+  border-radius: 100px;
+  display: block;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.menu {
+  padding: 0;
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  margin: 40px 0;
+}
+
+.menu a {
+  color: black;
+  margin: 0 20px;
+  font-size: 24px;
+  padding: 10px 50px;
+  display: inline-block;
+  border-radius: 100px;
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.4);
+}

@@ -1,0 +1,142 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.container {
+  width: 100%;
+  padding: 10px;
+}
+
+.main {
+  text-align: center;
+  padding: 10px 30px;
+  font-size: 2em;
+  width: max-content;
+  max-width: 90%;
+  margin: auto;
+  font-weight: 600;
+  transition: 1s all ease;
+  border: 3px solid white;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
+}
+.typingArea {
+  width: 90%;
+  max-width: 600px;
+  height: 220px;
+  margin-top: 20px;
+  padding: 10px;
+  outline: none;
+  font-size: 20px;
+  resize: none;
+  transition: 1s all ease;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
+}
+.btn {
+  outline: none;
+  border: none;
+  font-size: 2em;
+  color: white;
+  margin-top: 20px;
+  cursor: pointer;
+  user-select: none;
+  font-weight: bold;
+  padding: 16px 60px;
+  border-radius: 100px;
+  transition: 1s all ease;
+  background-color: blueviolet;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+}
+.btn:hover {
+  background-color: rgb(82, 3, 155);
+}
+[disabled] {
+  opacity: 0.4;
+  pointer-events: none;
+}
+/* Learning Box starts here */
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(#4b2146, #1419f9);
+  border-radius: 10px;
+}
+
+.learning-box {
+  padding: 0;
+  left: 10px;
+  z-index: 99;
+  bottom: 10px;
+  position: fixed;
+  max-width: 300px;
+  text-align: left;
+  border-radius: 10px;
+  pointer-events: none;
+  backdrop-filter: blur(9.5px);
+  background: rgba(0, 0, 63, 0.75);
+  -webkit-backdrop-filter: blur(9.5px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+/* width */
+.learning-box-list::-webkit-scrollbar {
+  width: 4px;
+}
+
+/* Track */
+.learning-box-list::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+/* Handle */
+.learning-box-list::-webkit-scrollbar-thumb {
+  background: #aaa;
+  border-radius: 10px;
+}
+
+.learning-box h3 {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 6px 14px;
+  margin: 0;
+}
+
+.learning-box-list {
+  margin: 0;
+  max-height: 90%;
+  overflow: auto;
+  padding: 0 14px 14px 26px;
+}
+
+.learning-box-list li {
+  color: #fff;
+  font-size: 12px;
+  font-weight: 500;
+  list-style: decimal;
+}
+
+@media screen and (max-width: 1000px) {
+  .learning-box {
+    display: none;
+  }
+}
+
+/* Learning Box ends here */

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/favicon.png"
+    />
+    <title>Array Sort Without Articles</title>
+    <style>
+      @import url(https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/reset.css);
+
+      body {
+        display: flex;
+        align-items: center;
+        min-height: 100vh;
+      }
+
+      #bands {
+        padding: 0;
+        width: 500px;
+        margin: auto;
+        font-size: 20px;
+        list-style: inside square;
+        box-shadow: 0 0 0 20px rgba(0, 0, 0, 0.2);
+        background-color: rgb(255 255 255 / 60%);
+      }
+
+      #bands li {
+        border-bottom: 1px solid rgb(255 255 255 / 60%);
+        padding: 20px;
+      }
+
+      #bands li:last-child {
+        border-bottom: 0;
+      }
+
+      .wrapper a {
+        color: #ffc600;
+        text-decoration: none;
+      }
+      .wrapper {
+        padding: 50px;
+        margin: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <ul id="bands"></ul>
+    </div>
+
+    <script>
+      const bands = [
+        "The Plot in You",
+        "The Devil Wears Prada",
+        "Pierce the Veil",
+        "Norma Jean",
+        "The Bled",
+        "Say Anything",
+        "The Midway State",
+        "We Came as Romans",
+        "Counterparts",
+        "Oh, Sleeper",
+        "A Sky lit Drive",
+        "Anywhere But Here",
+        "An Old Dog",
+      ];
+      function strip(bandName) {
+        return bandName.replace(/^(a |the |an )/i, "").trim();
+      }
+      const sortedBands = bands.sort((a, b) => (strip(a) > strip(b) ? 1 : -1));
+      document.querySelector("#bands").innerHTML = sortedBands
+        .map((band) => `<li>${band}</li>`)
+        .join("");
+      // console.log(sortedBands)
+      // Learnings from this project are listed below:
+      const myLearnings = [
+        "array",
+        "map()",
+        "sort()",
+        "trim()",
+        "return",
+        "join()",
+        "innerHTML",
+        "replace()",
+        "querySelector()",
+        "Backtick Literals (``)",
+        "Comparison Operators (>,?)",
+      ];
+    </script>
+    <script src="https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/mylearnings.js"></script>
+  </body>
+</html>

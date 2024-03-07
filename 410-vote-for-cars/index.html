@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/favicon.png"
+    />
+    <title>Vote for Cars</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <center>
+      <h1>Which car is better for you?</h1>
+      <h2>Vote for your favorite car here</h2>
+      <div class="car-box" id="carLHS">
+        <h2>Safari</h2>
+        <label class="input-label" for="carLeft">
+          <img
+            src="https://cdni.autocarindia.com/Utils/ImageResizer.ashx?n=https://cdni.autocarindia.com/Galleries/20231009033910_Accomplished%20_%20Front%203_4th%20new.jpg"
+          />
+        </label>
+        <input type="radio" name="pets" id="carLeft" />
+        <h2 id="result1">Number of Votes</h2>
+      </div>
+      <div class="car-box" id="carRHS">
+        <h2>Punch</h2>
+        <label class="input-label" for="carRight">
+          <img
+            src="https://images.hindustantimes.com/auto/img/2023/08/02/1600x900/Tata_Punch_CNG_1690969329968_1690969332532.jpg"
+          />
+        </label>
+        <input type="radio" name="pets" id="carRight" />
+        <h2 id="result2">Number of Votes</h2>
+      </div>
+      <div class="buttons-group">
+        <button class="btn-vote" onclick="updateVotes()">Vote</button>
+        <button class="btn-results" onclick="showResults()">
+          View Results
+        </button>
+      </div>
+    </center>
+    <!-- partial -->
+    <script src="./script.js"></script>
+    <script src="https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/mylearnings.js"></script>
+  </body>
+</html>

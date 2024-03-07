@@ -1,0 +1,49 @@
+@import url(https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/reset.css);
+
+body {
+  height: 100vh;
+  display: grid;
+  background-color: #6b72e7;
+  place-items: center;
+}
+#our-elem {
+  background-color: #ffffff;
+  height: 200px;
+  width: 200px;
+  border-radius: 5px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1em;
+  font-size: 1.5em;
+}
+#our-elem button {
+  font-size: 0.8em;
+  padding: 0.6em;
+  background-color: #6b72e7;
+  border: none;
+  color: #ffffff;
+  border-radius: 5px;
+}
+#message {
+  font-size: 1.5em;
+  margin-top: 1.5em;
+  padding: 0.5em;
+  text-align: center;
+  background-color: #000000;
+  color: #ffffff;
+  border-radius: 5px;
+}
+#message span {
+  color: #6b72e7;
+  font-style: italic;
+}
+.footer {
+  position: absolute;
+  bottom: 30px;
+  width: 100%;
+  left: 0;
+  text-align: center;
+}

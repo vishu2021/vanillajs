@@ -1,0 +1,50 @@
+@import url(https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/reset.css);
+main {
+  width: 90%;
+  max-width: 400px;
+  transform: scale(2.5);
+  box-shadow: 0 0 80px rgba(255, 255, 255, 0.6);
+}
+.copy-link {
+  --height: 36px;
+  display: flex;
+  width: 100%;
+  margin: auto;
+}
+
+.copy-link-input {
+  width: 100%;
+  flex-grow: 1;
+  outline: none;
+  padding: 0 8px;
+  font-size: 14px;
+  border-right: none;
+  transition: 1s all ease;
+
+  border: 2px solid #9077ff;
+}
+
+.copy-link-input:hover {
+  background: #eeeeee;
+}
+
+.copy-link-button {
+  flex-shrink: 0;
+  width: var(--height);
+  height: var(--height);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #1620ad;
+  color: #fff;
+  outline: none;
+  border: 2px solid #9077ff;
+  cursor: pointer;
+  padding: 0 30px;
+  transition: 1s all ease;
+  user-select: none;
+}
+
+.copy-link-button:hover {
+  background: #01086d;
+}

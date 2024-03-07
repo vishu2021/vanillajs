@@ -1,0 +1,123 @@
+@import url(https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/reset.css);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 1s;
+}
+
+:root {
+  --color-1: #171720;
+  --color-2: #282a3a;
+  --color-3: #735f32;
+  --color-4: #c69749;
+  --color-light: #c6974955;
+  --color-dark: #00000055;
+  --color-success: #88b750;
+  --color-error: #d46363;
+  --color-invalid: #d7a306;
+}
+
+body {
+  background-color: var(--color-1);
+  display: flex;
+  justify-content: center;
+  color: white;
+}
+.buttons {
+  margin: 50px;
+  transform: scale(2.5);
+}
+
+.buttons button {
+  background: var(--color-2);
+  color: var(--color-4);
+  border: 0;
+  outline: 0;
+  width: 120px;
+  height: 40px;
+  margin: 5px;
+  cursor: pointer;
+  border-radius: 1rem;
+  border: 1px solid var(--color-light);
+  box-shadow: inset 0 0 1rem 0.1rem var(--color-dark);
+}
+
+.buttons button:hover {
+  box-shadow: inset 0 0 1rem 0.1rem var(--color-light),
+    0 0 1rem 0.5rem var(--color-light);
+}
+
+#toastBox {
+  position: absolute;
+  bottom: 25px;
+  right: 30px;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 20px;
+}
+
+.toast {
+  width: 400px;
+  height: 80px;
+  background: var(--color-2);
+  font-weight: 500;
+  margin: 15px 0;
+  border-radius: 1rem;
+  box-shadow: 0 0 1rem 0.5rem #131315, inset 0 0 1rem 0.1rem var(--color-dark);
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--color-light);
+  position: relative;
+  transform: translateX(100%);
+  animation: moveleft 0.5s linear forwards;
+}
+
+@keyframes moveleft {
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.toast i {
+  margin: 0 20px;
+  font-size: 35px;
+  color: var(--color-success);
+}
+
+.toast.error i {
+  color: var(--color-error);
+}
+
+.toast.invalid i {
+  color: var(--color-invalid);
+}
+
+.toast::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 10px;
+  background: var(--color-success);
+  animation: anim 6200ms linear forwards;
+  border-radius: 0 0 1rem 1rem;
+}
+
+@keyframes anim {
+  100% {
+    width: 0;
+  }
+}
+
+.toast.error::after {
+  background: var(--color-error);
+}
+
+.toast.invalid::after {
+  background: var(--color-invalid);
+}

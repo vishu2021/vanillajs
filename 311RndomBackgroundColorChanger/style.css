@@ -1,0 +1,26 @@
+@import url(https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/reset.css);
+
+body {
+  background-color: #283faa;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  background-image: none;
+}
+button {
+  outline: none;
+  cursor: pointer;
+  font-size: 20px;
+  color: #ffffff;
+  padding: 20px 45px;
+  transform: scale(2);
+  border-radius: 50px;
+  letter-spacing: 1.5px;
+  transition: 1s all ease;
+  border: 5px solid #ffffff;
+  background-color: rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 80px rgba(0, 0, 0, 0.4);
+}
+button:active {
+  transform: scale(1.6);
+}

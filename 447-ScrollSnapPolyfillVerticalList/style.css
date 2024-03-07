@@ -1,0 +1,31 @@
+@import url(https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/reset.css);
+body {
+  display: block;
+}
+.container {
+  max-height: 100vh;
+  overflow-y: scroll;
+  border: 1px solid gray;
+  -ms-scroll-snap-type: mandatory;
+  scroll-snap-type: mandatory;
+  -ms-scroll-snap-points-y: repeat(3rem);
+  scroll-snap-points-y: repeat(3rem);
+  -ms-scroll-snap-type: y mandatory;
+  scroll-snap-type: y mandatory;
+}
+
+.container li {
+  padding: 1rem;
+  display: flex;
+  color: #000;
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  scroll-snap-align: start;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.4);
+}
+.learning-box {
+  background: rgba(92, 0, 0, 0.8);
+}

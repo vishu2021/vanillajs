@@ -1,0 +1,85 @@
+@import url(https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/reset.css);
+
+.page-wrapper h2 {
+  color: #fff;
+  font-size: 30px;
+  margin: 0 0 30px;
+  text-align: center;
+}
+.container {
+  background-color: #ffffff;
+  width: min(90%, 450px);
+  padding: 3em 2em;
+  border-radius: 0.8em;
+  margin: auto;
+}
+.input-wrapper {
+  display: grid;
+  grid-template-columns: 9fr 3fr;
+  gap: 1em;
+}
+input {
+  padding: 1em 0.5em;
+  color: #262e45;
+  border: 2px solid #e3e4ef;
+}
+input:focus {
+  border-color: #4470f3;
+}
+button {
+  display: flex;
+  color: #fff;
+  font-size: 24px;
+  line-height: 2;
+  cursor: pointer;
+  padding: 10px 20px;
+  align-items: center;
+  border-radius: 100px;
+  width: max-content;
+  text-align: center;
+  user-select: none;
+  transition: 1s all ease;
+  justify-content: center;
+  background-color: #3d4aff;
+  border: 4px solid #878fff;
+}
+input,
+button {
+  font-size: 1em;
+  outline: none;
+  border-radius: 0.5em;
+}
+#error {
+  background-color: #fc4747;
+  text-align: center;
+  color: #ffffff;
+  margin-top: 0.5em;
+  font-size: 20px;
+  line-height: 3;
+  border-radius: 8px;
+}
+#output {
+  font-size: 3em;
+  text-align: center;
+  font-weight: 600;
+  color: #262e45;
+  margin-top: 40px;
+}
+#output span {
+  font-size: 20px;
+}
+.footer {
+  position: absolute;
+  bottom: 30px;
+  width: 100%;
+  left: 0;
+  text-align: center;
+}
+button:hover {
+  opacity: 0.8;
+}
+
+button:active {
+  opacity: 1;
+  transform: scale(0.7);
+}

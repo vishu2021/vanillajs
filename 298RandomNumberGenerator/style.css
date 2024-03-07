@@ -1,0 +1,52 @@
+@import url(https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/reset.css);
+
+body {
+  background-color: #5373ee;
+}
+.container {
+  top: 50%;
+  left: 50%;
+  padding: 3em;
+  position: absolute;
+  text-align: center;
+  border-radius: 0.5em;
+  width: min(600px, 90%);
+  background-color: #ffffff;
+  transform: translate(-50%, -50%);
+}
+p {
+  margin: 20px 0;
+  font-size: 20px;
+  line-height: 1.6;
+}
+button {
+  margin: 30px auto;
+  display: flex;
+  color: #fff;
+  font-size: 24px;
+  line-height: 2;
+  cursor: pointer;
+  padding: 10px 60px;
+  align-items: center;
+  border-radius: 100px;
+  width: max-content;
+  text-align: center;
+  user-select: none;
+  transition: 1s all ease;
+  justify-content: center;
+  background-color: #3d4aff;
+  border: 4px solid #878fff;
+}
+button:hover {
+  opacity: 0.8;
+}
+
+button:active {
+  opacity: 1;
+  transform: scale(0.7);
+}
+p#result,
+h2 {
+  font-size: 30px;
+  font-weight: bold;
+}

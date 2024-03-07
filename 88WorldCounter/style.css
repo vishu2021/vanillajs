@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #333;
+}
+
+.container {
+  width: 400px;
+  margin: 25px;
+  padding: 25px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  line-height: 1.4;
+  box-shadow: 2px 1px 5px 1px;
+  background-color: #fff;
+}
+
+.title {
+  margin-top: 0;
+  margin-bottom: 25px;
+}
+
+.text-input {
+  width: 100%;
+  height: 225px;
+  margin-bottom: 25px;
+  resize: none;
+  padding: 10px;
+  box-sizing: border-box;
+  font-size: 20px;
+  font-weight: 500;
+}
+/* Learning Box starts here */
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(#4b2146, #1419f9);
+  border-radius: 10px;
+}
+
+.learning-box {
+  padding: 0;
+  left: 10px;
+  z-index: 99;
+  bottom: 10px;
+  position: fixed;
+  max-width: 300px;
+  text-align: left;
+  border-radius: 10px;
+  pointer-events: none;
+  backdrop-filter: blur(9.5px);
+  background: rgba(0, 0, 63, 0.75);
+  -webkit-backdrop-filter: blur(9.5px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+/* width */
+.learning-box-list::-webkit-scrollbar {
+  width: 4px;
+}
+
+/* Track */
+.learning-box-list::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+/* Handle */
+.learning-box-list::-webkit-scrollbar-thumb {
+  background: #aaa;
+  border-radius: 10px;
+}
+
+.learning-box h3 {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 6px 14px;
+  margin: 0;
+}
+
+.learning-box-list {
+  margin: 0;
+  max-height: 90%;
+  overflow: auto;
+  padding: 0 14px 14px 26px;
+}
+
+.learning-box-list li {
+  color: #fff;
+  font-size: 12px;
+  font-weight: 500;
+  list-style: decimal;
+}
+
+@media screen and (max-width: 1000px) {
+  .learning-box {
+    display: none;
+  }
+}
+
+/* Learning Box ends here */

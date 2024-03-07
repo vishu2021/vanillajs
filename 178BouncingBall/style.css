@@ -1,0 +1,11 @@
+@import url(https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/reset.css);
+
+body {
+  margin: 0px;
+  overflow: hidden;
+  background: none;
+  background-color: rgb(56, 220, 250);
+}
+.learning-box {
+  background-color: rgba(0, 0, 0, 0.6);
+}

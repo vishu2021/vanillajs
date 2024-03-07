@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="icon" href="https://i.imgur.com/S47oR2o.png" />
+    <title>Basic Form Validation</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Form -->
+    <section class="container">
+      <form>
+        <div class="input-container">
+          <input
+            type="text"
+            placeholder="Name*"
+            class="username"
+            id="username"
+          />
+          <p class="user-msg msg">error message</p>
+        </div>
+
+        <div class="input-container">
+          <input
+            type="email"
+            placeholder="Email Address*"
+            class="email"
+            id="email"
+          />
+          <p class="email-msg msg">error message</p>
+        </div>
+        <div class="input-container">
+          <input
+            type="password"
+            placeholder="Password*"
+            class="password1"
+            id="password1"
+          />
+          <p class="password1-msg msg">error message</p>
+        </div>
+        <div class="input-container">
+          <input
+            type="password"
+            placeholder="Confirm Password*"
+            id="password2"
+            class="password2"
+          />
+          <p class="password2-msg msg">error message</p>
+        </div>
+        <input type="submit" value="Submit" class="submit" />
+      </form>
+    </section>
+
+    <div class="learning-box">
+      <h3>Learnings:</h3>
+      <ul class="learning-box-list">
+        <li>value</li>
+        <li>alert()</li>
+        <li>if...else..if</li>
+        <li>textContent</li>
+        <li>Dynamic Style</li>
+        <li>querySelector()</li>
+        <li>e.preventDefault()</li>
+        <li>Logical Operators (&&)</li>
+        <li>previousElementSibling</li>
+        <li>addEventListener : click</li>
+        <li>Comparison Operators(===,!==)</li>
+      </ul>
+    </div>
+    <!-- <script src="script.js"></script> -->
+    <script src="script.js"></script>
+  </body>
+</html>

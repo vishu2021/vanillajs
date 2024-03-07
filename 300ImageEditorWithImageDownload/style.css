@@ -1,0 +1,133 @@
+@import url(https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/reset.css);
+
+.wrapper {
+  top: 50%;
+  left: 50%;
+  width: 90%;
+  display: flex;
+  position: absolute;
+  align-items: center;
+  justify-content: space-between;
+  transform: translate(-50%, -50%);
+}
+.editor-container,
+.preview-container {
+  width: 100%;
+  display: block;
+  padding: 2em 1em;
+  position: relative;
+  border-radius: 0.5em;
+  background-color: #ffffff;
+  box-shadow: 0 1.25em 4em rgba(8, 6, 75, 0.15);
+}
+.editor-container {
+  margin: 0 0.6em 0 0;
+}
+.preview-container {
+  display: grid;
+  place-items: center;
+}
+.wrapper input[type="file"] {
+  display: none;
+}
+.wrapper label {
+  width: 12em;
+  margin: auto;
+  display: block;
+  padding: 1em 0;
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 1.1em;
+  text-align: center;
+  border-radius: 0.3em;
+  user-select: none;
+  transition: 0.4s all ease;
+  background-color: #025bee;
+  box-shadow: 0 0 80px rgba(0, 0, 0, 0.4);
+}
+
+.image-container {
+  margin-bottom: 1em;
+}
+.wrapper img {
+  max-width: 100%;
+}
+.wrapper button,
+.wrapper a {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  user-select: none;
+  place-items: center;
+  transition: 0.4s all ease;
+  box-shadow: 0 0 80px rgba(0, 0, 0, 0.4);
+}
+.options-btn {
+  display: flex;
+  margin-top: 1em;
+  align-items: center;
+  justify-content: space-between;
+}
+.options-btn button {
+  width: 3.2em;
+  height: 3.2em;
+  color: #025bee;
+  font-size: 0.8em;
+  user-select: none;
+  border-radius: 0.3em;
+  transition: 0.4s all ease;
+  background-color: #dceafe;
+  box-shadow: 0 0 80px rgba(0, 0, 0, 0.4);
+}
+.options-btn button img {
+  width: 1.1em;
+}
+.action-btns {
+  display: flex;
+  margin-top: 1em;
+  align-items: center;
+  justify-content: space-around;
+}
+#preview,
+#download {
+  background-color: #025bee;
+  font-size: 1em;
+  padding: 0.8em 1em;
+  color: #ffffff;
+  border-radius: 0.3em;
+  text-decoration: none;
+  user-select: none;
+  transition: 0.4s all ease;
+  box-shadow: 0 0 80px rgba(0, 0, 0, 0.4);
+}
+.hide {
+  display: none;
+}
+#preview:active,
+#download:active,
+.wrapper label:active,
+.options-btn button:active {
+  transform: scale(0.8);
+}
+@media screen and (max-width: 1200px) {
+  .wrapper {
+    flex-direction: column;
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
+    top: 1em;
+  }
+  .wrapper img {
+    display: block;
+    width: 60%;
+    margin: 0 auto;
+  }
+  .editor-container {
+    margin: 0 0 0.6em 0;
+  }
+}
+.learning-box {
+  left: auto;
+  right: 2px;
+  bottom: 2px;
+}

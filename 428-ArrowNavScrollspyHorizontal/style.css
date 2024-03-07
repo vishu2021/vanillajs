@@ -1,0 +1,132 @@
+@import url(https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/reset.css);
+body {
+  display: block;
+  overflow: hidden;
+}
+.pn-ProductNav_Wrapper {
+  width: 96%;
+  padding: 0 12px;
+  max-width: 900px;
+  user-select: none;
+  position: relative;
+  margin: 60px auto 0;
+  background-color: #fff;
+  box-shadow: 0 0 80px rgba(255, 255, 255, 0.4);
+}
+
+.pn-ProductNav {
+  /* Make this scrollable when needed */
+  overflow-x: auto;
+  /* We don't want vertical scrolling */
+  overflow-y: hidden;
+  /* For WebKit implementations, provide inertia scrolling */
+  -webkit-overflow-scrolling: touch;
+  /* We don't want internal inline elements to wrap */
+  white-space: nowrap;
+  /* If JS present, let's hide the default scrollbar */
+  /* positioning context for advancers */
+  position: relative;
+  font-size: 0;
+}
+.js .pn-ProductNav {
+  /* Make an auto-hiding scroll  for the 3 people using a IE */
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  /* Remove the default scrollbar for WebKit implementations */
+}
+.js .pn-ProductNav::-webkit-scrollbar {
+  display: none;
+}
+
+.pn-ProductNav_Contents {
+  float: left;
+  transition: transform 0.2s ease-in-out;
+}
+
+.pn-ProductNav_Contents-no-transition {
+  transition: none;
+}
+
+.pn-ProductNav_Link {
+  color: #888;
+  font-size: 24px;
+  min-height: 44px;
+  font-weight: bold;
+  padding: 30px 34px;
+  align-items: center;
+  display: inline-flex;
+  text-decoration: none;
+  background-color: #fff;
+  transition: 0.6s all ease;
+  border: 4px solid transparent;
+}
+.pn-ProductNav_Link + .pn-ProductNav_Link {
+  border-left-color: #eee;
+}
+.pn-ProductNav_Link[aria-selected="true"] {
+  color: #111;
+  background-color: #ffe2b8;
+}
+
+.pn-Advancer {
+  /* Reset the button */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: 0;
+  border: 0;
+  /* Now style it as needed */
+  top: 0;
+  bottom: 0;
+  /* Set the buttons invisible by default */
+  opacity: 0;
+  width: 50px;
+  position: absolute;
+  background: transparent;
+  transition: opacity 0.3s;
+  backdrop-filter: blur(20px);
+  background-color: rgba(255, 153, 0, 0.1);
+}
+.pn-Advancer:focus {
+  outline: 0;
+}
+.pn-Advancer:hover {
+  cursor: pointer;
+}
+
+.pn-Advancer_Left {
+  left: 0;
+  box-shadow: 10px 0 20px rgba(0, 0, 0, 0.1);
+}
+[data-overflowing="both"] ~ .pn-Advancer_Left,
+[data-overflowing="left"] ~ .pn-Advancer_Left {
+  opacity: 1;
+}
+
+.pn-Advancer_Right {
+  right: 0;
+  box-shadow: -10px 0 20px rgba(0, 0, 0, 0.1);
+}
+[data-overflowing="both"] ~ .pn-Advancer_Right,
+[data-overflowing="right"] ~ .pn-Advancer_Right {
+  opacity: 1;
+}
+
+.pn-Advancer_Icon {
+  width: 30px;
+  height: 50px;
+  fill: rgb(206, 123, 0);
+  transition: 0.6s all ease;
+}
+.pn-Advancer:active .pn-Advancer_Icon {
+  transform: scale(0.9);
+}
+.pn-ProductNav_Indicator {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 10px;
+  width: 100px;
+  transform-origin: 0 0;
+  background-color: rgb(206, 123, 0);
+  transition: transform 0.2s ease-in-out;
+}

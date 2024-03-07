@@ -1,0 +1,60 @@
+@import url(https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/reset.css);
+main {
+  width: 100%;
+  height: 100%;
+  padding-top: 90px;
+}
+header {
+  position: fixed;
+  background: #345995;
+  width: 100%;
+  top: 0;
+}
+header nav {
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+header nav a {
+  width: 25%;
+  height: 90px;
+  color: #fff;
+  padding: 0 30px;
+  flex: 0 0 auto;
+  font-size: 30px;
+  border-radius: 0;
+  background: #03cea4;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+section {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  color: #fff;
+  font-size: 80px;
+  font-weight: bold;
+  align-items: center;
+  background: #ca1551;
+  justify-content: center;
+}
+section:nth-child(1),
+nav a:nth-child(1) {
+  background: #950032;
+}
+section:nth-child(2),
+nav a:nth-child(2) {
+  background: #007122;
+}
+section:nth-child(3),
+nav a:nth-child(3) {
+  background: #05008a;
+}
+section:nth-child(4),
+nav a:nth-child(4) {
+  background: #4c0063;
+}

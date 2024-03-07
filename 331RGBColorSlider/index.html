@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"
+    />
+    <link
+      rel="icon"
+      href="https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/favicon.png"
+    />
+    <title>RGB Color Slider</title>
+
+    <!--Stylesheet-->
+    <style>
+      @import url(https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/reset.css);
+
+      body {
+        background-image: none;
+        background-color: #000000;
+      }
+      .container {
+          top: 50%;
+          left: 50%;
+          width: 90%;
+          display: grid;
+          padding: 20px 0;
+          font-size: 20px;
+          max-width: 700px;
+          font-weight: 500;
+          color: #142b37;
+          border-radius: 20px;
+          position: absolute;
+          justify-items: center;
+          backdrop-filter: blur(44px);
+          border: 8px solid rgb(0 0 0 / 60%);
+          background-color: rgb(255 255 255 / 80%);
+          transform: translate(-50%, -50%) scale(1.5);
+          box-shadow: 0 0 200px rgba(255, 255, 255, 0.6);
+}
+      .wrapper {
+        width: 100%;
+        font-size: 30px;
+        text-align: center;
+      }
+      input[type="range"] {
+          width: 80%;
+          margin-top: 25px;
+          margin-left: 10px;
+          display: inline-block;
+      }
+      span {
+          margin: 20px 0;
+          color: #ffffff;
+          font-size: 30px;
+          text-align: center;
+          padding:20px 40px;
+          border-radius: 8px;
+          letter-spacing: 0.5px;
+          display: inline-block;
+        background-color: #0075ff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="wrapper">
+        R<input
+          type="range"
+          min="0"
+          max="255"
+          value="0"
+          id="red"
+          oninput="colors()"
+        />
+      </div>
+      <div class="wrapper">
+        G<input
+          type="range"
+          min="0"
+          max="255"
+          value="0"
+          id="green"
+          oninput="colors()"
+        />
+      </div>
+      <div class="wrapper">
+        B<input
+          type="range"
+          min="0"
+          max="255"
+          value="0"
+          id="blue"
+          oninput="colors()"
+        />
+      </div>
+      <span id="output">rgb(0, 0, 0)</span>
+    </div>
+      <script>
+        function colors() {
+          var red = document.getElementById("red").value;
+          var green = document.getElementById("green").value;
+          var blue = document.getElementById("blue").value;
+          document.body.style.backgroundColor =
+            "rgb(" + red + "," + green + "," + blue + ")";
+          document.getElementById("output").innerHTML =
+            "rgb(" + red + "," + green + "," + blue + ")";
+        }
+      // Learnings from this project are listed below:
+      const myLearnings = [
+        "value",
+        "oninput", 
+        "innerHTML",
+        "Dynamic Styles", 
+        "getElementById()",
+        "Arithmetic Operators (+)",
+      ];
+      </script>
+       <script src="https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/mylearnings.js"></script>
+    </div>
+  </body>
+</html>

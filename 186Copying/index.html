@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Copy Array</title>
+    <link
+      rel="icon"
+      href="https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/favicon.png"
+    />
+    <style>
+      @import url(https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/reset.css);
+      body {
+        height: auto;
+      }
+      html {
+        height: 100%;
+      }
+      .page-wrapper {
+        padding-bottom: 20px;
+      }
+      .page-wrapper h3 {
+        color: #fff;
+        font-size: 40px;
+        margin: 20px 0;
+        text-align: center;
+      }
+      .wrapper {
+        position: relative;
+        box-shadow: 0 20px 40px rgba(255, 255, 255, 0.3);
+      }
+      .wrapper h4 {
+        color: #000;
+        font-size: 24px;
+        line-height: 2;
+      }
+      .icon-box {
+        top: 30px;
+        right: 30px;
+        font-size: 90px;
+        width: 160px;
+        height: 160px;
+        text-align: center;
+        border-radius: 50%;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #fff;
+        transform: rotateY(180deg);
+        padding: 0 0px 18px 12px;
+      }
+      .wrapper {
+        width: 90%;
+        padding: 30px;
+        max-width: 1000px;
+        margin: 20px auto;
+        border-radius: 20px;
+        backdrop-filter: blur(4px);
+        background-color: rgba(255, 255, 255, 0.6);
+        border: 8px solid rgba(255, 255, 255, 0.8);
+      }
+      .wrapper p {
+        color: #000;
+        font-size: 20px;
+        line-height: 2;
+      }
+      .wrapper p span {
+        display: block;
+        text-align: left;
+        padding-left: 32px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page-wrapper">
+      <h3><em> Have a look at the JavaScript Console</em></h3>
+      <div class="wrapper">
+        <h4>Code is mentioned below:</h4>
+        <p>const players = ["Wes", "Sarah", "Ryan", "Poppy"];</p>
+        <p>const team = players;</p>
+        <p>const team2 = players.slice();</p>
+        <p>const team3 = [].concat(players);</p>
+        <p>const team4 = [...players];</p>
+        <p>const team5 = Array.from(players);</p>
+        <p>const person = { name: "Wes Bos", age: 80, };</p>
+        <p>const cap2 = Object.assign({}, person, { number: 99, age: 12 });</p>
+        <p>
+          const wes = { name: "Wes", age: 100, social: { twitter: "@wesbos",
+          facebook: "wesbos.developer", }, };
+        </p>
+        <p>const dev = Object.assign({}, wes);</p>
+        <p>const dev2 = JSON.parse(JSON.stringify(wes));</p>
+        <div class="icon-box">💁</div>
+      </div>
+    </div>
+    <script>
+      // start with strings, numbers and booleans
+      // let age = 100;
+      // let age2 = age;
+      // console.log(age, age2);
+      // age = 200;
+      // console.log(age, age2);
+      // let name = 'Wes';
+      // let name2 = name;
+      // console.log(name, name2);
+      // name = 'wesley';
+      // console.log(name, name2);
+
+      // Let's say we have an array
+      const players = ["Wes", "Sarah", "Ryan", "Poppy"];
+      console.log("players :", players);
+      // and we want to make a copy of it.
+      const team = players;
+      console.log("players :", players, "team :", team);
+
+      // You might think we can just do something like this:
+      // team[3] = 'Lux';
+
+      // however what happens when we update that array?
+
+      // now here is the problem!
+
+      // oh no - we have edited the original array too!
+
+      // Why? It's because that is an array reference, not an array copy. They both point to the same array!
+
+      // So, how do we fix this? We take a copy instead!
+      const team2 = players.slice();
+      console.log("team2 :", team2);
+      // one way
+
+      // or create a new array and concat the old one in
+      const team3 = [].concat(players);
+      console.log("team3 :", team3);
+
+      // or use the new ES6 Spread
+      const team4 = [...players];
+      team4[3] = "heeee hawww";
+      console.log("team4 :", team4);
+
+      const team5 = Array.from(players);
+      console.log("team5 :", team5);
+
+      // now when we update it, the original one isn't changed
+
+      // The same thing goes for objects, let's say we have a person object
+
+      // with Objects
+      const person = {
+        name: "Wes Bos",
+        age: 80,
+      };
+      console.log("person :", person);
+
+      // and think we make a copy:
+      // const captain = person;
+      // captain.number = 99;
+
+      // how do we take a copy instead?
+      const cap2 = Object.assign({}, person, { number: 99, age: 12 });
+      console.log("cap2 :", cap2);
+
+      // We will hopefully soon see the object ...spread
+      // const cap3 = {...person};
+
+      // Things to note - this is only 1 level deep - both for Arrays and Objects. lodash has a cloneDeep method, but you should think twice before using it.
+
+      const wes = {
+        name: "Wes",
+        age: 100,
+        social: {
+          twitter: "@wesbos",
+          facebook: "wesbos.developer",
+        },
+      };
+
+      // console.clear();
+      console.log("wes :", wes);
+
+      const dev = Object.assign({}, wes);
+      console.log("dev :", dev);
+      const dev2 = JSON.parse(JSON.stringify(wes));
+      console.log("dev2 :", dev2);
+
+      // Learnings from this project are listed below:
+      const myLearnings = [
+        "[]",
+        "array",
+        "slice()",
+        "concat()",
+        "[...array]",
+        "Array.from()",
+        "JSON.parse()",
+        "Object.assign()",
+        "JSON.stringify()",
+      ];
+    </script>
+    <script src="https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/mylearnings.js"></script>
+  </body>
+</html>

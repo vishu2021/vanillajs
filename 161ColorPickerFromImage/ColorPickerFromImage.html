@@ -1,0 +1,342 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/favicon.png"
+    />
+    <title>Color Picker From Image</title>
+    <style>
+      .main-wrapper {
+        text-align: center;
+        max-width: 900px;
+        margin: 30px auto;
+      }
+      .main-wrapper button {
+        border: none;
+        height: 50px;
+        color: #fff;
+        font-size: 20px;
+        border-radius: 8px;
+        padding: 10px 20px;
+        cursor: pointer;
+        margin: 0 0 20px;
+        user-select: none;
+        background-color: blue;
+        border: 2px solid #fff;
+        transition: 1s all ease;
+      }
+      .main-wrapper button:active {
+        transform: scale(0.9);
+      }
+      .file-input {
+        display: inline-block;
+      }
+      .file-input__input {
+        width: 0.1px;
+        height: 0.1px;
+        opacity: 0;
+        overflow: hidden;
+        position: absolute;
+        z-index: -1;
+      }
+
+      .file-input__label {
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        border-radius: 8px;
+        color: #fff;
+        font-size: 20px;
+        padding: 10px 30px;
+        height: 50px;
+        border: 2px solid #fff;
+        background-color: rgb(150, 0, 0);
+        box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25);
+        transition: 1s all ease;
+      }
+      .file-input__label:active {
+        transform: scale(0.9);
+      }
+      .file-input__label svg {
+        height: 16px;
+        margin-right: 16px;
+      }
+      .res,
+      .file-name,
+      .file-type {
+        color: #fff;
+        margin: 10px 0;
+        font-size: 20px;
+        font-weight: normal;
+      }
+      .preview {
+        max-width: 400px;
+      }
+      /*Common Code Starts Here*/
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        height: 100%;
+      }
+
+      body,
+      button,
+      input {
+        font-family: "Cascadia Code PL", sans-serif;
+      }
+
+      @font-face {
+        font-family: "Cascadia Code PL";
+        src: url("https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/fonts/CascadiaCodePL-BoldItalic.eot");
+        src: url("https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/fonts/CascadiaCodePL-BoldItalic.eot?#iefix")
+            format("embedded-opentype"),
+          url("https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/fonts/CascadiaCodePL-BoldItalic.woff2")
+            format("woff2"),
+          url("https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/fonts/CascadiaCodePL-BoldItalic.woff")
+            format("woff"),
+          url("https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/fonts/CascadiaCodePL-BoldItalic.ttf")
+            format("truetype"),
+          url("https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/fonts/CascadiaCodePL-BoldItalic.svg#CascadiaCodePL-BoldItalic")
+            format("svg");
+        font-weight: bold;
+        font-style: italic;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "Cascadia Code PL";
+        src: url("https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/fonts/CascadiaCodePL-Italic.eot");
+        src: url("https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/fonts/CascadiaCodePL-Italic.eot?#iefix")
+            format("embedded-opentype"),
+          url("https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/fonts/CascadiaCodePL-Italic.woff2")
+            format("woff2"),
+          url("https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/fonts/CascadiaCodePL-Italic.woff")
+            format("woff"),
+          url("https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/fonts/CascadiaCodePL-Italic.ttf")
+            format("truetype"),
+          url("https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/fonts/CascadiaCodePL-Italic.svg#CascadiaCodePL-Italic")
+            format("svg");
+        font-weight: normal;
+        font-style: italic;
+        font-display: swap;
+      }
+
+      body {
+        width: 100%;
+        background: rgb(150, 0, 0);
+        background: radial-gradient(
+          circle,
+          rgba(150, 0, 0, 1) 0%,
+          rgb(3, 98, 0) 50%,
+          rgb(0, 0, 116) 100%
+        );
+        background-size: 150% 150%;
+        animation: gradient 30s ease infinite;
+      }
+
+      @keyframes gradient {
+        0% {
+          background-position: 0% 50%;
+        }
+
+        50% {
+          background-position: 100% 50%;
+        }
+
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+
+      /* Learning Box starts here */
+      /* width */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+
+      /* Track */
+      ::-webkit-scrollbar-track {
+        border-radius: 10px;
+      }
+
+      /* Handle */
+      ::-webkit-scrollbar-thumb {
+        background: linear-gradient(#4b2146, #1419f9);
+        border-radius: 10px;
+      }
+
+      .learning-box {
+        padding: 0;
+        left: 10px;
+        z-index: 99;
+        bottom: 10px;
+        display: flex;
+        position: fixed;
+        max-width: 400px;
+        text-align: left;
+        border-radius: 10px;
+        pointer-events: none;
+        flex-direction: column;
+        backdrop-filter: blur(4px);
+        max-height: calc(100% - 20px);
+        background: rgba(0, 0, 63, 0.1);
+        -webkit-backdrop-filter: blur(4px);
+        border: 4px solid rgba(255, 255, 255, 0.2);
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+      }
+
+      /* width */
+      .learning-box-list::-webkit-scrollbar {
+        width: 4px;
+      }
+
+      /* Track */
+      .learning-box-list::-webkit-scrollbar-track {
+        border-radius: 10px;
+      }
+
+      /* Handle */
+      .learning-box-list::-webkit-scrollbar-thumb {
+        background: #aaa;
+        border-radius: 10px;
+      }
+
+      .learning-box h3 {
+        margin: 0;
+        color: #fff;
+        font-size: 14px;
+        font-weight: 500;
+        letter-spacing: 1px;
+        padding: 12px 14px 6px;
+      }
+
+      .learning-box-list {
+        margin: 0;
+        max-height: 94%;
+        overflow: auto;
+        padding: 0 14px 14px 40px;
+      }
+
+      .learning-box-list li {
+        color: #fff;
+        font-size: 12px;
+        line-height: 1.6;
+        font-weight: normal;
+        list-style: decimal;
+      }
+
+      @media screen and (max-width: 1000px) {
+        .learning-box {
+          display: none;
+        }
+      }
+
+      /*Common Code Ends Here*/
+    </style>
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <button class="open-picker">Open Color Picker</button>
+      <!-- <input type="file" id="img-select" /> -->
+      <div class="file-input">
+        <input
+          type="file"
+          name="file-input"
+          id="img-select"
+          class="file-input__input"
+        />
+        <label class="file-input__label" for="img-select">
+          <svg
+            aria-hidden="true"
+            focusable="false"
+            data-prefix="fas"
+            data-icon="upload"
+            class="svg-inline--fa fa-upload fa-w-16"
+            role="img"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 512 512"
+          >
+            <path
+              fill="currentColor"
+              d="M296 384h-80c-13.3 0-24-10.7-24-24V192h-87.7c-17.8 0-26.7-21.5-14.1-34.1L242.3 5.7c7.5-7.5 19.8-7.5 27.3 0l152.2 152.2c12.6 12.6 3.7 34.1-14.1 34.1H320v168c0 13.3-10.7 24-24 24zm216-8v112c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24V376c0-13.3 10.7-24 24-24h136v8c0 30.9 25.1 56 56 56h80c30.9 0 56-25.1 56-56v-8h136c13.3 0 24 10.7 24 24zm-124 88c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20zm64 0c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20z"
+            ></path>
+          </svg>
+          <span>Upload file</span></label
+        >
+      </div>
+      <!-- Picker color code will be shown here -->
+      <p class="file-name"></p>
+      <p class="file-type"></p>
+      <p class="res"></p>
+      <!-- Selected image will be shown here -->
+      <img src="" alt="" class="preview" />
+    </div>
+    <div class="learning-box">
+      <h3>Learnings:</h3>
+      <ul class="learning-box-list">
+        <li>new</li>
+        <li>src</li>
+        <li>this</li>
+        <li>return</li>
+        <li>open()</li>
+        <li>then()</li>
+        <li>catch()</li>
+        <li>alert()</li>
+        <li>if...else</li>
+        <li>innerHTML</li>
+        <li>readAsDataURL()</li>
+        <li>querySelector()</li>
+        <li>new FileReader()</li>
+        <li>new EyeDropper()</li>
+        <li>Logical Operators (!)</li>
+        <li>Backtick Literals (``)</li>
+        <li>addEventListener : load</li>
+        <li>addEventListener : click</li>
+        <li>addEventListener : change</li>
+      </ul>
+    </div>
+    <script>
+      const imgInput = document.querySelector("#img-select");
+      const imgPreview = document.querySelector(".preview");
+      const imageName = document.querySelector(".file-name");
+      const imageType = document.querySelector(".file-type");
+
+      if (!window.EyeDropper) {
+        alert("Your browser does not support this feature");
+      }
+      const eyeDropper = new EyeDropper();
+      const pickerBtn = document.querySelector(".open-picker");
+      const result = document.querySelector(".res");
+      imgInput.addEventListener("change", function () {
+        const file = this.files[0];
+        const fileName = this.files[0].name;
+        const fileType = this.files[0].type;
+        imageName.innerHTML = `File Name: <b>${fileName}</b>`;
+        imageType.innerHTML = `File Type: <b>${fileType}</b>`;
+        if (!file) return;
+        const reader = new FileReader();
+        reader.addEventListener("load", function () {
+          imgPreview.src = this.result;
+        });
+        reader.readAsDataURL(file);
+      });
+      pickerBtn.addEventListener("click", function () {
+        eyeDropper
+          .open()
+          .then((res) => {
+            result.innerHTML = `Picked Color: <b>${res.sRGBHex}</b>`;
+          })
+          .catch((err) => {
+            console.log("User canceled the selection.");
+          });
+      });
+    </script>
+  </body>
+</html>

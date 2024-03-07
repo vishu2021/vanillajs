@@ -1,0 +1,177 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: rgb(26, 25, 25);
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+.panel-container {
+  background-color: #000;
+  box-shadow: 0 0 208px rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  font-size: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 30px;
+  width: 700px;
+  color: #fff;
+}
+.title {
+  font-size: 30px;
+  display: block;
+}
+.thank-you-text {
+  font-size: 24px;
+  display: block;
+}
+.selected-rating {
+  color: #faff00;
+  font-size: 18px;
+  display: block;
+  font-weight: 500;
+}
+.ratings-container {
+  display: flex;
+  margin: 20px 0;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 500px;
+}
+
+.rating {
+  flex: 1;
+  padding: 20px;
+  margin: 10px 5px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.rating:hover,
+.rating.active {
+  border-radius: 4px;
+  background-color: #444;
+  transition: 1s ease all;
+}
+
+.rating .icon {
+  width: 100%;
+  font-size: 5rem;
+  margin: 0;
+}
+
+.rating small {
+  color: #fff;
+  font-size: 20px;
+  display: inline-block;
+  margin: 10px 0 0;
+}
+
+.btn {
+  font-weight: 600;
+  font-size: 20px;
+  background: #fff;
+  color: #000;
+  border: 0;
+  border-radius: 40px;
+  padding: 12px 30px;
+  cursor: pointer;
+  outline: 0;
+  user-select: none;
+  transition: 1s all ease;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.6);
+}
+
+.btn:active,
+.btn:hover {
+  transform: scale(0.9);
+}
+.feedback-label {
+  pointer-events: none;
+}
+/* JavaScript */
+.heart {
+  line-height: 1;
+  font-size: 8rem;
+  margin-bottom: 30px;
+}
+
+/* Learning Box starts here */
+.learning-box {
+  padding: 0;
+  left: 10px;
+  z-index: 99;
+  bottom: 10px;
+  position: fixed;
+  max-width: 300px;
+  text-align: left;
+  border-radius: 10px;
+  pointer-events: none;
+  backdrop-filter: blur(9.5px);
+  background: rgba(0, 0, 63, 0.75);
+  -webkit-backdrop-filter: blur(9.5px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+/* width */
+.learning-box-list::-webkit-scrollbar {
+  width: 4px;
+}
+
+/* Track */
+.learning-box-list::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+/* Handle */
+.learning-box-list::-webkit-scrollbar-thumb {
+  background: #aaa;
+  border-radius: 10px;
+}
+
+.learning-box h3 {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 6px 14px;
+  margin: 0;
+}
+
+.learning-box-list {
+  margin: 0;
+  max-height: 260px;
+  overflow: auto;
+  padding: 0 14px 14px 26px;
+}
+
+.learning-box-list li {
+  color: #fff;
+  font-size: 12px;
+  font-weight: 500;
+  list-style: decimal;
+}
+
+@media screen and (max-width: 1000px) {
+  .learning-box {
+    display: none;
+  }
+}
+
+/* Learning Box ends here */

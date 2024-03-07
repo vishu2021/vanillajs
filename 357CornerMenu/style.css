@@ -1,0 +1,46 @@
+@import url(https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/reset.css);
+
+body {
+  background-color: #4249ed;
+}
+h1 {
+  color: #fff;
+  line-height: 2;
+  font-size: 60px;
+  font-weight: bold;
+  text-align: center;
+}
+#toggle-btn,
+.menu a {
+  position: absolute;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+}
+.menu a {
+  background-color: #ffffff;
+  height: 70px;
+  width: 70px;
+  font-size: 22px;
+  color: #4249ed;
+  text-decoration: none;
+  top: 30px;
+  left: 30px;
+  transition: 0.5s;
+  box-shadow: 0 0 40px rgba(255, 255, 255, 0.6);
+}
+#toggle-btn {
+  border: 8px solid #fff;
+  background-color: #0f1730;
+  color: #ffffff;
+  transition: 0.3s;
+  cursor: pointer;
+  font-size: 40px;
+  height: 100px;
+  width: 100px;
+  top: 15px;
+  left: 15px;
+}
+.active {
+  transform: rotate(45deg);
+}

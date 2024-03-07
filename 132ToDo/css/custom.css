@@ -1,0 +1,191 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+main {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #3498db;
+}
+
+.box {
+  width: 700px;
+  min-height: 500px;
+  background-color: white;
+  border-radius: 5px;
+  padding: 15px;
+}
+
+#item {
+  padding: 10px;
+  font-size: 20px;
+  width: 100%;
+  border: 0;
+  outline: 0;
+  display: block;
+  font-weight: bold;
+  box-shadow: 0px 0px 2px grey;
+}
+
+#to-do-box {
+  margin-top: 20px;
+  list-style: none;
+}
+
+#to-do-box li {
+  position: relative;
+  background-color: #2c3e50;
+  color: white;
+  padding: 10px;
+  border-radius: 2px;
+  padding-right: 30px;
+  text-align: justify;
+  margin-top: 10px;
+  user-select: none;
+  cursor: pointer;
+}
+
+#to-do-box li i {
+  position: absolute;
+  cursor: pointer;
+  right: 10px;
+  top: 12px;
+}
+
+.done {
+  text-decoration: line-through;
+  color: black;
+  background-color: #95a5a6 !important;
+}
+
+/* Integration of Fonts */
+body,
+button,
+input {
+  font-family: "Cascadia Code PL", sans-serif;
+}
+
+@font-face {
+  font-family: "Cascadia Code PL";
+  src: url("https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/fonts/CascadiaCodePL-BoldItalic.eot");
+  src: url("https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/fonts/CascadiaCodePL-BoldItalic.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/fonts/CascadiaCodePL-BoldItalic.woff2")
+      format("woff2"),
+    url("https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/fonts/CascadiaCodePL-BoldItalic.woff")
+      format("woff"),
+    url("https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/fonts/CascadiaCodePL-BoldItalic.ttf")
+      format("truetype"),
+    url("https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/fonts/CascadiaCodePL-BoldItalic.svg#CascadiaCodePL-BoldItalic")
+      format("svg");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Cascadia Code PL";
+  src: url("https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/fonts/CascadiaCodePL-Italic.eot");
+  src: url("https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/fonts/CascadiaCodePL-Italic.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/fonts/CascadiaCodePL-Italic.woff2")
+      format("woff2"),
+    url("https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/fonts/CascadiaCodePL-Italic.woff")
+      format("woff"),
+    url("https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/fonts/CascadiaCodePL-Italic.ttf")
+      format("truetype"),
+    url("https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/fonts/CascadiaCodePL-Italic.svg#CascadiaCodePL-Italic")
+      format("svg");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Learning Box starts here */
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(#4b2146, #1419f9);
+  border-radius: 10px;
+}
+
+.learning-box {
+  padding: 0;
+  left: 10px;
+  z-index: 99;
+  /* height: 100%; */
+  bottom: 10px;
+  display: flex;
+  position: fixed;
+  max-width: 300px;
+  text-align: left;
+  border-radius: 10px;
+  pointer-events: none;
+  flex-direction: column;
+  backdrop-filter: blur(9.5px);
+  max-height: calc(100% - 20px);
+  background: rgba(0, 0, 63, 0.75);
+  -webkit-backdrop-filter: blur(9.5px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+/* width */
+.learning-box-list::-webkit-scrollbar {
+  width: 4px;
+}
+
+/* Track */
+.learning-box-list::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+/* Handle */
+.learning-box-list::-webkit-scrollbar-thumb {
+  background: #aaa;
+  border-radius: 10px;
+}
+
+.learning-box h3 {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 12px 14px 6px;
+  margin: 0;
+}
+
+.learning-box-list {
+  margin: 0;
+  max-height: 94%;
+  overflow: auto;
+  padding: 0 14px 14px 40px;
+}
+
+.learning-box-list li {
+  color: #fff;
+  font-size: 12px;
+  font-weight: normal;
+  list-style: decimal;
+}
+
+@media screen and (max-width: 1000px) {
+  .learning-box {
+    display: none;
+  }
+}
+
+/* Learning Box ends here */

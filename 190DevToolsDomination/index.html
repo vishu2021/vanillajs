@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/favicon.png"
+    />
+    <title>Console Tricks Dev Tools Domination</title>
+    <style>
+      @import url(https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/reset.css);
+      body {
+        height: auto;
+      }
+      html {
+        height: 100%;
+      }
+      .page-wrapper {
+        padding-bottom: 20px;
+      }
+      .page-wrapper h3 {
+        color: #fff;
+        font-size: 40px;
+        margin: 20px 0;
+        text-align: center;
+      }
+      .wrapper {
+        position: relative;
+        box-shadow: 0 20px 40px rgba(255, 255, 255, 0.3);
+      }
+      .wrapper h4 {
+        color: #000;
+        font-size: 24px;
+        line-height: 2;
+      }
+      .icon-box {
+        right: 30px;
+        bottom: 30px;
+        font-size: 90px;
+        width: 160px;
+        height: 160px;
+        text-align: center;
+        border-radius: 50%;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #fff;
+        transform: rotateY(180deg);
+        padding: 0 0px 18px 12px;
+      }
+      .wrapper {
+        width: 90%;
+        padding: 30px;
+        max-width: 1000px;
+        margin: 20px auto;
+        border-radius: 20px;
+        backdrop-filter: blur(4px);
+        background-color: rgba(255, 255, 255, 0.6);
+        border: 8px solid rgba(255, 255, 255, 0.8);
+      }
+      .wrapper p {
+        color: #000;
+        font-size: 20px;
+        line-height: 2;
+      }
+      .wrapper p span {
+        display: block;
+        text-align: left;
+        padding-left: 32px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page-wrapper">
+      <h3><em> Have a look at the JavaScript Console</em></h3>
+      <div class="wrapper">
+        <h4>List of points exercised are mentioned below:</h4>
+        <p>
+          <strong>01. console.log()</strong>
+        </p>
+        <p>
+          <strong>02. console.dir() </strong>
+        </p>
+        <p>
+          <strong>03. console.time() </strong>
+        </p>
+        <p>
+          <strong>04. console.warn()</strong>
+        </p>
+
+        <p>
+          <strong>05. console.info() </strong>
+        </p>
+        <p>
+          <strong>06. console.error()</strong>
+        </p>
+
+        <p>
+          <strong>07. console.table() </strong>
+        </p>
+        <p>
+          <strong>08. console.count() </strong>
+        </p>
+        <p>
+          <strong>09. console.clear() </strong>
+        </p>
+        <p>
+          <strong>10. console.assert() </strong>
+        </p>
+        <p>
+          <strong>11. console.timeEnd() </strong>
+        </p>
+        <p>
+          <strong>12. console.groupEnd() </strong>
+        </p>
+
+        <p>
+          <strong>13. console.groupCollapsed() </strong>
+        </p>
+
+        <div class="icon-box">💁</div>
+      </div>
+    </div>
+    <script>
+      const dogs = [
+        { name: "Snickers", age: 2 },
+        { name: "hugo", age: 8 },
+      ];
+
+      // Regular
+      console.log("hello");
+
+      // Interpolated
+      console.log("Hello I am a %s string!", "💩");
+
+      // warning!
+      console.warn("OH NOOO");
+
+      // Error :|
+      console.error("Shit!");
+
+      // Info
+      console.info("Crocodiles eat 3-4 people per year");
+
+      // Testing
+      const p = document.querySelector("p");
+
+      console.assert(p.classList.contains("ouch"), "That is wrong!");
+
+      // clearing
+      // console.clear();
+
+      // Viewing DOM Elements
+      console.log(p);
+      console.dir(p);
+
+      // console.clear();
+
+      // Grouping together
+      dogs.forEach((dog) => {
+        console.groupCollapsed(`${dog.name}`);
+        console.log(`This is ${dog.name}`);
+        console.log(`${dog.name} is ${dog.age} years old`);
+        console.log(`${dog.name} is ${dog.age * 7} dog years old`);
+        console.groupEnd(`${dog.name}`);
+      });
+
+      // counting
+
+      console.count("Wes");
+      console.count("Wes");
+      console.count("Steve");
+      console.count("Steve");
+      console.count("Wes");
+      console.count("Steve");
+      console.count("Wes");
+      console.count("Steve");
+      console.count("Steve");
+      console.count("Steve");
+      console.count("Steve");
+      console.count("Steve");
+
+      // timing
+      console.time("fetching data");
+      fetch("https://api.github.com/users/wesbos")
+        .then((data) => data.json())
+        .then((data) => {
+          console.timeEnd("fetching data");
+          console.log(data);
+        });
+
+      console.table(dogs);
+
+      // Learnings from this project are listed below:
+
+      const myLearnings = [
+        "api",
+        "array",
+        "then()",
+        "json()",
+        "object",
+        "fetch()",
+        "forEach()",
+        "console.log()",
+        "console.dir()",
+        "console.warn()",
+        "console.info()",
+        "console.time()",
+        "console.error()",
+        "console.clear()",
+        "console.table()",
+        "console.count()",
+        "querySelector()",
+        "console.assert()",
+        "console.timeEnd()",
+        "console.groupEnd()",
+        "classList.contains()",
+        "Backtick Literals (``)",
+        "Arithmetic Operators (*)",
+        "console.groupCollapsed()",
+      ];
+    </script>
+    <script src="https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/mylearnings.js"></script>
+  </body>
+</html>

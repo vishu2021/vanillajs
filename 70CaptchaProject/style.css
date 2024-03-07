@@ -1,0 +1,221 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.wrapper {
+  max-width: 80%;
+  border-radius: 12px;
+  background: #a80038;
+  padding: 7rem 8rem;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.75);
+}
+
+.wrapper h1 {
+  color: #fff;
+  font-size: 32px;
+  font-weight: 700;
+  text-align: center;
+  user-select: none;
+}
+
+.wrapper .captcha-area {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 65px;
+  margin: 30px 0 20px;
+}
+
+.captcha-area .captcha-container {
+  height: 100%;
+  width: 350px;
+  user-select: none;
+  background: #000;
+  position: relative;
+  border-radius: 5px;
+}
+
+.captcha-container .captcha {
+  position: absolute;
+  left: 60%;
+  top: 50%;
+  width: 100%;
+  color: #fff;
+  font-size: 35px;
+  letter-spacing: 10px;
+  transform: translate(-50%, -50%);
+  text-shadow: 0 0 2px #b1b1b1;
+  font-family: sans-serif;
+}
+
+.wrapper button {
+  border: none;
+  outline: none;
+  color: #041897;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.captcha-area .reload-btn {
+  border-radius: 5px;
+  width: 75px;
+  height: 100%;
+  font-size: 23px;
+  margin-left: 20px;
+  user-select: none;
+}
+
+.captcha-area i {
+  transition: transform 0.3s ease;
+}
+
+.input-area .reload-btn:hover i {
+  transform: rotate(15deg);
+}
+
+.wrapper .input-area {
+  height: 60px;
+  width: 100%;
+  position: relative;
+}
+
+.input-area input {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  font-size: 20px;
+  padding-left: 20px;
+  border-radius: 5px;
+  border: 1px solid #bfbfbf;
+}
+
+.input-area .check-btn {
+  position: absolute;
+  right: 7px;
+  top: 50%;
+  font-size: 17px;
+  height: 45px;
+  padding: 0 20px;
+  opacity: 0;
+  pointer-events: none;
+  background: #041897;
+  color: #fff;
+  border-radius: 5px;
+  transform: translateY(-50%);
+  user-select: none;
+}
+
+.input-area input:valid + .check-btn {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.status-text {
+  display: none;
+  font-size: 18px;
+  color: #000;
+  width: max-content;
+  font-weight: 600;
+  text-align: center;
+  padding: 10px 20px;
+  border-radius: 4px;
+  margin: 20px auto -5px;
+}
+.success {
+  color: rgb(0, 148, 0);
+  background-color: rgb(183, 255, 183);
+}
+.error {
+  color: rgb(183, 0, 0);
+  background-color: rgb(255, 201, 201);
+}
+
+/* Learning Box starts here */
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(#4b2146, #1419f9);
+  border-radius: 10px;
+}
+
+.learning-box {
+  padding: 0;
+  left: 10px;
+  z-index: 99;
+  bottom: 10px;
+  position: fixed;
+  max-width: 300px;
+  text-align: left;
+  border-radius: 10px;
+  pointer-events: none;
+  backdrop-filter: blur(9.5px);
+  background: rgba(0, 0, 63, 0.75);
+  -webkit-backdrop-filter: blur(9.5px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+/* width */
+.learning-box-list::-webkit-scrollbar {
+  width: 4px;
+}
+
+/* Track */
+.learning-box-list::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+/* Handle */
+.learning-box-list::-webkit-scrollbar-thumb {
+  background: #aaa;
+  border-radius: 10px;
+}
+
+.learning-box h3 {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 6px 14px;
+  margin: 0;
+}
+
+.learning-box-list {
+  margin: 0;
+  max-height: 440px;
+  overflow: auto;
+  padding: 0 14px 14px 26px;
+}
+
+.learning-box-list li {
+  color: #fff;
+  font-size: 12px;
+  font-weight: 500;
+  list-style: decimal;
+}
+
+@media screen and (max-width: 1000px) {
+  .learning-box {
+    display: none;
+  }
+}
+
+/* Learning Box ends here */

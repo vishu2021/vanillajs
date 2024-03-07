@@ -1,0 +1,52 @@
+@import url(https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/reset.css);
+.page-wrapper {
+  width: 90%;
+  margin: auto;
+  max-width: 600px;
+}
+body { 
+  background: transparent !important;
+}
+input {
+  display: block;
+  margin: 0 0 1em 0;
+  padding: .4em .5em;
+  width: 100%;
+  height: 40px;
+  outline: none; 
+}
+[type=number] {
+  display: block;
+  margin: 0 0 1em 0;
+  padding: .4em .5em;
+  width: 100%;
+  height: 40px;
+  outline: none;
+  border: 1px solid rgba(255,255,255,.7);
+  border-radius: 2px;
+  background: rgba(255,255,255,.5);
+  box-shadow: rgba(0,0,0,.15) 0 1px 0;
+  color: rgba(0,0,0,.7);
+  font-weight: 400;
+  font-size: 12pt;
+  transition: all .2s ease-in-out;
+  -webkit-appearance: none;
+  appearance: none;
+  -moz-appearance: none;
+}
+[type=number]:focus {
+  outline: none;
+  border-color: orange;
+  box-shadow: #fc0 0 0 3px;
+}
+[type="number"]:focus {
+  outline: none;
+  border-color: orange;
+  box-shadow: #fc0 0 0 3px;
+}
+#slider {
+  cursor: pointer;
+}
+.learning-box {
+  background-color: rgba(0,0,0,0.4);
+}

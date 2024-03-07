@@ -1,0 +1,105 @@
+/*styles.css*/
+@import url(https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/reset.css);
+body {
+  background: #333
+    url(https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/images/food8.jpeg)
+    center center no-repeat;
+  background-size: cover;
+  color: #532827;
+}
+
+#container {
+  width: 90%;
+  max-width: 800px;
+  margin: 40px auto 0;
+  padding: 50px;
+  box-sizing: border-box;
+  background: url(https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/images/paper-pattern.jpg)
+    top left repeat;
+  box-shadow: 0 10px 15px -8px #000;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 20px;
+}
+
+h1 {
+  margin: 0 0 20px;
+  padding: 0 0 20px;
+  border-bottom: solid 1px #ddd;
+}
+
+form {
+  text-align: left;
+}
+
+form label {
+  display: block;
+  margin: 8px 0;
+  font-weight: bold;
+}
+
+form input,
+form select {
+  padding: 8px;
+  margin: 10px 0;
+  font-size: 20px;
+}
+#serviceQuality {
+  cursor: pointer;
+}
+
+form input[type="text"] {
+  width: 90px;
+}
+
+button {
+  width: 100%;
+  color: white;
+  cursor: pointer;
+  font-size: 20px;
+  padding: 20px 30px;
+  background: #6c2726;
+  transition: 0.6s all ease;
+  border-bottom: solid 4px #222;
+}
+
+button:hover {
+  background: #4c2827;
+  border-bottom-color: #111;
+}
+
+button:active {
+  transform: scale(0.9);
+}
+
+#totalTip {
+  font-size: 50px;
+  margin-top: 40px;
+}
+
+#totalTip:before {
+  content: "Tip amount";
+  font-size: 14px;
+  font-weight: bold;
+  display: block;
+  text-transform: uppercase;
+}
+
+#totalTip sup {
+  font-size: 24px;
+  top: -18px;
+}
+
+#totalTip small {
+  font-size: 14px;
+  font-weight: bold;
+  display: block;
+}
+.learning-box {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.field {
+  display: flex;
+}

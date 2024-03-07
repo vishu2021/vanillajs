@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"
+    />
+    <link
+      rel="icon"
+      href="https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/favicon.png"
+    />
+    <title>GSAP Sidebar Animation Menu</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Gabarito:wght@400..900&family=Wix+Madefor+Display:wght@400..800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/minireset.css/0.0.6/minireset.min.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- partial:index.partial.html -->
+    <div class="header__line js-header-lines">
+      <data></data>
+      <data></data>
+      <data></data>
+      <data></data>
+      <data></data>
+    </div>
+
+    <aside class="menu js-menu" role="menu">
+      <!--CLOSE-->
+      <div class="menu__close">
+        <button type="button" class="button js-button-close">
+          <span>Close</span>
+          <i>
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M17.6585 4.92888C18.049 4.53836 18.6822 4.53835 19.0727 4.92888C19.4632 5.3194 19.4632 5.95257 19.0727 6.34309L13.4158 12L19.0727 17.6568C19.4632 18.0473 19.4632 18.6805 19.0727 19.071C18.6822 19.4615 18.049 19.4615 17.6585 19.071L12.0016 13.4142L6.34481 19.071C6.3387 19.0771 6.33254 19.0831 6.32632 19.089C5.93455 19.4614 5.31501 19.4554 4.93059 19.071C4.6377 18.7781 4.56447 18.3487 4.71092 17.9876C4.75973 17.8672 4.83296 17.7544 4.93059 17.6568L10.5874 12L4.93059 6.34314C4.54006 5.95262 4.54006 5.31945 4.93059 4.92893C5.32111 4.5384 5.95428 4.5384 6.3448 4.92893L12.0016 10.5857L17.6585 4.92888Z"
+              />
+            </svg>
+          </i>
+        </button>
+      </div>
+      <!--CLOSE-->
+
+      <div class="menu__navigation">
+        <nav>
+          <ul role="options">
+            <li role="option">
+              <a href="#" role="link">
+                <span class="menu__navigation__option">Index</span>
+              </a>
+            </li>
+            <li role="option">
+              <a href="#" role="link">
+                <span class="menu__navigation__option">Projects</span>
+              </a>
+            </li>
+            <li role="option">
+              <a href="#" role="link">
+                <span class="menu__navigation__option">About</span>
+              </a>
+            </li>
+            <li role="option">
+              <a href="#" role="link">
+                <span class="menu__navigation__option">Services</span>
+              </a>
+            </li>
+            <li role="option">
+              <a href="#" role="link">
+                <span class="menu__navigation__option">Contact</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="menu__footer" role="footer">
+        <ol role="options">
+          <li role="option">
+            <a href="#" role="link">
+              Instagram
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M8.11512 6.63605L15.9509 6.63605L4.9301 17.6569C4.85087 17.7361 4.78771 17.8253 4.74063 17.9205C4.61367 18.1771 4.6036 18.4768 4.71043 18.7403C4.75925 18.8606 4.83247 18.9734 4.9301 19.0711C5.32062 19.4616 5.95379 19.4616 6.34431 19.0711L17.3651 8.05026V15.886C17.3651 16.4383 17.8128 16.886 18.3651 16.886C18.9174 16.886 19.3651 16.4383 19.3651 15.886V5.63605C19.3651 5.60153 19.3634 5.56742 19.36 5.5338C19.3099 5.0409 18.9019 4.65382 18.3999 4.63664C18.3884 4.63625 18.3768 4.63605 18.3651 4.63605L8.11512 4.63605C7.56284 4.63605 7.11513 5.08376 7.11513 5.63605C7.11512 6.18833 7.56284 6.63605 8.11512 6.63605Z"
+                />
+              </svg>
+            </a>
+          </li>
+          <li role="option">
+            <a href="#" role="link">
+              Threads
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M8.11512 6.63605L15.9509 6.63605L4.9301 17.6569C4.85087 17.7361 4.78771 17.8253 4.74063 17.9205C4.61367 18.1771 4.6036 18.4768 4.71043 18.7403C4.75925 18.8606 4.83247 18.9734 4.9301 19.0711C5.32062 19.4616 5.95379 19.4616 6.34431 19.0711L17.3651 8.05026V15.886C17.3651 16.4383 17.8128 16.886 18.3651 16.886C18.9174 16.886 19.3651 16.4383 19.3651 15.886V5.63605C19.3651 5.60153 19.3634 5.56742 19.36 5.5338C19.3099 5.0409 18.9019 4.65382 18.3999 4.63664C18.3884 4.63625 18.3768 4.63605 18.3651 4.63605L8.11512 4.63605C7.56284 4.63605 7.11513 5.08376 7.11513 5.63605C7.11512 6.18833 7.56284 6.63605 8.11512 6.63605Z"
+                />
+              </svg>
+            </a>
+          </li>
+          <li role="option">
+            <a href="#" role="link">
+              Vimeo
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M8.11512 6.63605L15.9509 6.63605L4.9301 17.6569C4.85087 17.7361 4.78771 17.8253 4.74063 17.9205C4.61367 18.1771 4.6036 18.4768 4.71043 18.7403C4.75925 18.8606 4.83247 18.9734 4.9301 19.0711C5.32062 19.4616 5.95379 19.4616 6.34431 19.0711L17.3651 8.05026V15.886C17.3651 16.4383 17.8128 16.886 18.3651 16.886C18.9174 16.886 19.3651 16.4383 19.3651 15.886V5.63605C19.3651 5.60153 19.3634 5.56742 19.36 5.5338C19.3099 5.0409 18.9019 4.65382 18.3999 4.63664C18.3884 4.63625 18.3768 4.63605 18.3651 4.63605L8.11512 4.63605C7.56284 4.63605 7.11513 5.08376 7.11513 5.63605C7.11512 6.18833 7.56284 6.63605 8.11512 6.63605Z"
+                />
+              </svg>
+            </a>
+          </li>
+          <li role="option">
+            <a href="#" role="link">
+              Linkedin
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M8.11512 6.63605L15.9509 6.63605L4.9301 17.6569C4.85087 17.7361 4.78771 17.8253 4.74063 17.9205C4.61367 18.1771 4.6036 18.4768 4.71043 18.7403C4.75925 18.8606 4.83247 18.9734 4.9301 19.0711C5.32062 19.4616 5.95379 19.4616 6.34431 19.0711L17.3651 8.05026V15.886C17.3651 16.4383 17.8128 16.886 18.3651 16.886C18.9174 16.886 19.3651 16.4383 19.3651 15.886V5.63605C19.3651 5.60153 19.3634 5.56742 19.36 5.5338C19.3099 5.0409 18.9019 4.65382 18.3999 4.63664C18.3884 4.63625 18.3768 4.63605 18.3651 4.63605L8.11512 4.63605C7.56284 4.63605 7.11513 5.08376 7.11513 5.63605C7.11512 6.18833 7.56284 6.63605 8.11512 6.63605Z"
+                />
+              </svg>
+            </a>
+          </li>
+        </ol>
+      </div>
+    </aside>
+
+    <header class="header">
+      <div class="header__layout" role="layout">
+        <div class="header__logo">
+          <a role="logo">
+            <span>
+              <data>F</data>
+              <data>I</data>
+              <data>L</data>
+              <data>M</data>
+              <data>.TV</data>
+              <sup>®</sup>
+            </span>
+          </a>
+        </div>
+        <div class="header__menu">
+          <button type="button" class="js-button-open">
+            <span>Menu</span>
+            <i>
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M3 7C3 6.44772 3.44772 6 4 6H20C20.5523 6 21 6.44772 21 7C21 7.55229 20.5523 8 20 8H4C3.44772 8 3 7.55229 3 7Z"
+                />
+                <path
+                  d="M4 11C3.44772 11 3 11.4477 3 12C3 12.5522 3.44772 13 4 13H20C20.5523 13 21 12.5522 21 12C21 11.4477 20.5523 11 20 11H4Z"
+                />
+                <path
+                  d="M3 17C3 16.4477 3.44772 16 4 16H20C20.5523 16 21 16.4477 21 17C21 17.5523 20.5523 18 20 18H4C3.44772 18 3 17.5523 3 17Z"
+                /></svg
+            ></i>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="home__section">
+        <div class="home__title">
+          <h1><span class="js-cover-title">FILM PRODUCER</span></h1>
+          <h2>
+            <span class="js-cover-subtitle">
+              We have different specialized<br />services for audiovisual
+              productions.
+            </span>
+          </h2>
+        </div>
+
+        <div class="project__tags">
+          <ul role="options">
+            <li role="option">
+              <a href="#" class="js-cover-tags">
+                <span>(Shipwreck)</span>
+              </a>
+            </li>
+            <li role="option">
+              <time class="js-cover-tags">[10.12.2024]</time>
+            </li>
+            <li role="option">
+              <h4 class="js-cover-tags">Jaime Humberto Hermosillo</h4>
+            </li>
+          </ul>
+        </div>
+        <div class="project__cover js-cover-video">
+          <video
+            src="https://tympanus.net/Development/videoTransitions/3.0fdb9a6e.mp4"
+            preload="meta"
+            muted
+            loop
+            playsinline
+            autoplay
+          ></video>
+        </div>
+      </section>
+    </main>
+    <!-- partial -->
+    <script type="module" src="./script.js"></script>
+  </body>
+</html>

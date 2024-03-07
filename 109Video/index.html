@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="https://i.imgur.com/S47oR2o.png" />
+    <title>Video Play Pause Toggle</title>
+
+    <!-- styles -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- preloader -->
+    <div class="preloader">
+      <img
+        src="https://i.imgur.com/bkFCVa3.gif"
+        alt="preloader"
+        class="preloader__item"
+      />
+    </div>
+    <!-- header -->
+    <header>
+      <video controls muted autoplay loop class="video-container">
+        <source src="https://i.imgur.com/5xzABOG.mp4" type="video/mp4" />
+      </video>
+      <h1>video project</h1>
+      <!-- video switch -->
+      <button class="switch-btn">
+        <span class="play-text"> play </span>
+        <span class="pause-text"> pause </span>
+        <span class="switch"></span>
+      </button>
+    </header>
+    <div class="learning-box">
+      <h3>Learnings:</h3>
+      <ul class="learning-box-list">
+        <li>play()</li>
+        <li>if...else</li>
+        <li>pause()</li>
+        <li>contains()</li>
+        <li>classList.add()</li>
+        <li>querySelector()</li>
+        <li>classList.remove()</li>
+        <li>Logical Operators (!)</li>
+        <li>addEventListener : load</li>
+        <li>addEventListener : click</li>
+      </ul>
+    </div>
+    <!-- javascript -->
+    <script src="app.js"></script>
+  </body>
+</html>

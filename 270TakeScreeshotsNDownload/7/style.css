@@ -1,0 +1,42 @@
+@import url(https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/reset.css);
+
+.page-wrapper {
+  width: 90%;
+  max-width: 600px;
+  padding: 60px;
+  border-radius: 10px;
+  text-align: center;
+  background: rgb(32, 32, 32);
+  color: whitesmoke;
+}
+.page-wrapper p {
+  font-size: 60px;
+}
+.download-btn {
+  margin: 10px auto;
+  display: flex;
+  color: #fff;
+  font-size: 24px;
+  line-height: 2;
+  cursor: pointer;
+  padding: 10px 60px;
+  align-items: center;
+  border-radius: 100px;
+  width: max-content;
+  text-align: center;
+  user-select: none;
+  transition: 1s all ease;
+  justify-content: center;
+  background-color: #3d4aff;
+  border: 4px solid #878fff;
+}
+
+.download-btn:hover {
+  opacity: 0.6;
+}
+
+.download-btn:active {
+  opacity: 1;
+  box-shadow: none;
+  transform: scale(0.7);
+}

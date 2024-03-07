@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0,maximum-scale=1, user-scalable=no"
+    />
+    <link
+      rel="icon"
+      href="https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/favicon.png"
+    />
+    <title>Matter CSS Variables with JS</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main>
+      <header>Pure CSS Material Components Showcase</header>
+
+      <section class="grid">
+        <div></div>
+        <div class="column">Enabled</div>
+        <div class="column">Disabled</div>
+
+        <a
+          class="title"
+          href="https://codepen.io/finnhvman/pen/MQyJxV"
+          target="_top"
+          >Button - Contained</a
+        >
+        <div>
+          <button class="pure-material-button-contained">Contained</button>
+        </div>
+        <div>
+          <button class="pure-material-button-contained" disabled>
+            Contained
+          </button>
+        </div>
+
+        <a class="title" href="#" target="_top">Button - Outlined</a>
+        <div>
+          <button class="pure-material-button-outlined">Outlined</button>
+        </div>
+        <div>
+          <button class="pure-material-button-outlined" disabled>
+            Outlined
+          </button>
+        </div>
+
+        <a
+          class="title"
+          href="https://codepen.io/finnhvman/pen/YeXwNY"
+          target="_top"
+          >Button - Text</a
+        >
+        <div><button class="pure-material-button-text">Text</button></div>
+        <div>
+          <button class="pure-material-button-text" disabled>Text</button>
+        </div>
+
+        <a
+          class="title"
+          href="https://codepen.io/finnhvman/pen/zpygBB"
+          target="_top"
+          >Checkbox</a
+        >
+        <div class="checkboxes">
+          <label class="pure-material-checkbox">
+            <input type="checkbox" />
+            <span>Unchecked</span>
+          </label>
+          <label class="pure-material-checkbox">
+            <input type="checkbox" checked />
+            <span>Checked</span>
+          </label>
+          <label class="pure-material-checkbox">
+            <input type="checkbox" />
+            <span>Indeterminate</span>
+          </label>
+        </div>
+        <div class="checkboxes">
+          <label class="pure-material-checkbox">
+            <input type="checkbox" disabled />
+            <span>Unchecked</span>
+          </label>
+          <label class="pure-material-checkbox">
+            <input type="checkbox" checked disabled />
+            <span>Checked</span>
+          </label>
+          <label class="pure-material-checkbox">
+            <input type="checkbox" disabled />
+            <span>Indeterminate</span>
+          </label>
+        </div>
+
+        <a
+          class="title"
+          href="https://codepen.io/finnhvman/pen/vVwJbq"
+          target="_top"
+          >Radio Buttons</a
+        >
+        <div class="radios">
+          <label class="pure-material-radio">
+            <input type="radio" name="group-enabled" />
+            <span>Unchecked</span>
+          </label>
+          <label class="pure-material-radio">
+            <input type="radio" name="group-enabled" checked />
+            <span>Checked</span>
+          </label>
+        </div>
+        <div class="radios">
+          <label class="pure-material-radio">
+            <input type="radio" name="group-disabled" disabled />
+            <span>Unchecked</span>
+          </label>
+          <label class="pure-material-radio">
+            <input type="radio" name="group-disabled" checked disabled />
+            <span>Checked</span>
+          </label>
+        </div>
+
+        <a
+          class="title"
+          href="https://codepen.io/finnhvman/pen/pOeyjE"
+          target="_top"
+          >Switch</a
+        >
+        <div class="switches">
+          <label class="pure-material-switch">
+            <input type="checkbox" />
+            <span>Off</span>
+          </label>
+          <br />
+          <label class="pure-material-switch">
+            <input type="checkbox" checked />
+            <span>On</span>
+          </label>
+        </div>
+        <div class="switches">
+          <label class="pure-material-switch">
+            <input type="checkbox" disabled />
+            <span>Off</span>
+          </label>
+          <br />
+          <label class="pure-material-switch">
+            <input type="checkbox" checked disabled />
+            <span>On</span>
+          </label>
+        </div>
+
+        <a
+          class="title"
+          href="https://codepen.io/finnhvman/pen/LJWJVR"
+          target="_top"
+          >Slider</a
+        >
+        <div>
+          <label class="pure-material-slider">
+            <input type="range" min="0" max="100" />
+            <span>Slider</span>
+          </label>
+        </div>
+        <div>
+          <label class="pure-material-slider">
+            <input type="range" min="0" max="100" disabled />
+            <span>Slider</span>
+          </label>
+        </div>
+
+        <a
+          class="title"
+          href="https://codepen.io/finnhvman/pen/bmNdNr"
+          target="_top"
+          >Progress - Circular</a
+        >
+        <div><progress class="pure-material-progress-circular"></progress></div>
+        <div></div>
+
+        <a
+          class="title"
+          href="https://codepen.io/finnhvman/pen/OBLZRX"
+          target="_top"
+          >Progress - Linear</a
+        >
+        <div class="progresses">
+          <progress
+            class="pure-material-progress-linear"
+            value="0"
+            max="100"
+          ></progress>
+          <progress class="pure-material-progress-linear"></progress>
+        </div>
+        <div></div>
+
+        <a
+          class="title"
+          href="https://codepen.io/finnhvman/pen/bxXPqN"
+          target="_top"
+          >Textfield - Filled</a
+        >
+        <div class="textfields">
+          <label class="pure-material-textfield-filled">
+            <input placeholder=" " />
+            <span>Empty</span>
+          </label>
+          <label class="pure-material-textfield-filled">
+            <input placeholder=" " value="Some text" />
+            <span>Non-empty</span>
+          </label>
+          <label class="pure-material-textfield-filled">
+            <textarea placeholder=" "></textarea>
+            <span>Empty Textarea</span>
+          </label>
+          <label class="pure-material-textfield-filled">
+            <textarea placeholder=" ">Some text</textarea>
+            <span>Non-empty Textarea</span>
+          </label>
+        </div>
+        <div class="textfields">
+          <label class="pure-material-textfield-filled">
+            <input placeholder=" " disabled />
+            <span>Empty</span>
+          </label>
+          <label class="pure-material-textfield-filled">
+            <input placeholder=" " value="Some text" disabled />
+            <span>Non-empty</span>
+          </label>
+          <label class="pure-material-textfield-filled">
+            <textarea placeholder=" " disabled></textarea>
+            <span>Empty Textarea</span>
+          </label>
+          <label class="pure-material-textfield-filled">
+            <textarea placeholder=" " disabled>Some text</textarea>
+            <span>Non-empty Textarea</span>
+          </label>
+        </div>
+
+        <a
+          class="title"
+          href="https://codepen.io/finnhvman/pen/xyOORQ"
+          target="_top"
+          >Textfield - Outlined</a
+        >
+        <div class="textfields">
+          <label class="pure-material-textfield-outlined">
+            <input placeholder=" " />
+            <span>Empty</span>
+          </label>
+          <label class="pure-material-textfield-outlined">
+            <input placeholder=" " value="Some text" />
+            <span>Non-empty</span>
+          </label>
+          <label class="pure-material-textfield-outlined">
+            <textarea placeholder=" "></textarea>
+            <span>Empty Textarea</span>
+          </label>
+          <label class="pure-material-textfield-outlined">
+            <textarea placeholder=" ">Some text</textarea>
+            <span>Non-empty Textarea</span>
+          </label>
+        </div>
+        <div class="textfields">
+          <label class="pure-material-textfield-outlined">
+            <input placeholder=" " disabled />
+            <span>Empty</span>
+          </label>
+          <label class="pure-material-textfield-outlined">
+            <input placeholder=" " value="Some text" disabled />
+            <span>Non-empty</span>
+          </label>
+          <label class="pure-material-textfield-outlined">
+            <textarea placeholder=" " disabled></textarea>
+            <span>Empty Textarea</span>
+          </label>
+          <label class="pure-material-textfield-outlined">
+            <textarea placeholder=" " disabled>Some text</textarea>
+            <span>Non-empty Textarea</span>
+          </label>
+        </div>
+
+        <a
+          class="title"
+          href="https://codepen.io/finnhvman/pen/GyzbEj"
+          target="_top"
+          >Textfield - Standard</a
+        >
+        <div class="textfields">
+          <label class="pure-material-textfield-standard">
+            <input placeholder=" " />
+            <span>Empty</span>
+          </label>
+          <label class="pure-material-textfield-standard">
+            <input placeholder=" " value="Some text" />
+            <span>Non-empty</span>
+          </label>
+          <label class="pure-material-textfield-standard">
+            <textarea placeholder=" "></textarea>
+            <span>Empty Textarea</span>
+          </label>
+          <label class="pure-material-textfield-standard">
+            <textarea placeholder=" ">Some text</textarea>
+            <span>Non-empty Textarea</span>
+          </label>
+        </div>
+        <div class="textfields">
+          <label class="pure-material-textfield-standard">
+            <input placeholder=" " disabled />
+            <span>Empty</span>
+          </label>
+          <label class="pure-material-textfield-standard">
+            <input placeholder=" " value="Some text" disabled />
+            <span>Non-empty</span>
+          </label>
+          <label class="pure-material-textfield-standard">
+            <textarea placeholder=" " disabled></textarea>
+            <span>Empty Textarea</span>
+          </label>
+          <label class="pure-material-textfield-standard">
+            <textarea placeholder=" " disabled>Some text</textarea>
+            <span>Non-empty Textarea</span>
+          </label>
+        </div>
+
+        <aside>
+          <div class="theming">
+            <label id="toggle" class="pure-material-switch">
+              <input type="checkbox" checked />
+              <span>Colors</span>
+            </label>
+            <label id="primary" class="pure-material-slider">
+              <input type="range" min="0" max="360" value="207" />
+              <span>Primary</span>
+            </label>
+            <label id="on-primary" class="pure-material-slider">
+              <input type="range" min="0" max="255" value="255" />
+              <span>On Primary</span>
+            </label>
+            <label id="surface" class="pure-material-slider">
+              <input type="range" min="0" max="255" value="255" />
+              <span>Surface</span>
+            </label>
+            <label id="on-surface" class="pure-material-slider">
+              <input type="range" min="0" max="255" value="0" />
+              <span>On Surface</span>
+            </label>
+          </div>
+        </aside>
+      </section>
+    </main>
+    <!-- partial -->
+    <script src="script.js"></script>
+    <script src="https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/mylearnings.js"></script>
+  </body>
+</html>

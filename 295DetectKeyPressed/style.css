@@ -1,0 +1,39 @@
+@import url(https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/reset.css);
+
+body {
+  height: 100vh;
+  background: linear-gradient(#2887e3 50%, #16191e 50%);
+}
+#result {
+  top: 50%;
+  left: 50%;
+  width: 80vw;
+  max-width: 600px;
+  color: #f5f5f5;
+  position: absolute;
+  padding: 80px 40px;
+  text-align: center;
+  font-size: 3.6vmin;
+  font-style: italic;
+  border-radius: 10px;
+  background-color: #242831;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 10px 50px rgba(0, 0, 0, 0.2);
+}
+#result span:nth-child(1) {
+  color: #2887e3;
+  font-size: 3em;
+  display: block;
+  font-style: normal;
+}
+#result span:nth-child(2) {
+  font-size: 1.5em;
+  font-style: normal;
+}
+.footer {
+  position: absolute;
+  bottom: 30px;
+  width: 100%;
+  left: 0;
+  text-align: center;
+}

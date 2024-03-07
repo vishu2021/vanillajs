@@ -1,0 +1,27 @@
+@import url(https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/reset.css);
+h1 {
+  color: #fff;
+  line-height: 2;
+  font-size: 40px;
+  text-align: center;
+}
+#context-menu {
+  color: #1f194c;
+  width: max-content;
+  padding: 0.8em 0.6em;
+  font-size: 1.3rem;
+  position: fixed;
+  visibility: hidden;
+  transition: 1s all ease;
+  transform: scale(1.5);
+  background-color: rgba(255, 255, 255, 1);
+  box-shadow: 0 0 100px rgba(255, 255, 255, 0.4);
+}
+.item {
+  padding: 0.3em 1.2em;
+}
+.item:hover {
+  color: #fff;
+  cursor: pointer;
+  background-color: rgba(0, 95, 197, 0.7);
+}

@@ -1,0 +1,276 @@
+@import url(https://fonts.googleapis.com/css?family=Lato);
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  font-family: "Lato", sans-serif;
+}
+.timeline ul {
+  padding: 50px 0 300px;
+}
+.timeline ul li {
+  background: #d8031c;
+  position: relative;
+  margin: 0 auto;
+  width: 5px;
+  padding-bottom: 40px;
+  list-style-type: none;
+}
+.timeline ul li:last-child {
+  padding-bottom: 7px;
+}
+.timeline ul li:before {
+  content: "";
+  background: #faf8eb;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  width: 20px;
+  height: 20px;
+  border: 3px solid #d8031c;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+.timeline ul li .hidden {
+  opacity: 0;
+}
+.timeline ul li .content {
+  background: #67cc8e;
+  position: relative;
+  top: 7px;
+  width: 450px;
+  padding: 20px;
+  transition: all 0.4s ease-in-out;
+  z-index: 14;
+  box-shadow: 7px 6px 15px 0px rgba(0, 0, 0, 0.25);
+}
+.timeline ul li .content * {
+  color: #fff;
+}
+/* ***************** non vosible elements ***************** */
+.timeline ul li .content.non-focus::before {
+  display: none;
+}
+.timeline ul li .content.non-focus {
+  transform: rotate(20deg);
+  opacity: 0.4;
+  filter: blur(5px);
+  z-index: 11;
+}
+/* ***************** non vosible elements ***************** */
+
+.timeline ul li .content {
+  color: #d2d2d2;
+  background: #e6e6e6;
+}
+.timeline ul li .content p {
+  text-align: left;
+}
+.timeline ul li .content:before {
+  content: "";
+  background: inherit;
+  position: absolute;
+  top: 0px;
+  width: 38px;
+  height: 5px;
+}
+.timeline ul li:nth-child(odd) .content {
+  left: 50px;
+  background: #01016f;
+  border-radius: 0px 4px 4px 4px;
+}
+.timeline ul li:nth-child(odd) .content:before {
+  left: -38px;
+}
+.timeline ul li:nth-child(even) .content {
+  left: calc(-450px - 45px);
+  background: #01016f;
+  border-radius: 4px 0px 4px 4px;
+}
+.timeline ul li:nth-child(even) .content:before {
+  right: -38px;
+}
+/* **** custom css*/
+.timeline-content-info {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 4px;
+  padding: 2%;
+  background-color: #6497bf;
+}
+.content-skills {
+  margin: 15px 0px 0px 0px;
+}
+.content-skills span {
+  background: #d8031c;
+  border-radius: 4px;
+  padding: 2px;
+}
+/*****************/
+/* -------------------------
+   ----- Media Queries ----- 
+   ------------------------- */
+@media screen and (max-width: 1020px) {
+  .timeline ul li .content {
+    width: 41vw;
+  }
+
+  .timeline ul li:nth-child(even) .content {
+    left: calc(-41vw - 45px);
+  }
+}
+@media screen and (max-width: 700px) {
+  .timeline ul li {
+    margin-left: 20px;
+  }
+  .timeline ul li .content {
+    width: calc(100vw - 100px);
+  }
+  .timeline ul li:nth-child(even) .content {
+    left: 45px;
+    background: #01016f;
+    border-radius: 0px 4px 4px 4px;
+  }
+  .timeline ul li:nth-child(even) .content:before {
+    left: -33px;
+  }
+}
+
+/* Integration of Fonts */
+body,
+button,
+input {
+  font-family: "Cascadia Code PL", sans-serif;
+}
+
+@font-face {
+  font-family: "Cascadia Code PL";
+  src: url("https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/fonts/CascadiaCodePL-BoldItalic.eot");
+  src: url("https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/fonts/CascadiaCodePL-BoldItalic.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/fonts/CascadiaCodePL-BoldItalic.woff2")
+      format("woff2"),
+    url("https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/fonts/CascadiaCodePL-BoldItalic.woff")
+      format("woff"),
+    url("https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/fonts/CascadiaCodePL-BoldItalic.ttf")
+      format("truetype"),
+    url("https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/fonts/CascadiaCodePL-BoldItalic.svg#CascadiaCodePL-BoldItalic")
+      format("svg");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Cascadia Code PL";
+  src: url("https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/fonts/CascadiaCodePL-Italic.eot");
+  src: url("https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/fonts/CascadiaCodePL-Italic.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/fonts/CascadiaCodePL-Italic.woff2")
+      format("woff2"),
+    url("https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/fonts/CascadiaCodePL-Italic.woff")
+      format("woff"),
+    url("https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/fonts/CascadiaCodePL-Italic.ttf")
+      format("truetype"),
+    url("https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/fonts/CascadiaCodePL-Italic.svg#CascadiaCodePL-Italic")
+      format("svg");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Learning Box starts here */
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(#4b2146, #1419f9);
+  border-radius: 10px;
+}
+
+.learning-box {
+  padding: 0;
+  left: 10px;
+  z-index: 99;
+  /* height: 100%; */
+  bottom: 10px;
+  display: flex;
+  position: fixed;
+  max-width: 400px;
+  text-align: left;
+  border-radius: 10px;
+  pointer-events: none;
+  flex-direction: column;
+  backdrop-filter: blur(9.5px);
+  max-height: calc(100% - 20px);
+  background: rgba(0, 0, 63, 0.75);
+  -webkit-backdrop-filter: blur(9.5px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+/* width */
+.learning-box-list::-webkit-scrollbar {
+  width: 4px;
+}
+
+/* Track */
+.learning-box-list::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+/* Handle */
+.learning-box-list::-webkit-scrollbar-thumb {
+  background: #aaa;
+  border-radius: 10px;
+}
+
+.learning-box h3 {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 12px 14px 6px;
+  margin: 0;
+}
+
+.learning-box-list {
+  margin: 0;
+  max-height: 94%;
+  overflow: auto;
+  padding: 0 14px 14px 40px;
+}
+
+.learning-box-list li {
+  color: #fff;
+  font-size: 12px;
+  line-height: 1.6;
+  font-weight: normal;
+  list-style: decimal;
+}
+
+@media screen and (max-width: 1000px) {
+  .learning-box {
+    display: none;
+  }
+}
+
+/* Learning Box ends here */

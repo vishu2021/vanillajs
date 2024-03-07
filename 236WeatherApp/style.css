@@ -1,0 +1,129 @@
+@import url(https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/reset.css);
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  width: 300px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 10px;
+  padding: 20px 20px;
+  transform: scale(1.5);
+  background-color: rgb(238 255 0 / 30%);
+}
+
+.app-title {
+  width: 100%;
+}
+
+.app-title p {
+  text-align: center;
+  padding: 0 0 15px;
+  margin: 0 auto;
+  font-size: 1.2em;
+  color: #fff;
+
+  font-weight: bold;
+}
+
+.notification {
+  background-color: #f8d7da;
+  display: none;
+}
+
+.notification p {
+  color: #721c24;
+  font-size: 1.2em;
+  margin: 0;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.weather-container {
+  width: 100%;
+  height: auto;
+  padding: 0 0 30px;
+  border-radius: 10px;
+  background-color: rgba(235, 244, 255, 0.68);
+  box-shadow: 0 0 40px rgba(235, 244, 255, 0.4);
+}
+
+.weather-icon {
+  width: 100%;
+  height: 128px;
+}
+
+.weather-icon img {
+  display: block;
+  margin: 0 auto;
+}
+
+.temperature-value p {
+  padding: 0;
+  margin: 0;
+  color: #000;
+  font-size: 4em;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+  text-decoration: blink;
+  -webkit-animation-name: blinker;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-in-out;
+  -webkit-animation-direction: alternate;
+  animation-name: blinker;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-direction: alternate;
+}
+
+@-webkit-keyframes blinker {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes blinker {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+.temperature-value p:hover {
+  color: #910000;
+}
+
+.temperature-value span {
+  color: #000;
+  font-size: 0.5em;
+}
+
+.temperature-description p {
+  color: #000;
+  font-size: 1.2em;
+  margin: 20px 0;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.location p {
+  margin: 0;
+  padding: 0;
+  color: #000;
+  text-align: center;
+  font-size: 0.8em;
+}

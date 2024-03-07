@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/favicon.png"
+    />
+    <title>Live Character Count</title>
+
+    <!-- Stylesheet -->
+    <style>
+      @import url(https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/reset.css);
+
+      body {
+        background-color: #0a192f;
+      }
+      .container {
+        width: 400px;
+        position: absolute;
+        transform: translate(-50%, -50%) scale(2);
+        top: 50%;
+        left: 50%;
+      }
+      textarea {
+        width: 100%;
+        resize: none;
+        background-color: rgba(23, 42, 70, 0.5);
+        border: 4px solid rgba(24, 255, 3, 0.7);
+        font-size: 16px;
+        line-height: 30px;
+        padding: 15px;
+        border-radius: 20px;
+        color: #fff;
+        outline: none;
+      }
+      p {
+        color: #18ff03;
+        text-align: right;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <textarea
+        id="my-text"
+        rows="8"
+        placeholder="Type something here..."
+      ></textarea>
+      <p id="count-result">Total characters: 0</p>
+    </div>
+
+    <!--Script-->
+    <script>
+      let myText = document.getElementById("my-text");
+      myText.addEventListener("input", () => {
+        let count = myText.value.length;
+        document.getElementById(
+          "count-result"
+        ).textContent = `Total characters: ${count}`;
+      });
+      // Learnings from this project are listed below:
+      const myLearnings = [
+        "value",
+        "length",
+        "textContent",
+        "getElementById()",
+        "Backtick Literals (``)",
+        "addEventListener : input",
+      ];
+    </script>
+    <script src="https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/mylearnings.js"></script>
+  </body>
+</html>

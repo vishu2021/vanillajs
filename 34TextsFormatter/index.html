@@ -1,0 +1,67 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="https://i.imgur.com/S47oR2o.png" />
+    <title>Text Formatter</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <button class="btn-refresh" id="btnRefresh">
+        <svg
+          width="20"
+          height="20"
+          viewBox="0 0 20 20"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect
+            width="20"
+            height="20"
+            rx="10"
+            fill="white"
+            fill-opacity="0.3"
+          />
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M4 9.69169C4 10.089 4.32208 10.4111 4.71939 10.4111C5.10546 10.3995 5.41348 10.0851 5.41718 9.69886C5.44661 8.0313 6.4341 6.52987 7.95362 5.84238C9.47312 5.15488 11.2528 5.40437 12.5247 6.48315H12.2945C11.8972 6.48315 11.5751 6.80523 11.5751 7.20256C11.5751 7.59988 11.8972 7.92196 12.2945 7.92196H14.3303C14.7277 7.92196 15.0497 7.59988 15.0497 7.20256V5.16664C15.0497 4.76935 14.7277 4.44726 14.3303 4.44726C13.933 4.44726 13.611 4.76935 13.611 5.16664V5.4832C11.9313 3.96698 9.51907 3.57574 7.44633 4.48336C5.37358 5.39099 4.02502 7.42903 4 9.69169ZM14.5677 10.2025C14.5677 9.80513 14.8898 9.48304 15.2871 9.48304C15.6788 9.48696 15.9954 9.80354 15.9993 10.1953C16.0233 11.7434 15.4155 13.2345 14.316 14.3246C12.1486 16.4811 8.67331 16.5664 6.40275 14.5189V14.8354C6.40275 15.2327 6.08067 15.5548 5.68336 15.5548C5.28604 15.5548 4.96397 15.2327 4.96397 14.8354V12.7995C4.96397 12.4022 5.28604 12.0801 5.68336 12.0801H7.7408C8.13809 12.0801 8.46017 12.4022 8.46017 12.7995C8.46017 13.1968 8.13809 13.5189 7.7408 13.5189H7.489C8.77572 14.5906 10.5662 14.8214 12.0826 14.111C13.599 13.4005 14.5677 11.8771 14.5677 10.2025Z"
+            fill="white"
+          />
+        </svg>
+      </button>
+      <div class="input-container">
+        <h2>Type In Your Words</h2>
+        <input type="text" id="input-field" placeholder="Type Your Text Here" />
+      </div>
+      <div class="btns-container">
+        <button class="btn uppercase">ABC</button>
+        <button class="btn lowercase">abc</button>
+        <button class="btn capitalize">Abc</button>
+        <button class="btn bold">Bold</button>
+        <button class="btn italic">Italic</button>
+        <button class="btn underline">ABC</button>
+      </div>
+      <p id="output-field">Output</p>
+    </div>
+    <div class="learning-box">
+      <h3>Learnings:</h3>
+      <ul class="learning-box-list">
+        <li>value</li>
+        <li>slice()</li>
+        <li>charAt()</li>
+        <li>forEach()</li>
+        <li>innerHTML</li>
+        <li>toLowerCase()</li>
+        <li>toUpperCase()</li>
+        <li>classList.contains()</li>
+        <li>toLocaleLowerCase()</li>
+        <li>addEventListener : click</li>
+        <li>addEventListener : keyup</li>
+      </ul>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>

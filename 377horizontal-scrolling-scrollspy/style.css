@@ -1,0 +1,143 @@
+@import url(https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/reset.css);
+
+body {
+  position: relative;
+  display: block;
+}
+
+header.secondary-nav .scroll {
+  white-space: nowrap;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+header.secondary-nav .scroll::-webkit-scrollbar {
+  display: none;
+}
+
+header.secondary-nav .submenu {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 100%;
+  height: 0;
+  clear: both;
+  background-color: #fbf7fc;
+  box-shadow: 0 0.3rem 0.3rem rgba(0, 0, 0, 0.15) !important;
+}
+
+header.secondary-nav .submenu.visible {
+  display: block;
+  height: auto;
+  border-top: 1px solid #e8e8e8;
+}
+
+header.secondary-nav .dropdown {
+  position: inherit;
+}
+
+header.secondary-nav .dropdown-item {
+  display: inline-block;
+  font-size: 20px;
+  font-weight: 500;
+  width: auto;
+  clear: inherit;
+  padding: 20px 30px;
+}
+header.secondary-nav .dropdown-toggle.visible {
+  background: #fbf7fc;
+}
+
+header.secondary-nav .dropdown-item.active,
+header.secondary-nav .dropdown-item:active,
+header.secondary-nav .dropdown-item:hover {
+  background: #fff;
+  color: #6a2c79;
+}
+
+/*Don't Remove this give class/id if required*/
+header.secondary-nav,
+header.secondary-nav nav {
+  font-size: 0;
+}
+
+header.secondary-nav {
+  background-color: #fff;
+  position: relative;
+  z-index: 2;
+  clear: both;
+  width: 100%;
+  /* Force Hardware Acceleration */
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  will-change: transform;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+}
+
+header.secondary-nav .vam {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+header.secondary-nav .nav {
+  width: 100%;
+}
+
+header.secondary-nav .nav-item {
+  display: inline-block;
+  vertical-align: middle;
+}
+header.secondary-nav .nav-link {
+  padding: 18px 30px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  header.secondary-nav::after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 35px;
+    background: linear-gradient(to left, #e3e3e3, rgba(37, 40, 61, 0));
+    pointer-events: none;
+    transition: opacity 0.2s;
+  }
+
+  header.secondary-nav .nav-link {
+    padding: 14px 10px;
+  }
+}
+header.secondary-nav .nav-link.active {
+  color: #000;
+  box-shadow: inset 0px -3px 0px 0px #fdac00;
+}
+
+.tab-content {
+  width: 90%;
+  padding: 40px;
+  max-width: 900px;
+  margin: 40px auto;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.9);
+}
+.tab-content h4 {
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 2;
+}
+.tab-content p {
+  font-size: 20px;
+  line-height: 2;
+}
+.learning-box {
+  pointer-events: initial;
+}

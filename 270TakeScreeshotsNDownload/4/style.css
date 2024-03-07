@@ -1,0 +1,53 @@
+@import url(https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/reset.css);
+.page-wrapper {
+  text-align: center;
+}
+.main {
+  width: 800px;
+  display: flex;
+  color: #00cc65;
+  position: relative;
+  background-color: red;
+}
+.main img {
+  width: 100%;
+}
+.main h3 {
+  left: 0;
+  top: 50%;
+  width: 100%;
+  color: #000;
+  line-height: 2;
+  font-size: 40px;
+  position: absolute;
+  transform: translateY(-50%);
+  background-color: rgba(0, 255, 255, 0.6);
+}
+#btn-Convert-Html2Image {
+  margin: 10px auto;
+  display: flex;
+  color: #fff;
+  font-size: 24px;
+  line-height: 2;
+  cursor: pointer;
+  padding: 10px 60px;
+  align-items: center;
+  border-radius: 100px;
+  width: max-content;
+  text-align: center;
+  user-select: none;
+  transition: 1s all ease;
+  justify-content: center;
+  background-color: #3d4aff;
+  border: 4px solid #878fff;
+  text-decoration: none;
+}
+
+#btn-Convert-Html2Image:hover {
+  opacity: 0.6;
+}
+
+#btn-Convert-Html2Image:active {
+  opacity: 1;
+  transform: scale(0.7);
+}

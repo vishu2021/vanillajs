@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/favicon.png"
+    />
+    <title>Video Speed Scrubber</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <video
+        class="flex"
+        width="765"
+        height="430"
+        poster="https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/video-poster.png"
+        src="https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/video.mp4"
+        loop
+        controls
+      ></video>
+      <div class="speed">
+        <div class="speed-bar">1×</div>
+      </div>
+    </div>
+
+    <script>
+      const speed = document.querySelector(".speed");
+      const bar = speed.querySelector(".speed-bar");
+      const video = document.querySelector(".flex");
+      function handleMove(e) {
+        const y = e.pageY - this.offsetTop;
+        const percent = y / this.offsetHeight;
+        const min = 0.4;
+        const max = 4;
+        const height = Math.round(percent * 100) + "%";
+        const playbackRate = percent * (max - min) + min;
+        bar.style.height = height;
+        bar.textContent = playbackRate.toFixed(2) + "×";
+        video.playbackRate = playbackRate;
+      }
+      speed.addEventListener("mousemove", handleMove);
+      // Learnings from this project are listed below:
+      const myLearnings = [
+        "event",
+        "pageY",
+        "offsetTop",
+        "toFixed()",
+        "textContent",
+        "offsetHeight",
+        "Math.round()",
+        "playbackRate",
+        "Dynamic Styles",
+        "querySelector()",
+        "Backtick Literals (``)",
+        "addEventListener : mousemove",
+        "Arithmetic Operators (+,-,*,/)",
+      ];
+    </script>
+    <script src="https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/mylearnings.js"></script>
+  </body>
+</html>

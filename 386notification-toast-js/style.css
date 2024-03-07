@@ -1,0 +1,151 @@
+@import url(https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/reset.css);
+
+.hs-toast-fixed-top {
+  position: fixed;
+  top: 60px;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.hs-toast-absolute-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.hs-toast-wrapper {
+  margin: 0 auto;
+  max-width: 44rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+.hs-toast {
+  margin: 0 auto;
+  border-radius: 0.25rem;
+  box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.2);
+  background: #5b7e96;
+  padding: 0.5rem 0.75rem;
+  max-width: 40rem;
+  position: relative;
+}
+
+.hs-toast-inner {
+  display: flex;
+}
+.hs-toast-msg {
+  color: white;
+  line-height: 1.5rem;
+  flex: 1 1 0%;
+  min-width: 0;
+  padding-top: 0.2rem;
+  padding-left: 0.5rem;
+  padding-right: 0.75rem;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+}
+.hs-toast-msg ul {
+  margin: 0;
+  padding-left: 0.75rem;
+}
+.hs-toast-icons,
+.hs-toast-action {
+  flex: none;
+  color: white;
+}
+.hs-toast-action,
+.hs-close {
+  cursor: pointer;
+}
+
+.hs-close {
+  border: none;
+  background: none;
+  color: white;
+  outline: none;
+  padding: 0;
+}
+.hs-toast + .hs-toast {
+  margin-top: 0.5rem;
+}
+.hs-theme-error {
+  background: #dd2134;
+}
+.hs-theme-success {
+  background: #03973b;
+}
+.hs-theme-warning {
+  background: #cf5300;
+}
+.buttons-wrapper {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  z-index: 9999;
+  position: absolute;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(10px);
+}
+.buttons-wrapper button {
+  margin: 10px;
+  display: flex;
+  color: #fff;
+  font-size: 20px;
+  line-height: 2;
+  cursor: pointer;
+  padding: 4px 30px;
+  align-items: center;
+  border-radius: 100px;
+  width: max-content;
+  text-align: center;
+  user-select: none;
+  transition: 1s all ease;
+  justify-content: center;
+  background-color: #3d4aff;
+  border: 4px solid #878fff;
+}
+
+.buttons-wrapper button:hover {
+  opacity: 0.6;
+}
+
+.buttons-wrapper button:active {
+  opacity: 1;
+  box-shadow: none;
+  transform: scale(0.7);
+}
+#showDefaultMsg {
+  border-color: #90d2ff;
+  background-color: #436b85;
+}
+#showSuccessMsg {
+  border-color: #a4ffc7;
+  background-color: #03973b;
+}
+#showErrorMsg {
+  border-color: #ffacb4;
+  background-color: #dd2134;
+}
+#showWarningMsg {
+  border-color: #ffb27f;
+  background-color: #cf5300;
+}
+#showMultipleMsg {
+  border-color: #ff7482;
+  background-color: #8d0210;
+}
+#showAutoClose {
+  border-color: #74ffa9;
+  background-color: #016a29;
+}
+.learning-box {
+  top: 4px;
+  bottom: auto;
+}

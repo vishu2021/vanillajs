@@ -1,0 +1,113 @@
+@import url(https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/reset.css);
+
+.container {
+  position: absolute;
+  background-color: #ffffff;
+  width: 90%;
+  max-width: 700px;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  padding: 3em 2em;
+  border-radius: 0.5em;
+}
+.app-title {
+  margin: auto;
+  color: #020332;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  position: relative;
+}
+.input-wrapper {
+  display: grid;
+  grid-template-columns: 9fr 3fr;
+  gap: 1em;
+  margin: 2.5em 0;
+}
+#name,
+#submit {
+  font-size: 24px;
+}
+#name {
+  outline: none;
+  padding: 0 1em;
+  border-radius: 100px;
+  border: 4px solid #3d4aff;
+  transition: 1s all ease;
+}
+#name:focus {
+  background-color: #d1d2fa;
+}
+#submit {
+  margin: 0 0 0 10px;
+  display: flex;
+  color: #fff;
+  font-size: 24px;
+  line-height: 2;
+  cursor: pointer;
+  padding: 10px 60px;
+  align-items: center;
+  border-radius: 100px;
+  width: max-content;
+  text-align: center;
+  user-select: none;
+  transition: 1s all ease;
+  justify-content: center;
+  background-color: #3d4aff;
+  border: 4px solid #878fff;
+}
+#submit:hover {
+  opacity: 0.8;
+}
+
+#submit:active {
+  opacity: 1;
+  transform: scale(0.7);
+}
+.female {
+  background-color: #ff5f96;
+}
+.male {
+  background-color: #5a72e9;
+}
+#info {
+  padding: 2em 1em;
+  text-align: center;
+  border-radius: 0.9em;
+}
+#result-name {
+  text-transform: capitalize;
+  font-weight: bold;
+  color: #edecec;
+}
+#gender-icon {
+  display: block;
+  width: 5em;
+  position: relative;
+  margin: 2em auto 1em auto;
+}
+#gender {
+  color: #ffffff;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+#prob {
+  letter-spacing: 0.2em;
+  line-height: 3;
+  font-weight: 500;
+  color: #edecec;
+}
+.footer {
+  position: absolute;
+  padding: 20px;
+  bottom: 0;
+  right: 0;
+}
+#error {
+  color: #f00;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+}

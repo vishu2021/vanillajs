@@ -1,0 +1,106 @@
+@import url(https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/reset.css);
+
+.container {
+  display: flex;
+  gap: 50px;
+}
+
+#posts {
+  width: 400px;
+}
+
+#posts div {
+  display: flex;
+  margin: 0 0 10px;
+  padding: 4px 10px;
+  border-radius: 8px;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+#posts p {
+  font-size: 14px;
+  text-align: left;
+  line-height: 1.6;
+  padding-right: 20px;
+  word-break: break-all;
+}
+.options {
+  gap: 5px;
+  display: flex;
+}
+
+i {
+  cursor: pointer;
+}
+
+#msg {
+  color: red;
+  line-height: 2;
+  font-size: 16px;
+  border-radius: 4px;
+  background-color: rgb(255, 210, 210);
+}
+.page-wrapper {
+  margin: auto;
+  max-width: 900px;
+  text-align: center;
+}
+.page-wrapper h1 {
+  color: #fff;
+  margin: 30px 0;
+}
+
+#form label,
+.right h3 {
+  color: #fff;
+  display: block;
+  margin: 20px 0;
+  font-size: 20px;
+  font-weight: normal;
+}
+#form button {
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 20px;
+  margin-top: 10px;
+  padding: 10px 40px;
+  border-radius: 60px;
+  border: 4px solid #fff;
+  background-color: #212529;
+  transition: 1s all ease;
+}
+#form button:hover {
+  opacity: 0.6;
+}
+#form button:active {
+  transform: scale(0.7);
+}
+#input {
+  resize: none;
+  outline: none;
+  padding: 20px;
+  font-size: 18px;
+  line-height: 1.5;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.options .fa-edit,
+.options .fa-trash-alt {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  color: #fff;
+  font-size: 12px;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+}
+
+.options .fa-edit {
+  background-color: #3d4aff;
+}
+.options .fa-trash-alt {
+  background-color: #d30000;
+}

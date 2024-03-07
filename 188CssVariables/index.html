@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/favicon.png"
+    />
+    <title>Update CSS Variables</title>
+    <style>
+      @import url(https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/reset.css);
+
+      :root {
+        --base: #ffc600;
+        --spacing: 10px;
+        --blur: 10px;
+      }
+
+      .wrapper img {
+        user-select: none;
+        padding: var(--spacing);
+        background: var(--base);
+        filter: blur(var(--blur));
+      }
+      .wrapper h2 {
+        font-size: 40px;
+        margin: 20px 0;
+      }
+      .wrapper label {
+        font-size: 30px;
+        cursor: pointer;
+        user-select: none;
+      }
+      .highlight {
+        color: var(--base);
+      }
+
+      /*
+      misc styles, nothing to do with CSS variables
+    */
+
+      body {
+        text-align: center;
+        color: white;
+        font-weight: 100;
+        font-size: 50px;
+      }
+
+      .controls {
+        margin-bottom: 50px;
+      }
+
+      .wrapper input {
+        width: 100px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <h2>Update CSS Variables with <span class="highlight">JS</span></h2>
+
+      <div class="controls">
+        <label for="spacing">Spacing:</label>
+        <input
+          id="spacing"
+          type="range"
+          name="spacing"
+          min="10"
+          max="200"
+          value="10"
+          data-sizing="px"
+        />
+
+        <label for="blur">Blur:</label>
+        <input
+          id="blur"
+          type="range"
+          name="blur"
+          min="0"
+          max="25"
+          value="10"
+          data-sizing="px"
+        />
+
+        <label for="base">Base Color</label>
+        <input id="base" type="color" name="base" value="#ffc600" />
+      </div>
+
+      <img src="https://source.unsplash.com/7bwQXzbF6KE/800x500" />
+    </div>
+
+    <script>
+      const inputs = document.querySelectorAll(".controls input");
+      function handleUpdate() {
+        const suffix = this.dataset.sizing || "";
+        document.documentElement.style.setProperty(
+          `--${this.name}`,
+          this.value + suffix
+        );
+      }
+      inputs.forEach((input) => input.addEventListener("change", handleUpdate));
+      inputs.forEach((input) =>
+        input.addEventListener("mousemove", handleUpdate)
+      );
+      // Learnings from this project are listed below:
+      const myLearnings = [
+        "this",
+        "value",
+        "dataset",
+        "forEach()",
+        "setProperty()",
+        "documentElement",
+        "querySelectorAll()",
+        "Backtick Literals (``)",
+        "Logical Operators (||)",
+        "Arithmetic Operators (+)",
+        "addEventListener : change",
+        "addEventListener : mousemove",
+      ];
+    </script>
+    <script src="https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/mylearnings.js"></script>
+  </body>
+</html>

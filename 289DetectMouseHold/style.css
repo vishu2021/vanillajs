@@ -1,0 +1,42 @@
+@import url(https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/reset.css);
+
+body {
+  background-color: #fec04f;
+}
+.container {
+  height: 31.25em;
+  width: 31.25em;
+  background-color: #151515;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  border-radius: 0.5em;
+  padding: 0 1.5em;
+  text-align: center;
+  box-shadow: 0 2em 4em rgba(84, 58, 11, 0.4);
+}
+#div-ref {
+  font-size: 1.6em;
+  height: 12em;
+  width: 12em;
+  background-color: #ffd68b;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  user-select: none;
+  font-weight: 300;
+  line-height: 1.8em;
+}
+p {
+  font-size: 1.2em;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 0.8em 0;
+  color: #ffffff;
+  border-radius: 0.5em;
+}

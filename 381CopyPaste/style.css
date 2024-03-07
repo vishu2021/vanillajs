@@ -1,0 +1,100 @@
+@import url(https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/reset.css);
+main {
+  width: 90%;
+  max-width: 800px;
+  padding: 30px;
+  border-radius: 30px;
+  border: 12px solid rgba(255, 255, 255, 1);
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 80px rgba(255, 255, 255, 0.4);
+}
+/* Just to play with animations */
+.copiedtext {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(-1em);
+  color: #000;
+  transition: all 0.5s;
+}
+.copied .copiedtext {
+  opacity: 1;
+  transform: translateY(-2em);
+}
+
+/* Some Generic styles */
+body {
+  text-align: center;
+  color: #444;
+  line-height: 1.6;
+}
+h1 {
+  font-size: 30px;
+  margin: 0 0 30px;
+}
+textarea,
+button {
+  font-size: 1em;
+}
+textarea {
+  width: 100%;
+  resize: none;
+  height: 150px;
+  display: block;
+  font-size: 18px;
+  line-height: 1.6;
+  padding: 10px 15px;
+  border-radius: 12px;
+  background: #f2f2f6;
+  margin: 2em auto 1.5em;
+  border: 4px solid #ddd;
+  transition: 0.6s all ease;
+  outline: none !important;
+}
+[id="cleared"] {
+  margin-top: 2em;
+}
+textarea:focus {
+  border-color: #8fa423;
+}
+
+main button {
+  margin: 10px auto;
+  display: flex;
+  color: #fff;
+  font-size: 24px;
+  line-height: 2;
+  cursor: pointer;
+  padding: 10px 60px;
+  align-items: center;
+  border-radius: 100px;
+  width: max-content;
+  text-align: center;
+  user-select: none;
+  transition: 1s all ease;
+  justify-content: center;
+  background-color: #3d4aff;
+  border: 4px solid #878fff;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.4);
+}
+
+main button:hover {
+  opacity: 0.9;
+}
+
+main button:active {
+  opacity: 1;
+  box-shadow: none;
+  transform: scale(0.7);
+}
+
+p {
+  margin-top: 3.25em;
+  font-size: 0.825em;
+  color: #777;
+  font-weight: bold;
+  letter-spacing: 0.01em;
+}

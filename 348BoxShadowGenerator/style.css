@@ -1,0 +1,77 @@
+@import url(https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/reset.css);
+
+.container {
+  top: 50%;
+  left: 50%;
+  padding: 30px;
+  width: 90%;
+  max-width: 900px;
+  position: absolute;
+  border-radius: 10px;
+  background-color: #ffffff;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 20px 40px rgba(2, 42, 83, 0.2);
+}
+.result {
+  padding: 100px 0;
+}
+#element {
+  height: 50px;
+  width: 50px;
+  position: relative;
+  background-color: #0075ff;
+  margin: auto;
+}
+.sliders {
+  display: grid;
+  grid-template-columns: 6fr 6fr;
+  gap: 20px 15px;
+}
+.slider-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+input[type="range"] {
+  width: 100%;
+  cursor: pointer;
+}
+.code-wrapper {
+  display: grid;
+  grid-template-columns: 10fr 2fr;
+  gap: 5px;
+  margin-top: 20px;
+}
+textarea {
+  resize: none;
+  padding: 10px;
+  font-size: 20px;
+  border-radius: 12px;
+  border: 2px solid black;
+}
+.code-wrapper button {
+  background-color: #0075ff;
+  transition: 0.4s all ease;
+  border-radius: 12px;
+  color: #ffffff;
+  font-size: 20px;
+  cursor: pointer;
+  border: none;
+}
+.code-wrapper button:active {
+  transform: scale(0.7);
+}
+label {
+  font-size: 20px;
+}
+#shadow-color {
+  width: 200px;
+  height: 60px;
+  cursor: pointer;
+}
+#shadow-inset {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  vertical-align: middle;
+}

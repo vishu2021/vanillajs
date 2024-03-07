@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/favicon.png"
+    />
+    <title>Copy Text</title>
+    <style>
+      @import url(https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/reset.css);
+      main {
+        transform: scale(2);
+      }
+      #textToCopy {
+        color: #fff;
+        font-size: 40px;
+        margin: 0 0 40px;
+        font-weight: bold;
+        text-align: center;
+      }
+      main button {
+        margin: 10px auto 40px;
+        display: flex;
+        color: #fff;
+        font-size: 24px;
+        line-height: 2;
+        cursor: pointer;
+        padding: 10px 60px;
+        align-items: center;
+        border-radius: 100px;
+        width: max-content;
+        text-align: center;
+        user-select: none;
+        transition: 1s all ease;
+        justify-content: center;
+        background-color: #3d4aff;
+        border: 4px solid #878fff;
+      }
+
+      main button:hover {
+        opacity: 0.8;
+      }
+
+      main button:active {
+        opacity: 1;
+        transform: scale(0.7);
+      }
+      main p {
+        color: #fff;
+        font-size: 30px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div id="textToCopy">You can copy this text!</div>
+      <button id="copyButton">Click to copy</button>
+      <p id="copyResult"></p>
+    </main>
+    <!-- partial -->
+    <script src="./script.js"></script>
+    <script src="https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/mylearnings.js"></script>
+  </body>
+</html>

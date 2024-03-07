@@ -1,0 +1,146 @@
+@import url(https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/reset.css);
+
+body {
+  overflow-x: hidden;
+}
+main {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  max-width: 900px;
+}
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+.carousel__headline {
+  color: #fff;
+}
+
+.carousel {
+  padding: 24px;
+}
+.carousel h2 {
+  margin: 0;
+}
+.carousel a {
+  text-decoration: none;
+  color: #fff;
+}
+.carousel img {
+  aspect-ratio: 1/1;
+  width: 175px;
+  height: 175px;
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
+  margin-bottom: 16px;
+  border-radius: clamp(0px, ((100vw - 4px) - 100%) * 9999, 4px);
+}
+.carousel h3 {
+  font-size: 16px;
+  margin: 0;
+  margin-bottom: 4px;
+}
+.carousel span {
+  color: #a7a7a7;
+  font-size: 14px;
+}
+.carousel .dragging a {
+  pointer-events: none;
+}
+.carousel .carousel__wrapper {
+  position: relative;
+  margin-bottom: 24px;
+}
+@media only screen and (min-width: 1180px) {
+  .carousel .carousel__wrapper.has-arrows .carousel__content {
+    justify-content: space-between;
+  }
+}
+@media only screen and (min-width: 1180px) {
+  .carousel .carousel__wrapper.has-arrows .carousel__arrows {
+    display: flex;
+  }
+}
+.carousel .carousel__header {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+.carousel .carousel__content {
+  overflow-y: hidden;
+  overflow-x: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  display: grid;
+  -webkit-overflow-scrolling: touch;
+  cursor: grab;
+  padding: 0;
+  margin: 0;
+  grid-gap: 24px;
+  grid-auto-flow: column;
+  list-style: none;
+}
+.carousel .carousel__content::-webkit-scrollbar {
+  display: none;
+}
+.carousel .carousel__item .carousel__description {
+  width: 100%;
+}
+.carousel .carousel__item a {
+  display: flex;
+  padding: 16px;
+  cursor: pointer;
+  margin: 10px 0px;
+  user-select: none;
+  position: relative;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  justify-content: flex-start;
+  background: rgb(0 0 0 / 30%);
+  border: 4px solid rgb(255 255 255 / 30%);
+  border-radius: clamp(0px, ((100vw - 4px) - 100%) * 9999, 8px);
+}
+.carousel .carousel__controls {
+  display: grid;
+  grid-gap: 4px;
+  grid-auto-flow: column;
+}
+.carousel .carousel__arrow {
+  display: flex;
+  color: #fff;
+  font-size: 40px;
+  cursor: pointer;
+  padding: 1px 40px;
+  align-items: center;
+  border-radius: 100px;
+  width: max-content;
+  text-align: center;
+  user-select: none;
+  transition: 1s all ease;
+  justify-content: center;
+  background-color: #3d4aff;
+  border: 4px solid #878fff;
+}
+
+.carousel .carousel__arrow:hover {
+  opacity: 0.8;
+}
+
+.carousel .carousel__arrow:active {
+  opacity: 1;
+  transform: scale(0.7);
+}
+.carousel .disabled {
+  opacity: 0.4;
+  pointer-events: none;
+}
+.disclaimer a {
+  color: #fff;
+}

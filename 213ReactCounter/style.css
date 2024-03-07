@@ -1,0 +1,69 @@
+@import url(https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/reset.css);
+
+html {
+  font-size: 24px;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.counter {
+  display: flex;
+  align-items: center;
+  transform: scale(2);
+}
+
+.input-wrapper {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 0.6rem/0.8rem;
+  background-color: #3978ef;
+  overflow: hidden;
+  box-shadow: inset 0 0 0.8rem 0.1rem rgba(15, 72, 179, 0.2),
+    0 20px 30px -10px rgba(15, 72, 179, 0.26);
+  border: 4px solid #fff;
+}
+
+.input {
+  height: 100%;
+  width: 100%;
+  background: none;
+  border: none;
+  text-align: center;
+  color: #fff;
+  font-weight: 900;
+  font-size: 2rem;
+  outline: none;
+  transition-property: transform, opacity;
+  text-transform: linear;
+  transition-duration: 0.25s;
+}
+
+.button {
+  padding: 0;
+  width: 50px;
+  border: none;
+  height: 50px;
+  outline: none;
+  margin: 0 20px;
+  font-size: 40px;
+  cursor: pointer;
+  font-weight: bold;
+  user-select: none;
+  border-radius: 50%;
+  color: rgb(57 120 239);
+  transition: all 1s ease-in-out;
+  background: rgba(255, 255, 255, 0.7);
+}
+.button:hover {
+  color: #0041bb;
+  background: rgba(255, 255, 255, 1);
+}

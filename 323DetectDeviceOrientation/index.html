@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="icon"
+      href="https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/favicon.png"
+    />
+    <title>Detect Device Orientation</title>
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <button class="hide" id="check" onclick="orientationChange()">
+        Check Orientation
+      </button>
+      <p id="status"></p>
+    </div>
+
+    <!-- Script -->
+    <script>
+      //Create Initial References
+      const statusRef = document.getElementById("status");
+      const checkOrientationButton = document.getElementById("check");
+      //Create the query
+      const portraitMediaQuery = window.matchMedia("(orientation:portrait)");
+      //Define a callback function for the event listener (For safari/ios since they don't support screen orientation)
+      const mediaOrientationChange = (mediaQuery) => {
+        if (!mediaQuery.matches) {
+          statusRef.innerText = `Landscape`;
+        } else {
+          statusRef.innerText = `Portrait`;
+        }
+      };
+      //onchange event would be triggered whenever the orientation  changes
+      window.screen.orientation.onchange = orientationChange = () => {
+        if (screen.orientation.type.includes("landscape")) {
+          statusRef.innerText = `Landscape`;
+        } else {
+          statusRef.innerText = `portrait`;
+        }
+      };
+      //However for Firefox it doesn't get fired hence we add buttons to manually display the changed orientation
+      window.onload = () => {
+        statusRef.innerText = "";
+        checkOrientationButton.classList.add("hide");
+        if ("mozOrientation" in screen) {
+          //For firefox
+          //Since we had issues with onchange on firefox the button would simply call the function which we call on change
+          checkOrientationButton.classList.remove("hide");
+        } else if ("orientation" in screen) {
+          //Supported Browsers
+          orientationChange();
+        } else {
+          //For safari
+          mediaOrientationChange(portraitMediaQuery);
+          portraitMediaQuery.addEventListener("change", mediaOrientationChange);
+        }
+      };
+      // Learnings from this project are listed below:
+      const myLearnings = [
+        "matches",
+        "onchange",
+        "innerText",
+        "includes()",
+        "window.onload",
+        "classList.add()",
+        "getElementById()",
+        "classList.remove()",
+        "if...else if...else",
+        "window.matchMedia()",
+        "Logical Operators (!)",
+        "Backtick Literals (``)",
+        "screen.orientation.type",
+        "'orientation' in screen",
+        "window.screen.orientation",
+        "addEventListener : change",
+        "'mozOrientation' in screen",
+      ];
+    </script>
+    <script src="https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/mylearnings.js"></script>
+  </body>
+</html>

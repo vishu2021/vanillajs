@@ -1,0 +1,48 @@
+@import url(https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/reset.css);
+
+*,
+*:before,
+*:after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+}
+.container {
+  top: 50%;
+  left: 50%;
+  padding: 50px;
+  position: absolute;
+  border-radius: 40px;
+  border: 8px solid rgba(255, 255, 255, 0.5);
+  background-color: rgba(28, 28, 39, 0.5);
+  transform: translate(-50%, -50%) scale(3);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
+}
+label,
+input {
+  font-size: 18px;
+  letter-spacing: 0.5px;
+}
+label {
+  display: block;
+  position: relative;
+  color: #eb3461;
+  font-size: 30px;
+  font-weight: bold;
+
+  margin-bottom: 10px;
+}
+input {
+  position: relative;
+  width: 300px;
+  padding: 10px 0;
+  background-color: transparent;
+  border: none;
+  border-bottom: 4px solid #eb3461;
+  outline: none;
+  color: #e5e5e5;
+  font-weight: bold;
+}

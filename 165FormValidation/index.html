@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="icon"
+      href="https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/favicon.png"
+    />
+    <title>Basic Form Validation</title>
+    <style>
+      @import url(https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/reset.css);
+
+      html {
+        font-size: 12px;
+        height: 100%;
+      }
+      body {
+        height: 100%;
+        padding: 0;
+        margin: 0;
+      }
+      .keys {
+        display: flex;
+        flex: 1;
+        align-items: top;
+        justify-content: center;
+      }
+      .key {
+        border: 0.4rem solid blue;
+        border-radius: 0.5rem;
+        margin: 1rem;
+        font-size: 2rem;
+        padding: 1rem 0.5rem;
+        transition: all 0.01s ease;
+        width: 5rem;
+        text-align: center;
+        color: black;
+        text-shadow: 0 0 0.5rem yellow;
+      }
+      .wrapper {
+        width: 90%;
+        margin: auto;
+        max-width: 500px;
+      }
+      h1 {
+        color: #fff;
+        margin: 30px 0;
+      }
+      .wrapper table {
+        padding: 30px;
+        border-radius: 8px;
+        background-color: #fff;
+      }
+      .wrapper table input,
+      .wrapper table select {
+        width: 100%;
+        height: 40px;
+        margin: 10px 0;
+        padding: 0 20px;
+        font-size: 20px;
+        border-radius: 100px;
+        border: 2px solid #999;
+      }
+      .wrapper table select {
+        cursor: pointer;
+      }
+      .submit-button-box {
+        text-align: center;
+      }
+      .submit-button-box input {
+        margin: 20px 0;
+        padding: 14px 40px;
+        font-size: 24px;
+        cursor: pointer;
+        border: none;
+        border-radius: 100px;
+        transition: 0.4s all ease;
+      }
+      .submit-button-box input:focus {
+        transform: scale(0.9);
+      }
+      .wrapper table,
+      .wrapper table tr,
+      .wrapper table td,
+      .wrapper table tbody {
+        display: block;
+        border: none;
+        text-align: left;
+        font-size: 20px;
+      }
+      #demo {
+        color: rgb(209, 0, 0);
+        padding: 20px;
+        font-size: 20px;
+        margin: 20px 0 0;
+        text-align: center;
+        background: #fee2e2;
+        border-left: 4px solid rgb(209, 0, 0);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <form action="" name="myForm" onsubmit="return(validate());">
+        <h1 align="center">USER REGISTRATION</h1>
+        <table align="center" cellspacing="3" cellpadding="3" border="3">
+          <tr>
+            <td align="right">Name</td>
+            <td><input type="text" name="name" /></td>
+          </tr>
+          <tr>
+            <td align="right">E-mail</td>
+            <td><input type="text" name="email" /></td>
+          </tr>
+          <tr>
+            <td align="right">Phone Number</td>
+            <td><input type="text" name="phone" /></td>
+          </tr>
+          <tr>
+            <td align="right">Subject</td>
+            <td>
+              <select name="subject">
+                <option value="0" selected>Select</option>
+                <option value="1">HTML</option>
+                <option value="2">JavaScript</option>
+                <option value="3">CSS</option>
+                <option value="4">JSP</option>
+              </select>
+            </td>
+          </tr>
+        </table>
+        <p id="demo" style="display: none"></p>
+        <div class="submit-button-box">
+          <input type="submit" value="Submit" id="submit-button" />
+        </div>
+      </form>
+    </div>
+    <script>
+      const errorBox = document.getElementById("demo");
+      function validate() {
+        var text;
+        if (document.myForm.name.value == "") {
+          text = "Name cannot be empty";
+          errorBox.innerHTML = text;
+          errorBox.style.display = "block";
+          document.myForm.name.focus();
+          return false;
+        }
+        if (document.myForm.email.value == "") {
+          text = "E-mail cannot be empty";
+          errorBox.innerHTML = text;
+          errorBox.style.display = "block";
+          document.myForm.email.focus();
+          return false;
+        }
+        var emailID = document.myForm.email.value;
+        atposn = emailID.indexOf("@");
+        dotposn = emailID.lastIndexOf(".");
+        if (atposn < 1 || dotposn - atposn < 2) {
+          text = "Please enter valid email ID";
+          errorBox.innerHTML = text;
+          errorBox.style.display = "block";
+          document.myForm.email.focus();
+          return false;
+        }
+        if (
+          document.myForm.phone.value == "" ||
+          isNaN(document.myForm.phone.value) ||
+          document.myForm.phone.value.length != 10
+        ) {
+          text = "Please enter a valid 10-digit phone number";
+          errorBox.innerHTML = text;
+          errorBox.style.display = "block";
+          document.myForm.phone.focus();
+          return false;
+        }
+        if (document.myForm.subject.value == "0") {
+          text = "Please provide your area of expertise";
+          errorBox.innerHTML = text;
+          errorBox.style.display = "block";
+          return false;
+        }
+        return true;
+      }
+      // Learnings from this project are listed below:
+      const myLearnings = [
+        "value",
+        "isNaN",
+        "length",
+        "return",
+        "focus()",
+        "innerHTML",
+        "if...else",
+        "indexOf()",
+        "true false",
+        "lastIndexOf()",
+        "Dynamic Styles",
+        "getElementById()",
+        "Logical Operators (||)",
+        "Comparison Operators (?)",
+        "Arithmetic Operators (-)",
+        "Comparison Operators (==,<,!=)",
+      ];
+    </script>
+    <script src="https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/mylearnings.js"></script>
+  </body>
+</html>

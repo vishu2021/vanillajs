@@ -1,0 +1,367 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/favicon.png"
+    />
+    <title>Basic Mini Calculator</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        font-family: "Nunito", sans-serif;
+        box-sizing: border-box;
+        user-select: none;
+      }
+      body {
+        height: 100vh;
+        background: #240046;
+        display: grid;
+      }
+      .container {
+        width: 100%;
+
+        height: 100%;
+
+        display: flex;
+      }
+      .calculator {
+        background: #023e7d;
+        padding: 10px;
+        box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.219);
+        margin: auto;
+
+        border-radius: 10px;
+      }
+
+      .calculator form input {
+        border: 0;
+        outline: 0;
+        width: 60px;
+        height: 60px;
+        margin: 10px;
+        color: white;
+        cursor: pointer;
+        font-size: 1.7em;
+        font-weight: 700;
+        border-radius: 10px;
+        transition: 0.2s all ease;
+        font-family: "Nunito", sans-serif;
+      }
+      .calculator form input.NumpadBtns {
+        background: #012a4a;
+      }
+      form .display {
+        display: flex;
+        justify-content: flex-end;
+        margin: 20px 0;
+      }
+      form .display input {
+        text-align: right;
+        flex: 2;
+        font-size: 45px;
+        box-shadow: none;
+        padding: 20px;
+        box-sizing: border-box;
+        background: #218380;
+        box-shadow: 0 0 10px 3px #00000033;
+        height: 80px;
+        color: white;
+      }
+
+      form input.equal {
+        width: 145px;
+        background: #005f08;
+      }
+      form input.ac,
+      form input.del {
+        background: #5f0000;
+      }
+
+      .calculator form .symbols {
+        color: #5f0000;
+        background-color: #84ff8f;
+      }
+      .special {
+        background: #248277;
+      }
+
+      .calculator form input:hover {
+        box-shadow: 0px 0px 5px 3px #00000025;
+      }
+      .calculator form input:focus,
+      .calculator form input:active,
+      .calculator form input:target,
+      .calculator form input:visited,
+      .calculator form input:focus-within,
+      .calculator form input:focus-visible {
+        transform: scale(0.9);
+      }
+
+      body {
+        width: 100%;
+        height: 100%;
+        background: rgb(150, 0, 0);
+        background: radial-gradient(
+          circle,
+          rgba(150, 0, 0, 1) 0%,
+          rgb(3, 98, 0) 50%,
+          rgb(0, 0, 116) 100%
+        );
+        background-size: 150% 150%;
+        animation: gradient 30s ease infinite;
+      }
+
+      @keyframes gradient {
+        0% {
+          background-position: 0% 50%;
+        }
+
+        50% {
+          background-position: 100% 50%;
+        }
+
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+
+      /* Learning Box starts here */
+      /* width */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+
+      /* Track */
+      ::-webkit-scrollbar-track {
+        border-radius: 10px;
+      }
+
+      /* Handle */
+      ::-webkit-scrollbar-thumb {
+        background: linear-gradient(#4b2146, #1419f9);
+        border-radius: 10px;
+      }
+
+      .learning-box {
+        padding: 0;
+        left: 10px;
+        z-index: 99;
+        /* height: 100%; */
+        bottom: 10px;
+        display: flex;
+        position: fixed;
+        max-width: 400px;
+        text-align: left;
+        border-radius: 10px;
+        pointer-events: none;
+        flex-direction: column;
+        backdrop-filter: blur(9.5px);
+        max-height: calc(100% - 20px);
+        background: rgba(0, 0, 63, 0.75);
+        -webkit-backdrop-filter: blur(9.5px);
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+      }
+
+      /* width */
+      .learning-box-list::-webkit-scrollbar {
+        width: 4px;
+      }
+
+      /* Track */
+      .learning-box-list::-webkit-scrollbar-track {
+        border-radius: 10px;
+      }
+
+      /* Handle */
+      .learning-box-list::-webkit-scrollbar-thumb {
+        background: #aaa;
+        border-radius: 10px;
+      }
+
+      .learning-box h3 {
+        margin: 0;
+        color: #fff;
+        font-size: 14px;
+        font-weight: 500;
+        letter-spacing: 1px;
+        padding: 12px 14px 6px;
+        font-family: "Nunito", sans-serif;
+      }
+
+      .learning-box-list {
+        margin: 0;
+        max-height: 94%;
+        overflow: auto;
+        padding: 0 14px 14px 40px;
+      }
+
+      .learning-box-list li {
+        color: #fff;
+        font-size: 12px;
+        font-weight: normal;
+        list-style: decimal;
+        letter-spacing: 1px;
+        font-family: "Nunito", sans-serif;
+      }
+
+      @media screen and (max-width: 1000px) {
+        .learning-box {
+          display: none;
+        }
+      }
+      @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900;1000&display=swap");
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="calculator">
+        <form>
+          <div class="display">
+            <input type="text" name="display" disabled />
+          </div>
+          <div>
+            <input
+              type="button"
+              value="AC"
+              onclick="display.value =''"
+              class="ac"
+            />
+            <input
+              type="button"
+              class="del"
+              value="Del"
+              onclick="display.value =display.value.toString().slice (0,-1)"
+            />
+            <input
+              type="button"
+              class="symbols"
+              value="."
+              onclick="display.value +='.'"
+            />
+            <input
+              type="button"
+              class="symbols"
+              value="/"
+              onclick="display.value +='/'"
+            />
+          </div>
+          <div>
+            <input
+              type="button"
+              class="NumpadBtns"
+              value="7"
+              onclick="display.value +='7'"
+            />
+            <input
+              type="button"
+              class="NumpadBtns"
+              value="8"
+              onclick="display.value +='8'"
+            />
+            <input
+              type="button"
+              class="NumpadBtns"
+              value="9"
+              onclick="display.value +='9'"
+            />
+            <input
+              type="button"
+              class="symbols"
+              value="*"
+              onclick="display.value +='*'"
+            />
+          </div>
+          <div>
+            <input
+              type="button"
+              class="NumpadBtns"
+              value="4"
+              onclick="display.value +='4'"
+            />
+            <input
+              type="button"
+              class="NumpadBtns"
+              value="5"
+              onclick="display.value +='5'"
+            />
+            <input
+              type="button"
+              class="NumpadBtns"
+              value="6"
+              onclick="display.value +='6'"
+            />
+            <input
+              type="button"
+              class="symbols"
+              value="-"
+              onclick="display.value +='-'"
+            />
+          </div>
+          <div>
+            <input
+              type="button"
+              class="NumpadBtns"
+              value="1"
+              onclick="display.value +='1'"
+            />
+            <input
+              type="button"
+              class="NumpadBtns"
+              value="2"
+              onclick="display.value +='2'"
+            />
+            <input
+              type="button"
+              class="NumpadBtns"
+              value="3"
+              onclick="display.value +='3'"
+            />
+            <input
+              type="button"
+              class="symbols"
+              value="+"
+              onclick="display.value +='+'"
+            />
+          </div>
+          <div>
+            <input
+              type="button"
+              class="special"
+              value="00"
+              onclick="display.value +='00'"
+            />
+            <input
+              type="button"
+              class="special"
+              value="0"
+              onclick="display.value += '0'"
+            />
+            <input
+              type="button"
+              value="="
+              onclick="display.value = eval(display.value)"
+              class="equal"
+            />
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="learning-box">
+      <h3>Learnings:</h3>
+      <ul class="learning-box-list">
+        <li>value</li>
+        <li>eval()</li>
+        <li>slice()</li>
+        <li>onclick</li>
+        <li>toString()</li>
+        <li>Assignment Operators (+=)</li>
+        <li>Arithmetic Operators (+,-,*,/)</li>
+      </ul>
+    </div>
+  </body>
+</html>

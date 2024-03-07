@@ -1,0 +1,105 @@
+@import url(https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/reset.css);
+
+body {
+  height: 100vh;
+}
+.container {
+  background-color: #ffffff;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  width: 80vw;
+  max-width: 600px;
+  min-width: 350px;
+  padding: 60px 30px;
+  border-radius: 10px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+label {
+  display: block;
+  font-size: 22px;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+input {
+  margin-bottom: 20px;
+  border: none;
+  font-size: 20px;
+  border-bottom: 2px solid #585858;
+  color: #585858;
+  padding: 2px 15px;
+}
+input:focus {
+  outline: none;
+  border-bottom: 2.4px solid #3d4aff;
+}
+.input-wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+.input-wrapper input {
+  width: 100%;
+}
+.time-wrapper input {
+  width: 60%;
+}
+select {
+  width: 35%;
+  border: 1px solid #585858;
+  font-size: 20px;
+  margin-left: 3%;
+  height: 44px;
+  padding: 0 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+button {
+  margin: 20px auto;
+  display: flex;
+  color: #fff;
+  font-size: 24px;
+  line-height: 2;
+  cursor: pointer;
+  padding: 10px 60px;
+  align-items: center;
+  border-radius: 100px;
+  width: max-content;
+  text-align: center;
+  user-select: none;
+  transition: 1s all ease;
+  justify-content: center;
+  background-color: #3d4aff;
+  border: 4px solid #878fff;
+}
+button:hover {
+  opacity: 0.8;
+}
+
+button:active {
+  opacity: 1;
+  transform: scale(0.7);
+}
+#result {
+  background-color: #d9dcff;
+  margin-top: 30px;
+  color: #585858;
+  text-align: center;
+  font-size: 18px;
+  padding: 20px;
+  border-radius: 5px;
+}
+#result div {
+  margin-bottom: 10px;
+}
+#result span {
+  color: #000000;
+  font-weight: 500;
+}
+.footer {
+  position: absolute;
+  padding: 20px;
+  bottom: 0;
+  right: 0;
+}

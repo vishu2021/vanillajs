@@ -1,0 +1,113 @@
+@import url(https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/reset.css);
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+body {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+svg {
+  fill: white;
+  background: rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border-radius: 50%;
+  width: 200px;
+  margin-bottom: 50px;
+}
+
+.wrapper {
+  padding: 20px;
+  width: 90%;
+  max-width: 550px;
+  background: rgba(255, 255, 255, 0.7);
+  box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(12px);
+  border-radius: 12px;
+}
+.wrapper h2 {
+  margin: 0;
+  font-size: 30px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.plates {
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  list-style: none;
+}
+
+.plates li {
+  display: flex;
+  font-size: 18px;
+  user-select: none;
+  transition: all 1s ease;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+.plates li:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.plates label {
+  flex: 1;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.plates input {
+  display: none;
+}
+
+.plates input + label:before {
+  top: 3px;
+  width: 32px;
+  height: 32px;
+  content: "⬜️";
+  margin-right: 0;
+  font-size: 24px;
+  position: relative;
+  display: inline-block;
+  line-height: 32px;
+}
+
+.plates input:checked + label:before {
+  top: 0;
+  right: 6px;
+  content: "🌮";
+}
+
+.add-items {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.add-items input {
+  padding: 0 20px;
+  outline: 0;
+  font-size: 20px;
+  height: 48px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  flex: 0 0 auto;
+  width: 65%;
+  border-radius: 4px 0 0 4px;
+}
+
+.add-items input[type="submit"] {
+  color: #fff;
+  cursor: pointer;
+  width: 35%;
+  border-radius: 0 4px 4px 0;
+  background-color: blue;
+  transition: 1s all ease;
+}
+.add-items input[type="submit"]:hover {
+  background-color: rgb(11, 11, 139);
+}

@@ -1,0 +1,30 @@
+@import url(https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/reset.css);
+
+body {
+  background-color: #55cd58;
+}
+.container {
+  top: 50%;
+  left: 50%;
+  width: 350px;
+  padding: 35px 50px;
+  position: absolute;
+  border-radius: 8px;
+  transform: translate(-50%, -50%) scale(3);
+  background-color: rgba(255, 255, 255, 0.6);
+}
+input[type="password"] {
+  width: 100%;
+  padding: 15px;
+  border-radius: 3px;
+  border: 2px solid #202020;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+#warning {
+  padding: 5px;
+  display: none;
+  color: #d32f2f;
+  margin-top: 10px;
+  text-align: center;
+  background-color: #ffdde0;
+}

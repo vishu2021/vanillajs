@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/favicon.png"
+    />
+    <title>Speech Detection</title>
+    <style>
+      @import url(https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/reset.css);
+
+      .words {
+        max-width: 500px;
+        margin: 50px auto;
+        background: rgba(255, 255, 255, 0.8);
+        border-radius: 5px;
+        box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.1);
+        padding: 1rem 2rem 1rem 5rem;
+        /* background: -webkit-gradient(
+            linear,
+            0 0,
+            0 100%,
+            from(#d9eaf3),
+            color-stop(4%, #fff)
+          )
+          0 4px; */
+        /* background-size: 100% 3rem; */
+        position: relative;
+        min-height: 100px;
+        font-size: 20px;
+        font-weight: bold;
+        color: #000;
+        line-height: 2;
+      }
+
+      p {
+        font-size: 20px;
+        line-height: 2;
+        font-weight: bold;
+        color: #000;
+        margin: 0 0 1rem;
+      }
+
+      .words:before {
+        content: "";
+        position: absolute;
+        width: 4px;
+        top: 0;
+        left: 30px;
+        bottom: 0;
+        border: 1px solid;
+        border-color: transparent #afafaf;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="words" contenteditable></div>
+
+    <script>
+      window.SpeechRecognition =
+        window.SpeechRecognition || window.webkitSpeechRecognition;
+
+      const recognition = new SpeechRecognition();
+      recognition.interimResults = true;
+      recognition.lang = "en-US";
+
+      let p = document.createElement("p");
+      const words = document.querySelector(".words");
+      words.appendChild(p);
+
+      recognition.addEventListener("result", (e) => {
+        const transcript = Array.from(e.results)
+          .map((result) => result[0])
+          .map((result) => result.transcript)
+          .join("");
+        const poopScript = transcript.replace(/poop|poo|shit|dump/gi, "💩");
+        p.textContent = poopScript;
+        if (e.results[0].isFinal) {
+          p = document.createElement("p");
+          words.appendChild(p);
+        }
+      });
+
+      recognition.addEventListener("end", recognition.start);
+      recognition.start();
+      // Learnings from this project are listed below:
+      const myLearnings = [
+        "new",
+        "lang",
+        "map()",
+        "event",
+        "join()",
+        "replace()",
+        "if...else",
+        "true false",
+        "textContent",
+        "Array.from()",
+        "appendChild()",
+        "interimResults",
+        "createElement()",
+        "querySelector()",
+        "SpeechRecognition",
+        "Logical Operators (||)",
+        "addEventListener : end",
+        "webkitSpeechRecognition",
+        "new SpeechRecognition()",
+        "addEventListener : result",
+        "Comparison Operators (>,?)",
+      ];
+    </script>
+    <script src="https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/mylearnings.js"></script>
+  </body>
+</html>

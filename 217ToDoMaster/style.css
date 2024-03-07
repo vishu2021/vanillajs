@@ -1,0 +1,149 @@
+@import url(https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/reset.css);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  color: white;
+  min-height: 100vh;
+}
+header {
+  font-size: 2rem;
+}
+h1 {
+  text-align: center;
+}
+header,
+form {
+  display: flex;
+  min-height: 20vh;
+  justify-content: center;
+  align-items: center;
+}
+form input,
+form button {
+  border: none;
+  height: 60px;
+  font-size: 24px;
+  padding: 10px 20px;
+  background: rgb(255 255 255 / 70%);
+}
+form button {
+  color: #fff;
+  background: rgba(255, 55, 0, 0.4);
+  cursor: pointer;
+  transition: all 0.8s ease;
+}
+form button:hover {
+  background: rgba(255, 55, 0, 0.8);
+}
+.todo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.todo-list {
+  width: 90%;
+  max-width: 600px;
+  list-style: none;
+}
+
+.todo {
+  display: flex;
+  color: black;
+  margin: 0.5rem;
+  font-size: 1.5rem;
+  align-items: center;
+  transition: all 1s ease;
+  justify-content: space-between;
+  background: rgb(255 255 255 / 70%);
+}
+.filter-todo {
+  height: 60px;
+  padding: 0 1rem;
+}
+.todo li {
+  flex: 1;
+}
+
+.trash-btn,
+.complete-btn {
+  background: rgba(255, 55, 0, 0.8);
+  color: white;
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+.complete-btn {
+  background: rgb(11, 212, 162);
+}
+.todo-item {
+  padding: 0rem 1.4rem;
+}
+
+.fa-trash,
+.fa-check {
+  pointer-events: none;
+}
+
+.fall {
+  transform: translateY(10rem) rotateZ(20deg);
+  opacity: 0;
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+/*CUSTOM SELECTOR */
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  outline: 0;
+  box-shadow: none;
+  border: 0 !important;
+  background-image: none;
+}
+
+/* Custom Select */
+.select {
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+select {
+  width: 20rem;
+  cursor: pointer;
+  font-size: 24px;
+  color: rgba(255, 55, 0, 1);
+  background: rgb(255 255 255 / 70%);
+}
+/* Arrow */
+.select::after {
+  top: 0;
+  right: 0;
+  width: 50px;
+  height: 100%;
+  display: flex;
+  cursor: pointer;
+  font-size: 30px;
+  content: "\25BC";
+  position: absolute;
+  align-items: center;
+  pointer-events: none;
+  justify-content: center;
+  background: rgba(255, 55, 0, 0.8);
+}
+/* Transition */
+/*
+.select:hover::after {
+  transform: scale(1.5);
+}
+*/

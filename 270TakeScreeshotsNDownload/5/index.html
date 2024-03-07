@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="icon"
+      href="https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/favicon.png"
+    />
+    <title>Transform HTML to Image</title>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@coreui/coreui/dist/css/coreui.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="page-wrapper">
+      <div id="imgItem" class="container">
+        <div class="card">
+          <div class="card-header bg-info">
+            <h2>THIS IS THE DEMO</h2>
+          </div>
+          <div class="card-body">
+            <label for="">Your name</label>
+            <input class="form-control form-control-sm col-3" type="text" />
+            <label for="">Your Message</label>
+            <input class="form-control form-control-sm col-3" type="text" />
+          </div>
+          <!-- <div class="card-container">
+            <img
+              src="https://static.vecteezy.com/system/resources/thumbnails/021/746/785/small/holding-a-tree-in-a-ball-ecology-and-environment-concept-with-generative-ai-photo.jpg"
+            />
+          </div> -->
+          <button onclick="changeToImg()" class="btn btn-warning text-white">
+            To image
+          </button>
+        </div>
+      </div>
+      <div class="container">
+        <div class="card">
+          <div
+            class="card-header bg-success d-flex justify-content-between align-items-center"
+          >
+            <h3>Html Screenshot</h3>
+            <span>
+              <a id="download" class="font-lg download mr-3 text-white">
+                <i class="fas fa-download"></i>
+              </a>
+              <span class="font-lg clean" onclick="resetTheImageArea()">
+                <i class="fas fa-redo-alt"></i>
+              </span>
+            </span>
+          </div>
+          <div id="screenshot" class="card-body screenshot">
+            <span>
+              You can write something in the above inputs then press the button
+              to transform the html to image (canvas). The image will be shown
+              in here.</span
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- partial -->
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <script src="script.js"></script>
+    <script src="https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/mylearnings.js"></script>
+  </body>
+</html>

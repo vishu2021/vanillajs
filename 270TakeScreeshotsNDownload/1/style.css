@@ -1,0 +1,57 @@
+@import url(https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/reset.css);
+
+body {
+  padding: 1em;
+  background-color: #0075ff;
+}
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1em;
+  line-height: 2;
+}
+.wrapper img {
+  max-width: 100%;
+}
+#container,
+#preview-container {
+  background-color: #ffffff;
+  border-radius: 0.8em;
+  padding: 1em;
+}
+#container p {
+  font-size: 0.8em;
+  color: #606060;
+  text-align: justify;
+  margin: 0 0 10px;
+}
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  margin-top: 1em;
+}
+button,
+a {
+  font-size: 1em;
+  background-color: #ffffff;
+  border: none;
+  outline: none;
+  padding: 1em 2em;
+  cursor: pointer;
+  border-radius: 0.5em;
+  color: #000000;
+  text-decoration: none;
+}
+.hide {
+  display: none;
+}
+.footer {
+  position: absolute;
+  padding: 20px;
+  bottom: 0;
+  right: 0;
+}
+.learning-box {
+  background-color: rgba(0, 29, 62, 0.8);
+}

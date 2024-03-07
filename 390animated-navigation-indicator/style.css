@@ -1,0 +1,71 @@
+@import url(https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/reset.css);
+body {
+  overflow: hidden;
+}
+
+.nav__pointer {
+  top: 0;
+  left: 0;
+  z-index: 1;
+  height: 100%;
+  position: absolute;
+  border-radius: 0;
+  will-change: transform;
+  background-color: #c2ff00;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transition: transform 0.25s ease-in-out;
+}
+
+.nav__list {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* Decoration styles */
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.nav {
+  padding: 0;
+  margin: 40px auto auto;
+  display: block;
+  text-align: center;
+  width: max-content;
+  position: relative;
+  background: #f5f5f5;
+  transform: scale(1.5);
+}
+
+.nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav a {
+  text-decoration: none;
+  font-weight: 600;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-size: 24px;
+  display: block;
+  padding: 20px 40px;
+  transition: transform 0.25s ease-in-out;
+}
+
+.nav a,
+.nav a:visited {
+  color: #1d1d1d;
+}
+.nav a:active {
+  transform: scale(0.9);
+}

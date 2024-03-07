@@ -1,0 +1,318 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/favicon.png" />
+    <title>Vertical Sliding Numbers Timer</title>
+    <style>
+      *{
+    padding: 0;
+    margin: 0;
+    user-select: none;
+}
+body{
+    display:grid;
+    height:100vh;
+    place-items: center;
+    background-color: rgb(27, 28, 30);
+}
+button{
+    z-index: 1;
+    display: grid;
+    color:white;
+    cursor:pointer;
+    overflow: hidden; 
+    padding:10px 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    position: relative;
+    border-radius: 20px;
+    background-color: transparent;
+    border:1px solid rgb(51, 51, 60);
+}
+
+button:hover{
+    background-color: rgb(51, 51, 60);
+}
+button:after{
+    content:'';
+    place-self: center;
+    width:0px;
+    background-color: rgb(19, 18, 21);
+    z-index: -1;
+    height:0px;
+    border-radius: 50%;
+    position: absolute;
+    transition: 0.3s;
+}
+button:active::after{
+    width:200px;
+    height:200px;
+}
+.animateFromRight::after{
+    right:-200px;
+    width:200px;
+    height:200px;
+}
+.animateFromRight:active::after{
+    right:0px;
+}
+.animateFromLeft::after{
+    width:200px;
+    height:200px;
+    left:-200px;
+}
+.animateFromLeft:active::after{
+    left:0px;
+}
+.Time-container {
+    width: auto;
+    height: 50px;
+    padding: 5px;
+    display: flex;
+    color: white;
+    font-size: 30px;
+    overflow: hidden;
+    border-radius: 5px;
+    transform: scale(3);
+    font-weight: bold;
+}
+.Time-container li{
+list-style-type: none;
+height: 100%;
+display: grid;
+place-items: center;
+padding:0px 10px;
+transition-duration: 0.3s;
+}
+.Time-container .colon{
+    font-size: 30px;
+    display: grid;
+    place-items:center;
+    font-weight: 800;
+}
+.digit li{
+    position: relative;
+}
+
+/* Integration of Fonts */
+html {
+  height: 100%;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  background: rgb(150, 0, 0);
+  background: radial-gradient(circle,
+      rgba(150, 0, 0, 1) 0%,
+      rgb(3, 98, 0) 50%,
+      rgb(0, 0, 116) 100%);
+  background-size: 150% 150%;
+  animation: gradient 30s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+body,
+button,
+input {
+  font-family: "Cascadia Code PL", sans-serif;
+}
+
+@font-face {
+  font-family: "Cascadia Code PL";
+  src: url("https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/fonts/CascadiaCodePL-BoldItalic.eot");
+  src: url("https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/fonts/CascadiaCodePL-BoldItalic.eot?#iefix") format("embedded-opentype"),
+    url("https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/fonts/CascadiaCodePL-BoldItalic.woff2") format("woff2"),
+    url("https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/fonts/CascadiaCodePL-BoldItalic.woff") format("woff"),
+    url("https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/fonts/CascadiaCodePL-BoldItalic.ttf") format("truetype"),
+    url("https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/fonts/CascadiaCodePL-BoldItalic.svg#CascadiaCodePL-BoldItalic") format("svg");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Cascadia Code PL";
+  src: url("https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/fonts/CascadiaCodePL-Italic.eot");
+  src: url("https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/fonts/CascadiaCodePL-Italic.eot?#iefix") format("embedded-opentype"),
+    url("https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/fonts/CascadiaCodePL-Italic.woff2") format("woff2"),
+    url("https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/fonts/CascadiaCodePL-Italic.woff") format("woff"),
+    url("https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/fonts/CascadiaCodePL-Italic.ttf") format("truetype"),
+    url("https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/fonts/CascadiaCodePL-Italic.svg#CascadiaCodePL-Italic") format("svg");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Learning Box starts here */
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(#4b2146, #1419f9);
+  border-radius: 10px;
+}
+
+.learning-box {
+  padding: 0;
+  left: 10px;
+  z-index: 99;
+  /* height: 100%; */
+  bottom: 10px;
+  display: flex;
+  position: fixed;
+  max-width: 400px;
+  text-align: left;
+  border-radius: 10px;
+  pointer-events: none;
+  flex-direction: column;
+  backdrop-filter: blur(9.5px);
+  max-height: calc(100% - 20px);
+  background: rgba(0, 0, 63, 0.75);
+  -webkit-backdrop-filter: blur(9.5px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+/* width */
+.learning-box-list::-webkit-scrollbar {
+  width: 4px;
+}
+
+/* Track */
+.learning-box-list::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+/* Handle */
+.learning-box-list::-webkit-scrollbar-thumb {
+  background: #aaa;
+  border-radius: 10px;
+}
+
+.learning-box h3 {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 12px 14px 6px;
+  margin: 0;
+}
+
+.learning-box-list {
+  margin: 0;
+  max-height: 94%;
+  overflow: auto;
+  padding: 0 14px 14px 40px;
+}
+
+.learning-box-list li {
+  color: #fff;
+  font-size: 12px;
+  font-weight: normal;
+  list-style: decimal;
+}
+
+@media screen and (max-width: 1000px) {
+  .learning-box {
+    display: none;
+  }
+}
+
+/* Learning Box ends here */
+    </style>
+  </head>
+  <body>
+    <div class="Time-container">
+      <div class="digit">
+          <li>0</li><li>1</li><li>2</li><li>3</li><li>4</li><li>5</li><li>6</li><li>7</li><li>8</li><li>9</li>
+      </div>
+      <div class="digit">
+          <li>0</li><li>1</li><li>2</li><li>3</li><li>4</li><li>5</li><li>6</li><li>7</li><li>8</li><li>9</li>
+      </div>
+      <div class="colon">:</div>
+      <div class="digit">
+          <li>0</li><li>1</li><li>2</li><li>3</li><li>4</li><li>5</li><li>6</li><li>7</li><li>8</li><li>9</li>
+      </div><div class="digit">
+          <li>0</li><li>1</li><li>2</li><li>3</li><li>4</li><li>5</li><li>6</li><li>7</li><li>8</li><li>9</li>
+      </div>
+      <div class="colon">:</div>
+      <div class="digit">
+          <li>0</li><li>1</li><li>2</li><li>3</li><li>4</li><li>5</li><li>6</li><li>7</li><li>8</li><li>9</li>
+      </div><div class="digit"><li>0</li><li>1</li><li>2</li><li>3</li><li>4</li><li>5</li><li>6</li><li>7</li><li>8</li><li>9</li>
+      </div>
+      <div class="digit">
+          <li>AM</li>
+          <li>PM</li>
+      </div>
+  </div>
+</div>
+<div class="learning-box">
+    <h3>Learnings:</h3>
+    <ul class="learning-box-list">
+      <li>join()</li>
+      <li>length</li>
+      <li>slice()</li>
+      <li>split()</li>
+      <li>forEach()</li>
+      <li>parseInt()</li>
+      <li>new Date()</li>
+      <li>getHours()</li>
+      <li>for in loop</li>
+      <li>getMinutes()</li>
+      <li>getSeconds()</li>
+      <li>Array.from()</li>
+      <li>setInterval()</li>
+      <li>Dynamic Styles</li>
+      <li>querySelectorAll()</li>  
+      <li>Arithmetic Operators (+,-,*)</li>
+      <li>Comparison Operators (==, <,>) </li>
+    </ul>
+  </div>
+    <script>
+      setInterval(function(){
+    var Time=new Date()
+    var hour=Time.getHours()
+    var minutes=Time.getMinutes()
+    var seconds=Time.getSeconds()
+    var amOrpm=0;
+    if(hour>12){
+        hour=Time.getHours()-12
+        amOrpm=1
+    }
+    if(hour<10){hour="0"+hour}
+    if(minutes<10){minutes="0"+minutes}
+    if(seconds<10){seconds="0"+seconds}
+    var Time=[hour,minutes,seconds,amOrpm]
+    var digitDivs=Array.from(document.querySelectorAll(".digit"))
+    var digitDivs=digitDivs.slice(0,digitDivs.length) 
+    var Time=Time.join("").split("")
+    for(let i in Time){
+        Array.from(digitDivs[i].querySelectorAll("li")).forEach((e)=>{e.style.top=-(parseInt(Time[i])*50)+"px"})
+    }
+    },100)
+    </script>
+  </body>
+</html>

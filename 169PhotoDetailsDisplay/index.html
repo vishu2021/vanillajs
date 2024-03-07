@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="icon"
+      href="https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/favicon.png"
+    />
+    <title>Mouseover Photo Details Display</title>
+    <style>
+      @import url(https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/reset.css);
+
+      .main {
+        text-align: center;
+      }
+      #image {
+        width: 900px;
+        height: auto;
+        border: 5px solid pink;
+        background-color: black;
+        background-repeat: no-repeat;
+        color: white;
+        background-size: 100%;
+        font-family: sans-serif;
+        font-size: 150%;
+        line-height: 60px;
+        text-align: center;
+        margin: 60px auto;
+        padding: 10px 30px;
+      }
+      .main img {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <p id="image">Hover over a sun sign image to display details.</p>
+      <p>
+        <img
+          alt="Sagittarius are beautiful, loyal and passionate."
+          src="https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/saggi.jpg"
+          onmouseover="display(this)"
+          onmouseout="revert()"
+        />
+        <img
+          alt="Pisces are dreamy, helpful and love everyone!"
+          src="https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/pisces.jpg"
+          onmouseover="display(this)"
+          onmouseout="revert()"
+        />
+        <img
+          alt="Leo are strong and fearless. They aim for and achieve a lot!"
+          src="https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/leo.jpg"
+          onmouseover="display(this)"
+          onmouseout="revert()"
+        />
+        <img
+          alt="Scorpions are friends for life. They are trustworthy and truthful."
+          src="https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/scorpio.jpg"
+          onmouseover="display(this)"
+          onmouseout="revert()"
+        />
+      </p>
+    </div>
+
+    <script>
+      function display(element) {
+        document.getElementById("image").innerHTML = element.alt;
+      }
+      function revert() {
+        document.getElementById("image").innerHTML =
+          "Hover over a sun sign image to display details.";
+      }
+      // Learnings from this project are listed below:
+      const myLearnings = [
+        "alt",
+        "this",
+        "event",
+        "innerHTML",
+        "onmouseout",
+        "onmouseover",
+        "getElementById()",
+      ];
+    </script>
+    <script src="https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/mylearnings.js"></script>
+  </body>
+</html>

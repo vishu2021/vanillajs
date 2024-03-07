@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/favicon.png"
+    />
+    <title>Event Capture Propagation</title>
+    <style>
+      @import url(https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/reset.css);
+
+      html {
+        box-sizing: border-box;
+      }
+
+      *,
+      *:before,
+      *:after {
+        box-sizing: inherit;
+      }
+      .wrapper {
+        padding: 40px;
+        background-color: #000096;
+      }
+      .wrapper h2 {
+        color: #fff;
+        font-size: 40px;
+        margin: 0 0 20px;
+        text-align: center;
+      }
+      .wrapper div {
+        width: 100%;
+        padding: 50px;
+      }
+
+      .one {
+        background: rgb(0, 140, 26);
+      }
+
+      .two {
+        background: rgb(135, 0, 137);
+      }
+
+      .three {
+        background: rgb(86, 23, 0);
+      }
+      .wrapper button {
+        margin: 10px auto;
+        background-color: green;
+        color: #fff;
+        font-size: 20px;
+        padding: 20px 40px;
+        display: block;
+        cursor: pointer;
+        border-radius: 100px;
+        border: 4px solid #fff;
+      }
+      .learning-box {
+        background: rgba(0, 0, 63, 0.6);
+      }
+    </style>
+  </head>
+  <body class="bod">
+    <div class="wrapper">
+      <h2>Wrapper</h2>
+      <div class="one">
+        <h2>One</h2>
+        <div class="two">
+          <h2>Two</h2>
+          <div class="three">
+            <h2>Three</h2>
+          </div>
+        </div>
+      </div>
+      <button>Click on Button</button>
+    </div>
+    <script>
+      const divBoxes = document.querySelectorAll("div");
+      const button = document.querySelector("button");
+
+      function logText(e) {
+        console.log(this.classList.value);
+        // e.stopPropagation(); // stop bubbling!
+        // console.log(this);
+      }
+
+      divBoxes.forEach((div) =>
+        div.addEventListener("click", logText, {
+          capture: false,
+          once: true,
+        })
+      );
+
+      button.addEventListener(
+        "click",
+        () => {
+          console.log("Click!!!");
+        },
+        {
+          once: true,
+        }
+      );
+      // Learnings from this project are listed below:
+      const myLearnings = [
+        "this",
+        "event",
+        "value",
+        "forEach()",
+        "classList",
+        "true false",
+        "querySelector()",
+        "querySelectorAll()",
+        "addEventListener : click",
+      ];
+    </script>
+    <script src="https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/mylearnings.js"></script>
+  </body>
+</html>

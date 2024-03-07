@@ -1,0 +1,23 @@
+@import url(https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/reset.css);
+
+.container {
+  transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+#touch-area {
+  background-color: #ffffff;
+  border-radius: 0.6em;
+  height: 30em;
+  width: 30em;
+}
+#output {
+  background-color: #ffffff;
+  border-radius: 0.3em;
+  text-align: center;
+  font-size: 26px;
+  padding: 0.8em 0;
+  margin-top: 1em;
+  font-weight: bold;
+}

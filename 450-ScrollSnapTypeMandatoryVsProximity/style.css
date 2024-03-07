@@ -1,0 +1,46 @@
+@import url(https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/reset.css);
+
+body {
+  display: block;
+}
+
+.wrapper {
+  display: flex;
+}
+
+h2 {
+  position: fixed;
+  text-align: center;
+  font-size: 1.5rem;
+  width: 50%;
+  top: 1em;
+}
+h2 em {
+  font-weight: bold;
+}
+
+.container {
+  flex-basis: 50%;
+  max-height: 100vh;
+  overflow-y: scroll;
+  border: 1px solid gray;
+  -ms-scroll-snap-type: y mandatory;
+  scroll-snap-type: y mandatory;
+}
+.container.proximity {
+  -ms-scroll-snap-type: y proximity;
+  scroll-snap-type: y proximity;
+}
+
+.container li {
+  color: #000;
+  border-bottom: 1px solid white;
+  padding: 3rem;
+  font-size: 1.4rem;
+  background: lightgray;
+  text-align: center;
+  scroll-snap-align: start;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+}

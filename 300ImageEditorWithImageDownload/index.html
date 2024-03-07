@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="icon"
+      href="https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/favicon.png"
+    />
+    <title>Image Editor With Preview & Download</title>
+
+    <!-- Cropper CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.css"
+    />
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="editor-container">
+        <div class="image-container">
+          <img id="image" />
+        </div>
+        <input type="file" id="file" accept="image/*" />
+        <label for="file">Open a Photo</label>
+        <div class="options-btn hide">
+          <button id="rotate-left" title="Rotate Anti-Clockwise">
+            <img
+              src="https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/images/rotate-left.png"
+            />
+          </button>
+          <button id="rotate-right" title="Rotate  Clockwise">
+            <img
+              src="https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/images/rotate-right.png"
+            />
+          </button>
+          <button id="scale-X-button" title="Flip Horizontal">
+            <img
+              src="https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/images/flip-hori.png"
+            />
+          </button>
+          <button id="scale-Y-button" title="Flip Vertical">
+            <img
+              src="https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/images/flip-ver.png"
+            />
+          </button>
+          <button class="aspect-ratio-btns">16:9</button>
+          <button class="aspect-ratio-btns">4:3</button>
+          <button class="aspect-ratio-btns">1:1</button>
+          <button class="aspect-ratio-btns">2:3</button>
+          <button class="aspect-ratio-btns" title="Free Aspect Ratio">
+            Free
+          </button>
+        </div>
+        <div class="action-btns">
+          <button id="preview" class="hide">Preview</button>
+          <a href="" id="download" class="hide">Download</a>
+        </div>
+      </div>
+      <div class="preview-container">
+        <img id="preview-image" />
+      </div>
+    </div>
+    <!-- Script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.js"></script>
+    <script src="script.js"></script>
+    <script src="https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/mylearnings.js"></script>
+  </body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/favicon.png"
+    />
+    <title>Search Recipes with Modal App</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <div class="mobile-container">
+        <header>
+          <input type="text" id="search-term" />
+          <button id="search"><i class="fas fa-search"></i></button>
+        </header>
+        <div class="fav-container">
+          <h3>Favorite Meals</h3>
+          <ul class="fav-meals" id="fav-meals"></ul>
+        </div>
+        <div class="meals" id="meals"></div>
+      </div>
+
+      <div class="popup-container hidden" id="meal-popup">
+        <div class="popup">
+          <button id="close-popup" class="close-popup">
+            <i class="fas fa-times"></i>
+          </button>
+          <div class="meal-info" id="meal-info"></div>
+        </div>
+      </div>
+    </div>
+    <div class="learning-box">
+      <h3>Learnings:</h3>
+      <ul class="learning-box-list">
+        <li>api</li>
+        <li>null</li>
+        <li>array</li>
+        <li>map()</li>
+        <li>async</li>
+        <li>break</li>
+        <li>await</li>
+        <li>join()</li>
+        <li>json()</li>
+        <li>push()</li>
+        <li>return</li>
+        <li>fetch()</li>
+        <li>filter()</li>
+        <li>for loop</li>
+        <li>forEach()</li>
+        <li>innerHTML</li>
+        <li>setItem()</li>
+        <li>getItem()</li>
+        <li>if...else</li>
+        <li>true false</li>
+        <li>JSON.parse()</li>
+        <li>Local Storage</li>
+        <li>[...selector]</li>
+        <li>appendChild()</li>
+        <li>querySelector()</li>
+        <li>createElement()</li>
+        <li>classList.add()</li>
+        <li>JSON.stringify()</li>
+        <li>getElementById()</li>
+        <li>location.reload()</li>
+        <li>classList.remove()</li>
+        <li>querySelectorAll()</li>
+        <li>classList.contains()</li>
+        <li>Backtick Literals (``)</li>
+        <li>addEventListener : click</li>
+        <li>addEventListener : keyup</li>
+        <li>Arithmetic Operators (++,+,-)</li>
+        <li>Comparison Operators (<,<=,===,?,!==)</li>
+      </ul>
+    </div>
+  </body>
+</html>

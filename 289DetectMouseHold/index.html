@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="icon"
+      href="https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/favicon.png"
+    />
+    <title>Detect Mouse Touch Hold</title>
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div id="div-ref">Hold Mouse Here</div>
+      <p id="result">Demo Text Here</p>
+    </div>
+
+    <!-- Script -->
+    <script>
+      //Create Initial References
+      let divRef = document.getElementById("div-ref");
+      let result = document.getElementById("result");
+      let isMouseHold = true;
+      let timeOutReference;
+      let deviceType = "";
+
+      //Events Object
+      let events = {
+        mouse: {
+          down: "mousedown",
+          up: "mouseup",
+        },
+        touch: {
+          down: "touchstart",
+          up: "touchend",
+        },
+      };
+
+      //Detect if the device is a touch device
+      const isTouchDevice = () => {
+        try {
+          //We try to create Touch Event (It would fail for desktops and throw error)
+          document.createEvent("TouchEvent");
+          deviceType = "touch";
+          return true;
+        } catch (e) {
+          deviceType = "mouse";
+          return false;
+        }
+      };
+
+      isTouchDevice();
+
+      //Function on mouse down
+      divRef.addEventListener(events[deviceType].down, (e) => {
+        e.preventDefault();
+        isMouseHold = true;
+        //Mouse down will be considered mouse hold if it is being held down for more than 1500ms
+        timeOutReference = setTimeout(function () {
+          //If mouse is being held down do this
+          if (isMouseHold) {
+            result.innerText = "Mouse is being held down";
+          }
+        }, 1500);
+      });
+
+      //Function on mouse up
+      //If mouse is released do this
+      divRef.addEventListener(events[deviceType].up, function () {
+        //Clear the timeout
+        clearTimeout(timeOutReference);
+        result.innerText = "Mouse hold is released";
+      });
+      // Learnings from this project are listed below:
+      const myLearnings = [
+        "return",
+        "try catch",
+        "innerText",
+        "true false",
+        "setTimeout()",
+        "clearTimeout()",
+        "getElementById()",
+        "e.preventDefault()",
+        "if...else if...else",
+        "addEventListener : mouseup",
+        "addEventListener : touchend",
+        "addEventListener : mousedown",
+        "addEventListener : touchstart",
+      ];
+    </script>
+    <script src="https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/mylearnings.js"></script>
+  </body>
+</html>

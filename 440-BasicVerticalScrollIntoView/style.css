@@ -1,0 +1,89 @@
+@import url(https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/reset.css);
+main {
+  width: 90%;
+  padding: 0 30px;
+  max-width: 1000px;
+}
+nav {
+  position: fixed;
+  top: 32px;
+  left: 0;
+  right: 0;
+}
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+nav ul li:not(:last-child) {
+  margin-right: 40px;
+}
+nav ul li a {
+  display: block;
+  font-size: 30px;
+  font-weight: 500;
+  letter-spacing: 0.025em;
+  text-decoration: none;
+  color: var(--c, #bbc1e1);
+  transition: color 0.3s ease;
+}
+nav ul li a:hover {
+  --c: #fff;
+}
+
+section {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section > span {
+  font-size: 60px;
+  font-weight: 500;
+  color: #fff;
+}
+section > div > span {
+  padding: 12px;
+  display: table;
+  font-size: 18px;
+  color: #646b8c;
+  margin-top: 20px;
+  border-radius: 5px;
+  background: #1a1e32;
+}
+section > div > span a {
+  text-decoration: none;
+  color: var(--c, #a6accd);
+  transition: color 0.3s ease;
+}
+section > div > span a:hover {
+  --c: #fff;
+}
+
+pre code {
+  font-size: 18px;
+  color: #bbc1e1;
+  line-height: 1.6;
+}
+pre code .token.function {
+  color: #5c86ff;
+}
+pre code .token.string {
+  color: #cb7dd0;
+}
+pre code .token.parameter {
+  color: #c4ddb2;
+}
+
+#section-1 {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+#section-2 {
+  background: rgba(0, 0, 0, 0.6);
+}
+#section-3 {
+  background: rgba(0, 0, 0, 0.9);
+}

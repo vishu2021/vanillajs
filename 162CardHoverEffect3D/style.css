@@ -1,0 +1,270 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 1000px;
+}
+.container {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.card {
+  width: 31rem;
+  height: auto;
+  padding: 2rem 5rem;
+  border-radius: 30px;
+  backdrop-filter: blur(20px);
+  transform-style: preserve-3d;
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0px 0px 50px rgba(0, 0, 0, 0.2);
+}
+.sneaker {
+  display: flex;
+  min-height: 35vh;
+  align-items: center;
+  justify-content: center;
+}
+.sneaker img {
+  width: 16rem;
+  z-index: 2;
+  border-radius: 50%;
+  transition: all 1s ease-out;
+}
+.circle {
+  margin-top: 20px;
+  width: 14rem;
+  height: 14rem;
+  background: linear-gradient(
+    to right,
+    rgba(102, 101, 101, 0.75),
+    rgba(8, 83, 156, 0.75)
+  );
+  position: absolute;
+  border-radius: 50%;
+  z-index: 1;
+}
+.info h1 {
+  color: #fff;
+  font-size: 2.5rem;
+  text-align: center;
+  padding: 1.5rem 0rem;
+  transition: all 0.75s ease-out;
+}
+.info h3 {
+  color: #fff;
+  font-size: 1rem;
+  line-height: 1.5;
+  text-align: center;
+  padding-top: 0.5rem;
+  margin-bottom: 2rem;
+  transition: all 0.75s ease-out;
+}
+.sizes {
+  display: flex;
+  justify-content: space-between;
+  transition: all 0.75s ease-out;
+}
+.sizes button {
+  border: none;
+  margin: 0 2px;
+  cursor: pointer;
+  color: #585858;
+  font-weight: bold;
+  background: #fff;
+  border-radius: 30px;
+  padding: 0.5rem 2rem;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+button.active {
+  background: #585858;
+  color: white;
+}
+.purchase {
+  margin-top: 3rem;
+  transition: all 0.75s ease-out;
+}
+.purchase button {
+  width: 100%;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 20px;
+  padding: 1rem 0rem;
+  border-radius: 30px;
+  font-weight: bolder;
+  background: #ff00d8;
+}
+/*Common Code Starts Here*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body,
+button,
+input {
+  font-family: "Cascadia Code PL", sans-serif;
+}
+
+@font-face {
+  font-family: "Cascadia Code PL";
+  src: url("https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/fonts/CascadiaCodePL-BoldItalic.eot");
+  src: url("https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/fonts/CascadiaCodePL-BoldItalic.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/fonts/CascadiaCodePL-BoldItalic.woff2")
+      format("woff2"),
+    url("https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/fonts/CascadiaCodePL-BoldItalic.woff")
+      format("woff"),
+    url("https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/fonts/CascadiaCodePL-BoldItalic.ttf")
+      format("truetype"),
+    url("https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/fonts/CascadiaCodePL-BoldItalic.svg#CascadiaCodePL-BoldItalic")
+      format("svg");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Cascadia Code PL";
+  src: url("https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/fonts/CascadiaCodePL-Italic.eot");
+  src: url("https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/fonts/CascadiaCodePL-Italic.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/fonts/CascadiaCodePL-Italic.woff2")
+      format("woff2"),
+    url("https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/fonts/CascadiaCodePL-Italic.woff")
+      format("woff"),
+    url("https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/fonts/CascadiaCodePL-Italic.ttf")
+      format("truetype"),
+    url("https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/fonts/CascadiaCodePL-Italic.svg#CascadiaCodePL-Italic")
+      format("svg");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+body {
+  width: 100%;
+  background: rgb(150, 0, 0);
+  background: radial-gradient(
+    circle,
+    rgba(150, 0, 0, 1) 0%,
+    rgb(3, 98, 0) 50%,
+    rgb(0, 0, 116) 100%
+  );
+  background-size: 150% 150%;
+  animation: gradient 30s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Learning Box starts here */
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(#4b2146, #1419f9);
+  border-radius: 10px;
+}
+
+.learning-box {
+  padding: 0;
+  left: 10px;
+  z-index: 99;
+  bottom: 10px;
+  display: flex;
+  position: fixed;
+  max-width: 400px;
+  text-align: left;
+  border-radius: 10px;
+  pointer-events: none;
+  flex-direction: column;
+  backdrop-filter: blur(4px);
+  max-height: calc(100% - 20px);
+  background: rgba(0, 0, 63, 0.1);
+  -webkit-backdrop-filter: blur(4px);
+  border: 4px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+/* width */
+.learning-box-list::-webkit-scrollbar {
+  width: 4px;
+}
+
+/* Track */
+.learning-box-list::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+/* Handle */
+.learning-box-list::-webkit-scrollbar-thumb {
+  background: #aaa;
+  border-radius: 10px;
+}
+
+.learning-box h3 {
+  margin: 0;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  padding: 12px 14px 6px;
+}
+
+.learning-box-list {
+  margin: 0;
+  max-height: 94%;
+  overflow: auto;
+  padding: 0 14px 14px 40px;
+}
+
+.learning-box-list li {
+  color: #fff;
+  font-size: 12px;
+  line-height: 1.6;
+  font-weight: normal;
+  list-style: decimal;
+}
+
+@media screen and (max-width: 1000px) {
+  .learning-box {
+    display: none;
+  }
+}
+
+/*Common Code Ends Here*/

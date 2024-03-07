@@ -1,0 +1,106 @@
+@import url(https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/reset.css);
+
+.container {
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  border-radius: 0.5em;
+  width: min(90%, 28em);
+  padding: 3.12em 1.87em;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 1.25em 2.18em rgba(2, 44, 26, 0.2);
+}
+input[type="file"] {
+  display: none;
+}
+label {
+  margin: auto;
+  display: flex;
+  color: #fff;
+  line-height: 2;
+  font-size: 24px;
+  cursor: pointer;
+  user-select: none;
+  padding: 10px 60px;
+  text-align: center;
+  width: max-content;
+  align-items: center;
+  border-radius: 100px;
+  transition: 1s all ease;
+  justify-content: center;
+  background-color: #3d4aff;
+  border: 4px solid #878fff;
+  box-shadow: 0 0 2.18em rgba(0, 0, 0, 0.4);
+}
+label:hover {
+  opacity: 0.8;
+}
+
+label:active {
+  opacity: 1;
+  transform: scale(0.7);
+}
+#post-upload-container {
+  top: 50%;
+  left: 50%;
+  padding: 3em 2em;
+  position: absolute;
+  border-radius: 0.8em;
+  width: min(50em, 90%);
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 2em 4em rgba(2, 44, 25, 0.2);
+}
+.image-container {
+  gap: 1em;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.page-wrapper img,
+.page-wrapper canvas {
+  width: 100%;
+}
+.btns {
+  gap: 1em;
+  width: 100%;
+  display: flex;
+  margin-top: 2em;
+  justify-content: center;
+}
+.btns button,
+.btns a {
+  font-size: 1em;
+  cursor: pointer;
+  font-size: 20px;
+  padding: 1em 2em;
+  user-select: none;
+  border-radius: 100px;
+  transition: 1s all ease;
+  border: 4px solid #009956;
+  box-shadow: 0 0 2.18em rgba(0, 0, 0, 0.4);
+}
+.btns button {
+  background-color: #ffffff;
+  color: #009956;
+}
+.btns a {
+  text-decoration: none;
+  background-color: #009956;
+  border: 4px solid #fff;
+  color: #ffffff;
+}
+.btns button:hover,
+.btns a:hover {
+  opacity: 0.8;
+}
+
+.btns button:active,
+.btns a:active {
+  opacity: 1;
+  transform: scale(0.7);
+}
+.hide {
+  display: none;
+}

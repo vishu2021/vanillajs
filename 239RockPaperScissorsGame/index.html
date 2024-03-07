@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="icon"
+      href="https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/favicon.png"
+    />
+    <title>Rock Paper Scissors</title>
+    <style>
+      @import url(https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/reset.css);
+
+      body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+      }
+      .page-wrapper {
+        text-align: center;
+      }
+      .page-wrapper h1 {
+        color: #fff;
+        font-size: 60px;
+        margin: 0 0 30px;
+      }
+      .page-wrapper p {
+        color: #fff;
+        font-size: 30px;
+        margin: 0 0 30px;
+      }
+      .score {
+        color: #22ff00;
+        font-size: 30px;
+        margin: 0 0 30px;
+      }
+      .message {
+        color: #c3ff00;
+        font-size: 30px;
+        margin: 0 0 30px;
+        line-height: 2;
+      }
+      .buttons-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .buttons-wrapper button {
+        margin: 10px;
+        display: flex;
+        color: #fff;
+        font-size: 24px;
+        line-height: 2;
+        cursor: pointer;
+        padding: 10px 60px;
+        align-items: center;
+        border-radius: 100px;
+        width: max-content;
+        text-align: center;
+        user-select: none;
+        transition: 1s all ease;
+        justify-content: center;
+        background-color: #3d4aff;
+        border: 4px solid #878fff;
+      }
+
+      .buttons-wrapper button:hover {
+        opacity: 0.6;
+      }
+
+      .buttons-wrapper button:active {
+        opacity: 1;
+        box-shadow: none;
+        transform: scale(0.7);
+      }
+      .buttons-wrapper .paper {
+        background-color: #c200a5;
+        border-color: #ffa2f1;
+      }
+      .buttons-wrapper .scissors {
+        background-color: #007622;
+        border-color: #9dffb9;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page-wrapper">
+      <h1>Rock, Paper, Scissors</h1>
+      <p>
+        Select either rock, paper, or scissors and see if you can beat the
+        computer!
+      </p>
+
+      <p>
+        <strong>Remember:</strong> “Rock breaks scissors, scissors cuts paper,
+        paper covers rock.”
+      </p>
+      <div class="score"></div>
+      <div class="message"></div>
+      <div class="buttons-wrapper">
+        <button type="button" class="rock">Rock</button>
+        <button type="button" class="paper">Paper</button>
+        <button type="button" class="scissors">Scissors</button>
+      </div>
+    </div>
+    <script>
+      const message = document.querySelector(".message");
+      const score = document.querySelector(".score");
+      const buttons = document.querySelectorAll("button");
+      const winnerScores = [0, 0];
+
+      //add event listeners to buttons
+      for (let i = 0; i < buttons.length; i++) {
+        buttons[i].addEventListener("click", playGame);
+      }
+
+      function playGame(e) {
+        //setup player's selection
+        let playerSelection = e.target.innerText;
+        //setup a random number to select for computer
+        //selects a number between 0 and 1 (1 not-inclusive)
+        let computerSelection = Math.random();
+
+        //if computerSelection is less than .34, computer selects Rock
+        if (computerSelection < 0.34) {
+          computerSelection = "Rock";
+        } else if (computerSelection <= 0.67) {
+          computerSelection = "Paper";
+        } else {
+          computerSelection = "Scissors";
+        }
+
+        //setup a function to compare winners and return result
+        let result = checkWinner(playerSelection, computerSelection);
+
+        //output scores to the DOM
+        if (result === "Player") {
+          result += " wins!";
+          //update score
+          winnerScores[0]++;
+        }
+
+        if (result === "Computer") {
+          result += " wins!";
+          winnerScores[1]++;
+        }
+
+        if (result === "Draw") {
+          result += ". It's a tie!";
+        }
+
+        //output score into Score DIV
+        score.innerHTML =
+          "Player: [ " +
+          winnerScores[0] +
+          " ] Computer: [ " +
+          winnerScores[1] +
+          " ]";
+
+        //output player and computer's selections
+        messenger(
+          "Player: <strong>" +
+            playerSelection +
+            "</strong> Computer: <strong>" +
+            computerSelection +
+            "</strong><br>" +
+            result
+        );
+      }
+
+      function messenger(selectionMessage) {
+        message.innerHTML = selectionMessage;
+      }
+
+      function checkWinner(player, computer) {
+        if (player === computer) {
+          return "Draw";
+        }
+
+        if (player === "Rock") {
+          if (computer === "Paper") {
+            return "Computer";
+          } else {
+            return "Player";
+          }
+        }
+
+        if (player === "Paper") {
+          if (computer === "Scissors") {
+            return "Computer";
+          } else {
+            return "Player";
+          }
+        }
+
+        if (player === "Scissors") {
+          if (computer === "Rock") {
+            return "Computer";
+          } else {
+            return "Player";
+          }
+        }
+      }
+      // Learnings from this project are listed below:
+      const myLearnings = [
+        "length",
+        "return",
+        "for loop",
+        "e.target",
+        "innerHTML",
+        "innerText",
+        "Math.random()",
+        "Dynamic Styles",
+        "querySelector()",
+        "getElementById()",
+        "querySelectorAll()",
+        "if...else if...else",
+        "addEventListener : click",
+        "Assignment Operators (+=)",
+        "Arithmetic Operators (++,+)",
+        "Comparison Operators (<,<=,===)",
+      ];
+    </script>
+    <script src="https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/mylearnings.js"></script>
+  </body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/favicon.png"
+    />
+    <title>Custom Video Player</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <h2 class="heading">Hover to Navigate Video Player Controls</h2>
+
+      <div class="player">
+        <video
+          poster="https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/poster.png"
+          class="player__video viewer"
+          src="https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/video.mp4"
+        ></video>
+
+        <div class="player__controls">
+          <div class="progress">
+            <div class="progress__filled"></div>
+          </div>
+          <button class="player__button toggle" title="Toggle Play">►</button>
+          <img
+            src="https://winaero.com/blog/wp-content/uploads/2018/01/Music-mute-sound-volume-speaker-audio-player-icon-256-04.png"
+            width="20"
+            class="volume-icon"
+            title="Volume"
+          />
+          <input
+            title="Volume"
+            type="range"
+            name="volume"
+            class="player__slider"
+            min="0"
+            max="1"
+            step="0.05"
+            value="1"
+          />
+          <img
+            src="https://play-lh.googleusercontent.com/1ZPUhWxWHSCWJcOuxkSniAzc3GtobNFUTgOFsttQQM442vCLWhfRQNz895C-nPD3iqiJ=w240-h480-rw"
+            width="20"
+            class="playback-speed-icon"
+            title="Playback Speed"
+          />
+          <input
+            title="Playback Speed"
+            type="range"
+            name="playbackRate"
+            class="player__slider"
+            min="0.5"
+            max="2"
+            step="0.1"
+            value="1"
+          />
+          <button data-skip="-10" class="player__button" title="Skip 10s Prev">
+            « 10s
+          </button>
+          <button data-skip="25" class="player__button" title="Skip 25s Next">
+            25s »
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="scripts.js"></script>
+    <script src="https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/mylearnings.js"></script>
+  </body>
+</html>

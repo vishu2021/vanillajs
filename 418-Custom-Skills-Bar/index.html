@@ -1,0 +1,118 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/favicon.png"
+    />
+    <title>Custom Skills Bar</title>
+    <style>
+      @import url(https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/reset.css);
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        display: flex;
+      }
+      .skills {
+        padding: 30px;
+        border-radius: 20px;
+        transform: scale(1.6);
+        box-shadow: 0 0 80px rgba(255, 255, 255, 0.3);
+      }
+      header {
+        margin: 0 0 80px;
+      }
+
+      header h1 {
+        color: #fff;
+        font-size: 40px;
+        font-weight: 800;
+      }
+
+      .progress {
+        position: relative;
+        width: 380px;
+        height: 30px;
+        margin: 70px 0 0;
+        background: #d8d8d8;
+        border-radius: 20px;
+      }
+
+      .progress span {
+        position: absolute;
+        top: -32px;
+        color: #fff;
+        font-size: 20px;
+        font-weight: 600;
+      }
+
+      .progress .progress-bar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 85%;
+        height: 100%;
+        color: #fff;
+        font-weight: 600;
+        font-size: 20px;
+        border-radius: 20px;
+      }
+
+      .progress:nth-child(2) .progress-bar {
+        background: linear-gradient(90deg, #009345, #aea900);
+      }
+
+      .progress:nth-child(3) .progress-bar {
+        background: linear-gradient(90deg, #0096b8, #7500ac);
+      }
+
+      .progress:nth-child(4) .progress-bar {
+        background: linear-gradient(90deg, #b50067, #6600c0, #0060a5);
+      }
+    </style>
+  </head>
+  <body>
+    <section class="skills">
+      <header>
+        <h1>My Skills Set</h1>
+      </header>
+      <section class="progress">
+        <span>HTML</span>
+        <div class="progress-bar">85%</div>
+      </section>
+      <section class="progress">
+        <span>CSS</span>
+        <div class="progress-bar">95%</div>
+      </section>
+      <section class="progress">
+        <span>JS</span>
+        <div class="progress-bar">75%</div>
+      </section>
+    </section>
+
+    <script>
+      const progressBars = document.querySelectorAll(".progress-bar");
+      progressBars.forEach((bar) => {
+        bar.style.width = bar.textContent;
+      });
+      // Learnings from this project are listed below:
+      const myLearnings = [
+        "forEach()",
+        "parameter",
+        "textContent",
+        "Dynamic Styles",
+        "querySelectorAll()",
+      ];
+    </script>
+    <script src="https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/mylearnings.js"></script>
+  </body>
+</html>

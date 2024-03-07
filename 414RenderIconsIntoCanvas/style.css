@@ -1,0 +1,88 @@
+@import url(https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/reset.css);
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  transition: 1s all ease;
+}
+
+body {
+  line-height: 2;
+}
+
+.ms-Grid {
+  margin: 0 auto;
+  padding: 0 16px;
+  max-width: 1280px;
+}
+
+.ms-Grid-row {
+  margin-left: -16px;
+  margin-right: -16px;
+}
+
+.ms-Grid-col {
+  padding: 0 16px;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5em;
+}
+
+input {
+  border: none;
+  display: block;
+  margin-bottom: 2em;
+  padding: 5px;
+  width: 100%;
+}
+
+input[type="checkbox"] {
+  margin: 0;
+  padding: 0;
+  width: auto;
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+input[type="button"],
+input[type="submit"],
+.ms-button {
+  cursor: pointer;
+  display: inline-block;
+  padding: 0.75em 2em;
+  text-decoration: none;
+  width: auto;
+}
+input[type="button"] .ms-Icon,
+input[type="submit"] .ms-Icon,
+.ms-button .ms-Icon {
+  transform: translateY(2px);
+}
+
+.canvas-container {
+  background-color: white;
+  display: inline-block;
+  margin-bottom: 1em;
+  padding: 10px;
+  width: auto;
+}
+
+#canvas {
+  color: black;
+  font-family: FabricMDL2Icons;
+}
+.learning-box {
+  left: auto;
+  right: 20px;
+  pointer-events: initial;
+}

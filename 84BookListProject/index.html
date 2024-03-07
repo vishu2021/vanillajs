@@ -1,0 +1,61 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="https://i.imgur.com/S47oR2o.png" />
+    <title>Book List App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section class="container">
+      <form id="book-form">
+        <div class="form-items">
+          <div class="form-item">
+            <label for="title">Book Title</label>
+            <input type="text" id="title" placeholder="Enter Title" />
+          </div>
+          <div class="form-item">
+            <label for="author">Book Author</label>
+            <input type="text" id="author" placeholder="Enter Author" />
+          </div>
+          <div class="form-item">
+            <label for="year">Published Year</label>
+            <input type="number" id="year" placeholder="Enter Year" />
+          </div>
+        </div>
+        <button type="submit" class="btn">Add Book</button>
+      </form>
+
+      <section class="table">
+        <section class="table-section">
+          <div class="table-head">Title</div>
+          <div class="table-head">Author</div>
+          <div class="table-head">Year</div>
+        </section>
+
+        <section id="book-list"></section>
+      </section>
+    </section>
+
+    <div class="learning-box">
+      <h3>Learnings:</h3>
+      <ul class="learning-box-list">
+        <li>value</li>
+        <li>alert()</li>
+        <li>if...else</li>
+        <li>append()</li>
+        <li>innerHTML</li>
+        <li>appendChild()</li>
+        <li>querySelector()</li>
+        <li>createElement()</li>
+        <li>getElementById()</li>
+        <li>e.preventDefault()</li>
+        <li>Logical Operator (&&)</li>
+        <li>addEventListener : click</li>
+        <li>Comparison Operator (==)</li>
+      </ul>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+@import url(https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/reset.css);
+.spa-ul {
+  width: 100%;
+  display: flex;
+  list-style: none;
+  justify-content: center;
+}
+.spa-ul li {
+  flex: 0 0 auto;
+  width: 50%;
+}
+.spa-ul li a {
+  display: block;
+  font-size: 40px;
+  padding: 20px;
+  font-weight: bold;
+  color: #000;
+  user-select: none;
+  text-align: center;
+  text-decoration: none;
+  transition: 1s all ease;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+.spa-ul li a:focus,
+.spa-ul li a:active {
+  color: #000;
+
+  background-color: rgba(0, 255, 81, 1);
+}
+#app {
+  width: 100%;
+  display: flex;
+  color: #fff;
+  font-size: 100px;
+  font-weight: bold;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 100px);
+}

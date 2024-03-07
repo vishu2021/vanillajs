@@ -1,0 +1,15 @@
+@import url(https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/reset.css);
+
+.example {
+  width: 90%;
+  max-width: 500px;
+  margin: 40px auto;
+  transform: scale(2);
+}
+.input-group {
+  margin: 0 0 30px;
+}
+input,
+button {
+  transition: 1s all ease;
+}

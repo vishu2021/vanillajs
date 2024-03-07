@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="icon"
+      href="https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/favicon.png"
+    />
+    <title>Toast Notification</title>
+
+    <!--Font Awesome-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <!--Stylesheet-->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div id="toast">
+        <div class="container-1">
+          <i class="fas fa-check-square"></i>
+        </div>
+        <div class="container-2">
+          <p>Success</p>
+          <p>Your changes are saved successfully.</p>
+        </div>
+        <button id="close" onclick="closeToast()">&times;</button>
+      </div>
+    </div>
+    <button id="show-toast" class="show-toast" onclick="showToast()">
+      Show Toast Message
+    </button>
+
+    <!--Script-->
+    <script src="script.js"></script>
+    <script src="https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/mylearnings.js"></script>
+  </body>
+</html>
