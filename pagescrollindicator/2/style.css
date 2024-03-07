@@ -1,0 +1,82 @@
+@import url(https://d289lqr9w22fzu.cloudfront.net/orientation-block/assets/reset.css);
+body {
+  height: 300vh;
+  display: block;
+  position: relative;
+  background-image: linear-gradient(
+    -225deg,
+    #ad597b 0%,
+    #d8707f 48%,
+    #f7bd96 100%
+  );
+}
+
+h1 {
+  top: 50vh;
+  margin: 0;
+  color: #fff;
+  font-size: 6vw;
+  position: relative;
+  text-align: center;
+  padding: 1.25rem 2rem;
+  transform: translateY(-50%);
+  text-shadow: 6px 6px 2px rgba(0, 0, 0, 0.4);
+}
+
+h2 {
+  left: 0;
+  right: 0;
+  bottom: 0;
+  color: #fff;
+  font-size: 5vw;
+  position: absolute;
+  text-align: center;
+  margin: 0 0 2.25rem;
+  text-shadow: 6px 6px 2px rgba(0, 0, 0, 0.4);
+}
+
+.progress {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: none;
+  border: 0;
+  height: auto;
+  margin: 0;
+  padding: 0;
+}
+.progress progress {
+  position: relative;
+  display: block;
+  height: 45px;
+  width: 100%;
+  border: 0;
+  backdrop-filter: blur(10px);
+  background-color: transparent;
+  box-shadow: 0 0 100px rgba(0, 0, 0, 0.2);
+}
+.progress progress::-moz-progress-bar {
+  background-color: rgba(103, 0, 0, 0.2);
+}
+.progress progress::-webkit-progress-bar {
+  background-color: rgba(103, 0, 0, 0.2);
+}
+.progress progress::-webkit-progress-value {
+  background-color: #4aff3a;
+}
+
+.pv-logo {
+  position: fixed;
+  top: 30px;
+  left: 30px;
+}
+.pv-logo img {
+  border-radius: 50%;
+  max-width: 40px;
+}
+.learning-box {
+  background: #670000;
+}
