@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Resume Skills Section</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+body{
+  font-family:Arial, Helvetica, sans-serif;
+  background:#f5f5f5;
+  padding:20px;
+}
+.resume{
+  width:900px;
+  margin:auto;
+  background:#fff;
+  padding:25px 28px;
+  color:#111;
+  line-height:1.25;
+}
+.name{
+  font-size:30px;
+  font-weight:700;
+  color:#1d5fd1;
+  text-transform:uppercase;
+}
+.role{
+  font-size:20px;
+  font-weight:700;
+  margin-top:5px;
+  text-transform:uppercase;
+}
+.contact{
+  font-size:16px;
+  margin-top:6px;
+}
+.contact a{
+  color:#1d5fd1;
+  text-decoration:none;
+}
+.personal{
+  font-size:16px;
+  margin-top:6px;
+}
+.summary{
+  margin:20px 0;
+  font-size:16px;
+}
+.section{
+  margin-top:18px;
+}
+.section-title{
+  font-size:22px;
+  font-weight:700;
+  color:#1d5fd1;
+  text-transform:uppercase;
+  border-top:3px solid #1d5fd1;
+  border-bottom:3px solid #1d5fd1;
+  padding:4px 0;
+  margin-bottom:10px;
+}
+p{
+  font-size:16px;
+}
+ul{
+  margin-left:25px;
+}
+ul li{
+  font-size:16px;
+  margin-bottom:4px;
+}
+.job{
+  margin-bottom:12px;
+}
+.job-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+}
+.job-title{
+  font-size:20px;
+  font-weight:700;
+}
+.company{
+  font-size:16px;
+}
+.location{
+  font-size:16px;
+}
+.date{
+  font-size:16px;
+  font-weight:700;
+}
+.edu{
+  margin-bottom:10px;
+}
+.edu-header{
+  display:flex;
+  justify-content:space-between;
+}
+.edu-title{
+  font-size:20px;
+  font-weight:700;
+}
+@media(max-width:950px){
+  .resume{
+    width:100%;
+  }
+  .name{font-size:34px;}
+  .role{font-size:22px;}
+  .section-title{font-size:22px;}
+  p, ul li, .contact, .personal, .company, .location{font-size:16px;}
+}
+
+
+
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  background:#f3f3f3;
+  padding:20px;
+}
+
+.resume-page{
+  width:900px;
+  margin:auto;
+  background:#fff;
+  padding:25px 28px 40px;
+  color:#111;
+}
+
+.section{
+  margin-bottom:22px;
+}
+
+.section-title{
+  color:#1f5fd3;
+  font-size:22px;
+  font-weight:700;
+  text-transform:uppercase;
+  border-top:3px solid #1f5fd3;
+  border-bottom:3px solid #1f5fd3;
+  padding:4px 0;
+  margin-bottom:12px;
+}
+
+.expertise-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:10px 30px;
+}
+
+.expertise-grid ul,
+.project-grid ul{
+  list-style:disc;
+  padding-left:18px;
+}
+
+.expertise-grid li,
+.project-grid li{
+  font-size:18px;
+  line-height:1.45;
+}
+
+.skills-table{
+  width:100%;
+}
+
+.skill-row{
+  display:flex;
+  align-items:flex-start;
+  margin-bottom:8px;
+}
+
+.skill-label{
+  width:220px;
+  font-size:16px;
+  font-weight:700;
+}
+
+.skill-value{
+  flex:1;
+  font-size:16px;
+}
+
+.simple-text{
+  font-size:16px;
+  line-height:1.5;
+}
+
+.project-block{
+  margin-bottom:16px;
+}
+
+.project-subtitle{
+  font-size:22px;
+  font-weight:700;
+  margin-bottom:8px;
+}
+
+.project-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:10px 30px;
+}
+
+.project-grid a{
+  color:#1f5fd3;
+  text-decoration:none;
+  display:block;
+  font-size:16px;
+}
+.project-card {
+  margin: 10px 0;
+}
+.project-group{
+  margin-bottom:18px;
+}
+
+.group-title{
+  font-size:18px;
+  color:#000;
+  font-weight:700;
+  margin-bottom:8px;
+}
+
+.project-item{
+  font-size:16px;
+  line-height:1.5;
+  margin-bottom:6px;
+  padding-left: 10px;
+}
+.section{
+  margin-bottom:25px;
+}
+ 
+
+.project-group{
+  margin-bottom:16px;
+}
+
+ 
+.project-list{
+  margin:0;
+  padding-left:22px;
+}
+
+.project-list li{
+  font-size:16px;
+  line-height:1.5;
+  margin-bottom:6px;
+}
+
+.project-list a{
+  color:#111;
+  text-decoration:underline;
+}
+
+.project-list a:hover{
+  text-decoration:underline;
+}
+
+@media(max-width:768px){
+  .section-title{font-size:22px;}
+  .group-title{font-size:18px;}
+  .project-list li{font-size:15px;}
+}
+@media(max-width:950px){
+
+  .resume-page{
+    width:100%;
+  }
+
+  .section-title{
+    font-size:18px;
+  }
+
+  .expertise-grid,
+  .project-grid{
+    grid-template-columns:1fr;
+  }
+
+  .expertise-grid li,
+  .project-grid li,
+  .skill-label,
+  .skill-value,
+  .simple-text{
+    font-size:16px;
+  }
+
+  .skill-row{
+    flex-direction:column;
+    gap:4px;
+  }
+
+  .skill-label{
+    width:100%;
+  }
+
+  .project-subtitle{
+    font-size:18px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="resume-page">
+
+ 
+<div class="section">
+   
+   <div class="section-title">Projects</div> 
+        <!-- Angular -->
+        <div class="project-group">
+          <h3 class="group-title">Angular</h3>
+          <ul class="project-list">
+            <li>
+              <strong><a href="https://configurator.leapmotor-international.com.my/null/C10" target="_blank">Leapmotor C10</a></strong>
+              – Built vehicle configurator with responsive UI and optimized performance.
+            </li>
+            <li>
+              <strong><a href="https://configurator.epeugeot.co.kr/visualizer/null/P6" target="_blank">Peugeot Visualizer</a></strong>
+              – Developed digital vehicle platform with reusable components.
+            </li>
+            <li>
+              <strong><a href="https://configurator.jeep.com.au/visualizer/null/WL75" target="_blank">Grand Cherokee</a></strong>
+              – Created automotive visualizers with responsive layouts.
+            </li>
+          </ul>
+        </div> 
+  <!-- React -->
+  <div class="project-group">
+    <h3 class="group-title">React</h3>
+    <ul class="project-list">
+      <li>
+        <strong><a href="https://www.definingthefuture.org/" target="_blank">DefiningTheFuture</a></strong>
+        – Developed workforce development platform focused on emerging technologies.
+      </li>
+      <li>
+        <strong><a href="https://www.ubona.com/" target="_blank">Ubona</a></strong>
+        – Built AI-powered customer experience platform with responsive interfaces.
+      </li>
+      <li>
+        <strong><a href="https://ina-solutions.com/" target="_blank">INA-Solutions</a></strong>
+        – Developed responsive platform delivering technology solutions for organizations.
+      </li>
+    </ul>
+  </div>
+
+  <!-- Next.js -->
+  <div class="project-group">
+    <h3 class="group-title">Next.js</h3>
+    <ul class="project-list">
+      <li>
+        <strong><a href="https://qlitex.com/" target="_blank">Qlitex</a></strong>
+        – Built responsive e-learning platform for all screen sizes.
+      </li>
+      <li>
+        <strong><a href="https://www.globaltechpark.in/" target="_blank">GlobalTechPark</a></strong>
+        – Converted designs into responsive and user-friendly web pages.
+      </li>
+    </ul>
+  </div>
+
+  <!-- JavaScript -->
+  <div class="project-group">
+    <h3 class="group-title">JavaScript</h3>
+    <ul class="project-list">
+      <li>
+        <strong><a href="https://www.toyotabharat.com/virtual-showroom/index.html" target="_blank">Toyota Virtual Showroom</a></strong>
+        – Created digital showroom for vehicle exploration.
+      </li>
+      <li>
+        <strong><a href="https://auto.mahindra.com/360-view?cid=XUV700" target="_blank">XUV700 Visualizer</a></strong>
+        – Built animated showcase with seamless navigation.
+      </li>
+      <li>
+        <strong><a href="https://www.toyotabharat.com/virtual-showroom/fortuner.html" target="_blank">Fortuner Configurator</a></strong>
+        – Developed interactive vehicle configurators.
+      </li>
+    </ul>
+  </div>
+  </div>
+ 
+  <div class="section">
+    <div class="section-title">Education</div>
+
+    <div class="edu">
+      <div class="edu-header">
+        <div>
+          <div class="edu-title">CCS University, Meerut</div>
+          <div class="company">BA in Sociology</div>
+        </div>
+        <div class="date">Jun 2016 to Sep 2019</div>
+      </div>
+      <p>Completed graduation with strong communication, analytical, and problem-solving skills while building a foundation for professional growth.</p>
+    </div>
+
+    <div class="edu">
+      <div class="edu-header">
+        <div>
+          <div class="edu-title">National Institute Of Professional Studies, Ghaziabad</div>
+          <div class="company">Diploma in Web Development</div>
+        </div>
+        <div class="date">Jan 2018 to Mar 2019</div>
+      </div>
+      <p>Gained practical knowledge of web development fundamentals including HTML, CSS, JavaScript, responsive design, and modern website creation techniques.</p>
+    </div>
+
+  </div>
+
+    <div class="section">
+    <div class="section-title">Accomplishments</div>
+    <ul>
+      <li>Recognized for consistently delivering projects within deadlines while maintaining quality standards.</li>
+      <li>Streamlined front-end workflows to reduce development time and improve team productivity.</li>
+      <li>Successfully handled multiple client requirements across fast-paced international projects.</li>
+      <li>Created scalable UI structures that simplified future updates and maintenance.</li>
+      <li>Contributed innovative ideas that enhanced user experience and visual consistency.</li>
+      <li>Adapted quickly to new technologies and project needs in dynamic environments.</li>
+    </ul>
+  </div>
+ 
+
+  <!-- LANGUAGES -->
+  <div class="section">
+    <div class="section-title">Languages</div>
+    <div class="simple-text">English and Hindi</div>
+  </div>
+
+  <!-- HOBBIES -->
+  <div class="section">
+    <div class="section-title">Hobbies</div>
+    <div class="simple-text">Gardening and Cycling</div>
+  </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Resume</title>
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+body{
+  font-family:Arial, Helvetica, sans-serif;
+  background:#f5f5f5;
+  padding:20px;
+}
+.resume{
+  width:900px;
+  margin:auto;
+  background:#fff;
+  padding:25px 28px;
+  color:#111;
+  line-height:1.25;
+}
+.name{
+  font-size:30px;
+  font-weight:700;
+  color:#1d5fd1;
+  text-transform:uppercase;
+}
+.role{
+  font-size:20px;
+  font-weight:700;
+  margin-top:5px;
+  text-transform:uppercase;
+}
+.contact{
+  font-size:16px;
+  margin-top:6px;
+}
+.contact a{
+  color:#1d5fd1;
+  text-decoration:none;
+}
+.personal{
+  font-size:16px;
+  margin-top:6px;
+}
+.summary{
+  margin:20px 0;
+  font-size:16px;
+}
+.section{
+  margin-top:18px;
+}
+.section-title{
+  font-size:22px;
+  font-weight:700;
+  color:#1d5fd1;
+  text-transform:uppercase;
+  border-top:3px solid #1d5fd1;
+  border-bottom:3px solid #1d5fd1;
+  padding:4px 0;
+  margin-bottom:10px;
+}
+p{
+  font-size:16px;
+}
+ul{
+  margin-left:25px;
+}
+ul li{
+  font-size:16px;
+  margin-bottom:4px;
+}
+.job{
+  margin-bottom:12px;
+}
+.job-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+}
+.job-title{
+  font-size:20px;
+  font-weight:700;
+}
+.company{
+  font-size:16px;
+}
+.location{
+  font-size:16px;
+}
+.date{
+  font-size:16px;
+  font-weight:700;
+}
+.edu{
+  margin-bottom:10px;
+}
+.edu-header{
+  display:flex;
+  justify-content:space-between;
+}
+.edu-title{
+  font-size:20px;
+  font-weight:700;
+}
+@media(max-width:950px){
+  .resume{
+    width:100%;
+  }
+  .name{font-size:34px;}
+  .role{font-size:22px;}
+  .section-title{font-size:22px;}
+  p, ul li, .contact, .personal, .company, .location{font-size:16px;}
+}
+
+
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  background:#f3f3f3;
+  padding:20px;
+}
+
+.resume-page{
+  width:900px;
+  margin:auto;
+  background:#fff;
+  padding:25px 28px 40px;
+  color:#111;
+}
+
+.section{
+  margin-bottom:22px;
+}
+
+.section-title{
+  color:#1f5fd3;
+  font-size:22px;
+  font-weight:700;
+  text-transform:uppercase;
+  border-top:3px solid #1f5fd3;
+  border-bottom:3px solid #1f5fd3;
+  padding:4px 0;
+  margin-bottom:12px;
+}
+
+.expertise-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:10px 30px;
+}
+
+.expertise-grid ul,
+.project-grid ul{
+  list-style:disc;
+  padding-left:18px;
+}
+
+.expertise-grid li,
+.project-grid li{
+  font-size:18px;
+  line-height:1.45;
+}
+
+.skills-table{
+  width:100%;
+}
+
+.skill-row{
+  display:flex;
+  align-items:flex-start;
+  margin-bottom:8px;
+}
+
+.skill-label{
+  width:120px;
+  font-size:16px;
+  font-weight:700;
+}
+
+.skill-value{
+  flex:1;
+  font-size:16px;
+}
+
+.simple-text{
+  font-size:16px;
+  line-height:1.5;
+}
+
+.project-block{
+  margin-bottom:16px;
+}
+
+.project-subtitle{
+  font-size:22px;
+  font-weight:700;
+  margin-bottom:8px;
+}
+
+.project-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:10px 30px;
+}
+
+.project-grid a{
+  color:#1f5fd3;
+  text-decoration:none;
+  display:block;
+  font-size:16px;
+}
+.project-card {
+  margin: 10px 0;
+}
+.project-group{
+  margin-bottom:18px;
+}
+
+.group-title{
+  font-size:18px;
+  color:#000;
+  font-weight:700;
+  margin-bottom:8px;
+}
+
+.project-item{
+  font-size:16px;
+  line-height:1.5;
+  margin-bottom:6px;
+  padding-left: 10px;
+}
+.section{
+  margin-bottom:25px;
+}
+ 
+
+.project-group{
+  margin-bottom:16px;
+}
+
+ 
+.project-list{
+  margin:0;
+  padding-left:22px;
+}
+
+.project-list li{
+  font-size:16px;
+  line-height:1.5;
+  margin-bottom:6px;
+}
+
+.project-list a{
+  color:#111;
+  text-decoration:underline;
+}
+
+.project-list a:hover{
+  text-decoration:underline;
+}
+
+@media(max-width:768px){
+  .section-title{font-size:22px;}
+  .group-title{font-size:18px;}
+  .project-list li{font-size:15px;}
+}
+@media(max-width:950px){
+
+  .resume-page{
+    width:100%;
+  }
+
+  .section-title{
+    font-size:18px;
+  }
+
+  .expertise-grid,
+  .project-grid{
+    grid-template-columns:1fr;
+  }
+
+  .expertise-grid li,
+  .project-grid li,
+  .skill-label,
+  .skill-value,
+  .simple-text{
+    font-size:16px;
+  }
+
+  .skill-row{
+    flex-direction:column;
+    gap:4px;
+  }
+
+  .skill-label{
+    width:100%;
+  }
+
+  .project-subtitle{
+    font-size:18px;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="resume">
+
+  <h1 class="name">Vishvendra Tomar</h1>
+
+  <div class="role">Frontend Developer | React | Angular | Next.js | UI/UX</div>
+
+  <div class="contact">
+    
+    <a href="mailto:vishvendra7836@gmail.com">vishvendra7836@gmail.com</a> |
+   <a href="tel:7836815591"> +91 7836-81-55-91 </a>  | Greater Noida, 201310  
+  
+  </div>
+<div class="contact">
+  <p>
+    Portfolio: 
+    <a href="https://vishvendra.my.canva.site/" target="_blank">https://vishvendra.my.canva.site</a>
+  </p>
+   <p>
+    LinkedIn: 
+     <a target="_blank" href="https://www.linkedin.com/in/vishvendra-tomar-2aa0b7171/">https://www.linkedin.com/in/vishvendra-tomar-2aa0b7171</a>
+  </p>
+   
+</div>
+
+
+  <div class="summary">
+    Results-driven Frontend Developer with 8+ years of experience creating responsive, high-performance web applications and digital experiences. Skilled in React, Angular, JavaScript, UI/UX, and modern front-end technologies with a strong focus on clean code, scalability, and user satisfaction.
+  </div>
+
+  <div class="section">
+    <div class="section-title">Profile</div>
+    <p>
+      I specialize in Angular, React, JavaScript, and modern front-end development, with strong expertise in creating responsive, user-friendly interfaces and optimizing performance for large-scale applications.
+    </p>
+    <p>
+      Leveraged AI-assisted development tools (Cursor, ChatGPT) to accelerate UI development, improve code quality, and reduce development time.
+    </p>
+  </div>
+
+   <!-- TECHNICAL PROFICIENCIES -->
+  <div class="section">
+    <div class="section-title">Technical Proficiencies</div>
+
+    <div class="skills-table">
+      <div class="skill-row">
+        <div class="skill-label">Frontend :</div>
+        <div class="skill-value">React, Angular, Next.js, JavaScript, TypeScript, Redux, HTML5, CSS3, SCSS</div>
+      </div>
+
+      <div class="skill-row">
+        <div class="skill-label">Frameworks :</div>
+        <div class="skill-value">Tailwind CSS, Bootstrap, GSAP, jQuery</div>
+      </div>
+
+      <div class="skill-row">
+        <div class="skill-label">CMS  :</div>
+        <div class="skill-value">WordPress, Shopify, Webflow, Framer, Wix</div>
+      </div>
+
+      <div class="skill-row">
+        <div class="skill-label">Tools :</div>
+        <div class="skill-value">Git, Figma, VS Code, Photoshop, Webpack</div>
+      </div>
+ <div class="skill-row">
+        <div class="skill-label">Development:</div>
+        <div class="skill-value">API Integration, REST APIs, Reusable Components, SPAs</div>
+      </div>
+      <div class="skill-row">
+        <div class="skill-label">Others :</div>
+        <div class="skill-value">UI/UX, Responsive Design, Mobile-First Design, Cross-Browser Compatibility, Performance Optimization, SEO Basics</div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="section">
+    <div class="section-title">Professional Experience</div>
+
+    <div class="job">
+      <div class="job-header">
+        <div>
+          <div class="job-title">Frontend Developer, Eccentric</div>
+          <div class="location">Mumbai, India</div>
+        </div>
+        <div class="date">Oct 2020 to Present</div>
+      </div>
+      <p>
+        Developing responsive websites and web apps using HTML5, CSS3, JavaScript, React and Angular. Leading UI development for international projects, converting designs into high-performance interfaces, improving responsiveness, and delivering scalable solutions with excellent client satisfaction.
+      </p>
+    </div>
+
+    <div class="job">
+      <div class="job-header">
+        <div>
+          <div class="job-title">Senior Web Developer, Rejoin Web Solution</div>
+          <div class="location">Punjab, India</div>
+        </div>
+        <div class="date">May 2019 to Jun 2020</div>
+      </div>
+      <p>
+        Developed scalable and responsive web applications using HTML5, CSS3, jQuery, and Bootstrap with a focus on smooth user experience. Customized dynamic websites and business solutions across WordPress, Shopify, and CodeIgniter platforms.
+      </p>
+    </div>
+
+    <div class="job">
+      <div class="job-header">
+        <div>
+          <div class="job-title">UI Developer, Veom Infotech</div>
+          <div class="location">Noida, India</div>
+        </div>
+        <div class="date">Jun 2018 to May 2019</div>
+      </div>
+      <p>
+        Designed and developed responsive websites using HTML5 and CSS3 for diverse client projects.
+      </p>
+    </div>
+
+  </div>
+
+ 
+
+ 
+
+</div>
+
+</body>
+</html>
