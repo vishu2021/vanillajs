@@ -1,0 +1,112 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto Mono", monospace;
+}
+.container {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+}
+#battery {
+  box-sizing: content-box;
+  height: 7.8em;
+  width: 17.5em;
+  border: 0.6em solid #246aed;
+  margin: auto;
+  border-radius: 0.6em;
+  position: relative;
+  display: grid;
+  place-items: center;
+}
+#battery:before {
+  position: absolute;
+  content: "";
+  height: 5em;
+  width: 1.1em;
+  background-color: #246aed;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  right: -1.6em;
+  border-radius: 0 0.3em 0.3em 0;
+}
+#charge {
+  position: absolute;
+  height: 6.5em;
+  width: 16.25em;
+  background-color: #246aed;
+  top: 0.6em;
+  left: 0.6em;
+}
+#charge-level {
+  position: absolute;
+  font-size: 3em;
+  font-weight: 500;
+  color: #fff;
+}
+#charging-time {
+  text-align: center;
+  font-size: 1.7em;
+  margin-top: 1.4em;
+}
+.active {
+  animation: charge-animation 3s infinite linear;
+}
+@keyframes charge-animation {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 16.25em;
+  }
+}
+
+[3:39 pm, 24/12/2023] Vishu: .footer {
+  position: absolute;
+  bottom: 30px;
+  width: 100%;
+  left: 0;
+  text-align: center;
+}
+.youtube-tutorial-btn {
+  font-size: 1.12em;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  font-family: "Poppins", sans-serif;
+  border-radius: 0.5em;
+  padding: 1em 1.5em;
+  cursor: pointer;
+  outline: none;
+  display: inline-block;
+  text-decoration: none;
+}
+  .footer {
+  position: absolute; 
+  padding: 10px;
+  z-index: 9;
+  bottom: 0; 
+  right: 0; 
+}
+.youtube-tutorial-btn {
+  font-size: 1.12em;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  border: none;
+  font-family: "Poppins", sans-serif;
+  border-radius: 100px;
+  padding:20px 40px;
+  cursor: pointer;
+  outline: none;
+  font-weight: 600;
+  display: inline-block;
+  text-decoration: none;
+  transition: 1s all ease;
+  border: 4px solid #fff;
+}
+.youtube-tutorial-btn:hover {
+  background-color: #ca212a;
+}

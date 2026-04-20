@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Double Range Slider</title>
+    <!--Google Fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <!--Stylesheet-->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="values">
+            <span id="range1">
+                0
+            </span>
+            <span> &dash; </span>
+            <span id="range2">
+                100
+            </span>
+        </div>
+        <div class="container">
+            <div class="slider-track"></div>
+            <input type="range" min="0" max="100" value="30" id="slider-1" oninput="slideOne()">
+            <input type="range" min="0" max="100" value="70" id="slider-2" oninput="slideTwo()">
+        </div>
+    </div>
+    <div class="footer">
+      <a href="https://www.youtube.com/watch?v=DfSYmk_6vk8 " target="_blank" class="youtube-tutorial-btn"> 
+        Youtube Tutorial
+      </a>
+    </div>
+    <!--Script-->
+    <script src="script.js"></script>
+</body>
+</html>

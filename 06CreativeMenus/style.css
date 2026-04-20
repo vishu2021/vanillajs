@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #222;
+}
+main {
+  padding: 20px;
+}
+h1 {
+  text-align: center;
+  margin: 0;
+  padding: 30px;
+}
+h1 a {
+  color: #fff;
+  font-size: 30px;
+  line-height: 1.6;
+  display: inline-block;
+  font-weight: normal;
+}
+h1 a strong {
+  color: yellow;
+}
+.hero {
+  padding: 20px;
+  border-radius: 4px;
+  background-color: #333;
+}
+.hero ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  justify-content: center;
+  padding: 0;
+  margin: auto;
+  max-width: 800px;
+}
+.hero ul li {
+  padding: 4px;
+  flex: 0 0 auto;
+  width: 33.33333%;
+}
+.hero ul li a {
+  display: flex;
+  color: #fff;
+  font-size: 20px;
+  padding: 20px 10px;
+  border-radius: 4px;
+  text-decoration: none;
+  background-color: #000;
+  transition: all 0.6s ease;
+  height: 100%;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+}
+.hero ul li a:hover {
+  background-color: green;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #000;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #333;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #333;
+}
+@media screen and (max-width: 767px) {
+  main,
+  .hero {
+    padding: 10px;
+  }
+  .hero ul {
+    flex-direction: column;
+  }
+  .hero ul li {
+    padding: 4px 0;
+    width: 100%;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .hero ul li {
+    width: 33.33333%;
+  }
+}

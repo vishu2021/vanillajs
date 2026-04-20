@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detect Mouse/Touch Hold</title>
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div id="div-ref">Hold Mouse Here</div>
+      <p id="result">Demo Text Here</p>
+    </div>
+    <div class="footer">
+      <a href="https://www.youtube.com/watch?v=_WHFgDm_kkE " target="_blank" class="youtube-tutorial-btn"> 
+        Youtube Tutorial
+      </a>
+    </div>
+    <!-- Script -->
+    <script>
+      //Create Initial References
+      let divRef = document.getElementById("div-ref");
+      let result = document.getElementById("result");
+      let isMouseHold = true;
+      let timeoutref;
+      let deviceType = "";
+
+      //Events Object
+      let events = {
+        mouse: {
+          down: "mousedown",
+          up: "mouseup",
+        },
+        touch: {
+          down: "touchstart",
+          up: "touchend",
+        },
+      };
+
+      //Detect if the device is a touch device
+      const isTouchDevice = () => {
+        try {
+          //We try to create Touch Event (It would fail for desktops and throw error)
+          document.createEvent("TouchEvent");
+          deviceType = "touch";
+          return true;
+        } catch (e) {
+          deviceType = "mouse";
+          return false;
+        }
+      };
+
+      isTouchDevice();
+
+      //Function on mouse down
+      divRef.addEventListener(events[deviceType].down, (e) => {
+        e.preventDefault();
+        isMouseHold = true;
+        //Mouse down will be considered mouse hold if it is being held down for more than 1500ms
+        timeoutref = setTimeout(function () {
+          //If mouse is being held down do this
+          if (isMouseHold) {
+            result.innerText = "Mouse is being held down";
+          }
+        }, 1500);
+      });
+
+      //Function on mouse up
+      //If mouse is released do this
+      divRef.addEventListener(events[deviceType].up, function () {
+        //Clear the timeout
+        clearTimeout(timeoutref);
+        result.innerText = "Mouse hold is released";
+      });
+    </script>
+  </body>
+</html>

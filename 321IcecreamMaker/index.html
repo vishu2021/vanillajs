@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Customize Ice Cream</title>
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Stylesheet -->
+     <style>
+      body {
+  padding: 0;
+  margin: 0;
+  background-color: #dcacfe;
+}
+.wrapper {
+  width: 350px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+.container {
+  width: 100%;
+  height: 350px;
+  position: relative;
+}
+.bowl {
+  width: 230px;
+  height: 90px;
+  background-color: #d9f0fe;
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  bottom: 90px;
+  border-radius: 0 0 150px 150px;
+}
+.bowl:before {
+  content: "";
+  position: absolute;
+  height: 20px;
+  width: 110%;
+  background-color: #afddfa;
+  left: -5%;
+  border-radius: 20px;
+}
+.base {
+  height: 40px;
+  width: 20px;
+  background-color: #afddfa;
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 90px;
+}
+.base:after {
+  content: "";
+  position: absolute;
+  height: 40px;
+  width: 120px;
+  background-color: #d9f0fe;
+  left: -50px;
+  top: 30px;
+  border-radius: 50px 50px 0 0;
+}
+.scoop1 {
+  height: 130px;
+  width: 130px;
+  background-color: #f45c96;
+  border-radius: 50%;
+  position: absolute;
+  background-size: 40px 150px;
+  background-image: radial-gradient(
+    circle at 20px 12px,
+    #f8bd3d 25px,
+    transparent 25px
+  );
+  top: 20px;
+  left: 108px;
+}
+.scoop2 {
+  height: 130px;
+  width: 130px;
+  background-color: #badc58;
+  border-radius: 50%;
+  position: absolute;
+  top: 100px;
+  right: 70px;
+}
+.scoop3 {
+  height: 130px;
+  width: 130px;
+  background-color: #f58619;
+  border-radius: 50%;
+  position: absolute;
+  top: 100px;
+  left: 70px;
+  background-size: 25px 80px;
+  background-image: radial-gradient(
+    circle at 12.5px 17px,
+    #5c0003 20px,
+    transparent 21px
+  );
+}
+.btns {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding-top: 15px;
+  border-top: 2px dashed #404080;
+}
+.btns button {
+  width: 150px;
+  padding: 12px 0;
+  border-radius: 20px;
+  margin-top: 20px;
+  border: none;
+  outline: none;
+  background-color: #c174f8;
+  color: #ffffff;
+  cursor: pointer;
+}
+.footer {
+  position: absolute; 
+  padding: 10px;
+  z-index: 9;
+  bottom: 0; 
+  right: 0; 
+}
+.youtube-tutorial-btn {
+  font-size: 1.12em;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  border: none;
+  font-family: "Poppins", sans-serif;
+  border-radius: 100px;
+  padding:20px 40px;
+  cursor: pointer;
+  outline: none;
+  font-weight: 600;
+  display: inline-block;
+  text-decoration: none;
+  transition: 1s all ease;
+  border: 4px solid #fff;
+}
+.youtube-tutorial-btn:hover {
+  background-color: #ca212a;
+}
+
+     </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="container">
+        <div class="scoop1"></div>
+        <div class="scoop2"></div>
+        <div class="scoop3"></div>
+        <div class="bowl">
+          <div class="base"></div>
+        </div>
+      </div>
+      <div class="btns">
+        <button id="btn-scoop1">Scoop 1</button>
+        <button id="btn-scoop2">Scoop 2</button>
+        <button id="btn-scoop3">Scoop 3</button>
+        <button id="btn-topping1">Topping 1</button>
+        <button id="btn-topping2">Topping 2</button>
+      </div>
+    </div>
+    <div class="footer">
+      <a href="https://www.youtube.com/watch?v=-sFfbXGZ2Qs " target="_blank" class="youtube-tutorial-btn"> 
+        Youtube Tutorial
+      </a>
+      </div>
+    <!-- Script -->
+    <script >
+      let scoop1 = document.querySelector(".scoop1");
+let scoop2 = document.querySelector(".scoop2");
+let scoop3 = document.querySelector(".scoop3");
+
+let btnScoop1 = document.getElementById("btn-scoop1");
+let btnScoop2 = document.getElementById("btn-scoop2");
+let btnScoop3 = document.getElementById("btn-scoop3");
+let btnTopping1 = document.getElementById("btn-topping1");
+let btnTopping2 = document.getElementById("btn-topping2");
+
+let colors = ["#f45c96", "#f8bd3d", "#badc58", "#5c0003", "#f58619", "#ebab70"];
+
+let counter1 = 0;
+let counter2 = 0;
+let counter3 = 0;
+let counter4 = 0;
+let counter5 = 0;
+
+function setCounterValue(counter) {
+  return counter < colors.length - 1 ? counter + 1 : 0;
+}
+
+btnScoop1.addEventListener("click", () => {
+  scoop1.style.backgroundColor = colors[counter1];
+  counter1 = setCounterValue(counter1);
+});
+btnScoop2.addEventListener("click", () => {
+  scoop2.style.backgroundColor = colors[counter2];
+  counter2 = setCounterValue(counter2);
+});
+btnScoop3.addEventListener("click", () => {
+  scoop3.style.backgroundColor = colors[counter3];
+  counter3 = setCounterValue(counter3);
+});
+btnTopping1.addEventListener("click", () => {
+  scoop1.style.backgroundImage = `radial-gradient(circle at 20px 18px, ${colors[counter4]} 25px, transparent 25px)`;
+  counter4 = setCounterValue(counter4);
+});
+btnTopping2.addEventListener("click", () => {
+  scoop3.style.backgroundImage = `radial-gradient(circle at 12.5px 17px, ${colors[counter5]} 20px, transparent 21px)`;
+  counter5 = setCounterValue(counter5);
+});
+    </script>
+  </body>
+</html>

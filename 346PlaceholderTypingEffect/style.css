@@ -1,0 +1,49 @@
+*,
+*:before,
+*:after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    background: linear-gradient(
+        135deg,
+        #ff5b84,
+        #eb3461
+    );
+}
+.container{
+    background-color: #1c1c27;
+    padding: 50px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 5px;
+    box-shadow: 0 15px 25px rgba(0,0,0,0.15);
+}
+label,
+input{
+    font-family: "DM Sans",sans-serif;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+}
+label{
+    display: block;
+    position: relative;
+    color: #eb3461;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+input{
+    position: relative;
+    width: 300px;
+    padding: 10px 0;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1.5px solid #eb3461;
+    outline: none;
+    color: #e5e5e5;
+    font-weight: 400;
+}

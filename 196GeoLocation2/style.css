@@ -1,0 +1,21 @@
+body {
+  font-size: 120%;
+}
+
+#demo {
+  padding: 1em;
+  background: yellow;
+  width: 20em;
+  border-radius: 1em;
+}
+
+Button {
+  padding: 1em;
+  font-size: 130%;
+  background: lightgreen;
+  border-radius: 0.3em;
+}
+
+#map {
+  padding: 1em;
+}

@@ -1,0 +1,18 @@
+body {
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+    font-family: Roboto,"Helvetica Neue",Arial,sans-serif;
+  flex-direction: column;
+}
+input {
+  width: 250px;
+  text-align: center;
+}
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+}

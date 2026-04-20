@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detect Device Orientation</title>
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <button class="hide" id="check" onclick="orientationChange()">
+        Check Orientation
+      </button>
+      <p id="status"></p>
+    </div>
+    <div class="footer">
+      <a href="https://www.youtube.com/watch?v=SfeJ-eRR3Kc " target="_blank" class="youtube-tutorial-btn"> 
+        Youtube Tutorial
+      </a>
+      </div>
+    <!-- Script -->
+    <script>
+      //Create Initial References
+      const statusRef = document.getElementById("status");
+      const checkOrientationButton = document.getElementById("check");
+
+      //Create the query
+      const potraitMediaQuery = window.matchMedia("(orientation:potrait)");
+
+      //Define a callback function for the event listener (For safari/ios since they don't support screen orientation)
+      const mediaOrientationChange = (mediaQuery) => {
+        if (!mediaQuery.matches) {
+          statusRef.innerText = `Landscape`;
+        } else {
+          statusRef.innerText = `Portrait`;
+        }
+      };
+
+      //onchange event would be triggered whenever the orientation  changes
+      window.screen.orientation.onchange = orientationChange = () => {
+        if (screen.orientation.type.includes("landscape")) {
+          statusRef.innerText = `Landscape`;
+        } else {
+          statusRef.innerText = `Potrait`;
+        }
+      };
+
+      //However for Firefox it doesn't get fired hence we add buttons to manually display the changed orientation
+      window.onload = () => {
+        statusRef.innerText = "";
+        checkOrientationButton.classList.add("hide");
+        if ("mozOrientation" in screen) {
+          //For firefox
+          //Since we had issues with onchange on firefox the button would simply call the function which we call on change
+          checkOrientationButton.classList.remove("hide");
+        } else if ("orientation" in screen) {
+          //Supported Browsers
+          orientationChange();
+        } else {
+          //For safari
+          mediaOrientationChange(potraitMediaQuery);
+          potraitMediaQuery.addEventListener("change", mediaOrientationChange);
+        }
+      };
+    </script>
+  </body>
+</html>

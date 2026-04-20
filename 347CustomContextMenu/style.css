@@ -1,0 +1,25 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  background-color: #2c8df7;
+}
+#context-menu {
+  background-color: #ffffff;
+  color: #1f194c;
+  width: 10em;
+  padding: 0.8em 0.6em;
+  font-size: 1.3rem;
+  position: fixed;
+  visibility: hidden;
+}
+.item {
+  padding: 0.3em 1.2em;
+}
+.item:hover {
+  background-color: rgba(44, 141, 247, 0.2);
+  cursor: pointer;
+}

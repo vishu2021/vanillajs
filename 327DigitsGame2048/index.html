@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2048 Game</title>
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Stylesheet-->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container hide">
+      <h2 style="text-align: center;">
+        Play this game on iPad and Mobile Devices only.<br>
+        Do not play it on Desktop. 
+      </h2>
+      <div class="heading">
+        <h1>2048</h1>
+        <div class="score-container">
+          Score:
+          <span id="score">0</span>
+        </div>
+      </div>
+      <div class="grid"></div>
+    </div>
+    <div class="cover-screen">
+      <h2 id="over-text" class="hide">Game Over</h2>
+      <p id="result"></p>
+      <button id="start-button">Start Game</button>
+    </div> 
+    <div class="footer">
+      <a href="https://www.youtube.com/watch?v=I46Jf4o8r1w " target="_blank" class="youtube-tutorial-btn"> 
+        Youtube Tutorial
+      </a>
+      </div>
+      
+    <!-- Script -->
+    <script src="script.js"></script>
+  </body>
+</html>

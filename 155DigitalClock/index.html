@@ -1,0 +1,172 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="favicon.png" />
+    <title>JS Projects</title>
+    <style>
+      *{
+    padding: 0;
+    margin: 0;
+    user-select: none;
+}
+body{
+    display:grid;
+    place-items: center;
+    height:100vh;
+    background-color: rgb(27, 28, 30);
+}
+button{
+    display: grid;
+    
+    padding:10px 20px;
+    cursor:pointer;
+    background-color: transparent;
+    border:1px solid rgb(51, 51, 60);
+    border-radius: 20px;
+    color:white;
+    overflow: hidden;
+    font-family: monospace;
+    font-size: 1.2rem;
+    z-index: 1;
+    font-weight: bold;
+    position: relative;
+}
+
+button:hover{
+    background-color: rgb(51, 51, 60);
+}
+button:after{
+    content:'';
+    place-self: center;
+    width:0px;
+    background-color: rgb(19, 18, 21);
+    z-index: -1;
+    height:0px;
+    border-radius: 50%;
+    position: absolute;
+    transition: 0.3s;
+}
+button:active::after{
+    width:200px;
+    height:200px;
+}
+
+
+
+.animateFromRight::after{
+    right:-200px;
+    width:200px;
+    height:200px;
+}
+.animateFromRight:active::after{
+    right:0px;
+}
+.animateFromLeft::after{
+    width:200px;
+    height:200px;
+    left:-200px;
+}
+.animateFromLeft:active::after{
+    left:0px;
+}
+
+
+
+*{
+    padding: 0;
+    margin: 0;
+    user-select: none;
+}
+body{
+    display:grid;
+    place-items: center;
+    height:100vh;
+    background-color: rgb(27, 28, 30);
+}
+.Time-container{
+    width:auto;
+    height:50px;
+    padding:5px;
+    display:flex;
+    overflow: hidden;
+    background-color: #1e1f22;
+    border-radius: 5px;
+    color:white;
+    font-size: 30px;
+    font-family: sans-serif;
+}
+.Time-container li{
+list-style-type: none;
+height: 100%;
+display: grid;
+place-items: center;
+padding:0px 10px;
+transition-duration: 0.3s;
+}
+.Time-container .colon{
+    font-size: 30px;
+    display: grid;
+    place-items:center;
+    font-weight: 800;
+}
+.digit li{
+    position: relative;
+}
+    </style>
+  </head>
+  <body>
+    <div class="Time-container">
+      <div class="digit">
+          <li>0</li><li>1</li><li>2</li><li>3</li><li>4</li><li>5</li><li>6</li><li>7</li><li>8</li><li>9</li>
+      </div>
+      <div class="digit">
+          <li>0</li><li>1</li><li>2</li><li>3</li><li>4</li><li>5</li><li>6</li><li>7</li><li>8</li><li>9</li>
+      </div>
+      <div class="colon">:</div>
+      <div class="digit">
+          <li>0</li><li>1</li><li>2</li><li>3</li><li>4</li><li>5</li><li>6</li><li>7</li><li>8</li><li>9</li>
+      </div><div class="digit">
+          <li>0</li><li>1</li><li>2</li><li>3</li><li>4</li><li>5</li><li>6</li><li>7</li><li>8</li><li>9</li>
+      </div>
+      <div class="colon">:</div>
+      <div class="digit">
+          <li>0</li><li>1</li><li>2</li><li>3</li><li>4</li><li>5</li><li>6</li><li>7</li><li>8</li><li>9</li>
+      </div><div class="digit"><li>0</li><li>1</li><li>2</li><li>3</li><li>4</li><li>5</li><li>6</li><li>7</li><li>8</li><li>9</li>
+      </div>
+      <div class="digit">
+          <li>AM</li>
+          <li>PM</li>
+      </div>
+  </div>
+</div>
+    <script>
+      setInterval(function(){
+    var Time=new Date()
+    var hour=Time.getHours()
+    var minutes=Time.getMinutes()
+    var seconds=Time.getSeconds()
+    var amOrpm=0;
+    if(hour>12){
+        hour=Time.getHours()-12
+        amOrpm=1
+    }
+    if(hour<10){hour="0"+hour}
+    if(minutes<10){minutes="0"+minutes}
+    if(seconds<10){seconds="0"+seconds}
+    
+    var Time=[hour,minutes,seconds,amOrpm]
+    
+    var digitDivs=Array.from(document.querySelectorAll(".digit"))
+    var digitDivs=digitDivs.slice(0,digitDivs.length)
+    
+    var Time=Time.join("").split("")
+    for(let i in Time){
+    
+        Array.from(digitDivs[i].querySelectorAll("li")).forEach((e)=>{e.style.top=-(parseInt(Time[i])*50)+"px"})
+    }
+    },100)
+    </script>
+  </body>
+</html>

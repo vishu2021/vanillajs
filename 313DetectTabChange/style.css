@@ -1,0 +1,40 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+h1{
+    font-family: "Poppins",sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 80px;
+}
+.footer {
+    position: absolute; 
+    padding: 10px;
+    z-index: 9;
+    bottom: 0; 
+    right: 0; 
+  }
+  .youtube-tutorial-btn {
+    font-size: 1.12em;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    border: none;
+    font-family: "Poppins", sans-serif;
+    border-radius: 100px;
+    padding:20px 40px;
+    cursor: pointer;
+    outline: none;
+    font-weight: 600;
+    display: inline-block;
+    text-decoration: none;
+    transition: 1s all ease;
+    border: 4px solid #fff;
+  }
+  .youtube-tutorial-btn:hover {
+    background-color: #ca212a;
+  }

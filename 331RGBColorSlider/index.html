@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>RGB Color Slider</title>
+    <!--Google Font-->
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@500&display=swap" rel="stylesheet">
+    <!--Stylesheet-->
+   <style>
+    body{
+    background-color: #000000;
+}
+.container{
+    background-color: #ffffff;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    width: 60%;
+    padding: 20px 0;
+    box-shadow: 20px 20px 30px rgba(0,0,0,0.2);
+    font-family: 'Work Sans',sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    color: #142b37;
+    border-radius: 5px;
+    display: grid;
+    justify-items: center;
+}
+.wrapper{
+    width: 100%;
+    text-align: center;
+}
+input[type="range"]{
+    display: inline-block;
+    width: 80%;
+    margin-left: 10px;
+    margin-top: 25px;
+}
+span{
+    display: inline-block;
+    text-align: center;
+    margin: 20px 0;
+    background-color: #0075FF;
+    color: #ffffff;
+    padding: 10px 30px;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+    border-radius: 2px;
+}
+.footer {
+            position: absolute; 
+            padding: 10px;
+            z-index: 9;
+            bottom: 0; 
+            right: 0; 
+          }
+          .youtube-tutorial-btn {
+            font-size: 1.12em;
+            background-color: rgba(0, 0, 0, 0.6);
+            color: #fff;
+            border: none;
+            font-family: "Poppins", sans-serif;
+            border-radius: 100px;
+            padding:20px 40px;
+            cursor: pointer;
+            outline: none;
+            font-weight: 600;
+            display: inline-block;
+            text-decoration: none;
+            transition: 1s all ease;
+            border: 4px solid #fff;
+          }
+          .youtube-tutorial-btn:hover {
+            background-color: #ca212a;
+          }
+   </style>
+</head>
+<body>
+   <div class="container">
+       <div class="wrapper">
+           R<input type="range" min="0" max="255" value="0" id="red" oninput="colors()">
+       </div>
+       <div class="wrapper">
+            G<input type="range" min="0" max="255" value="0" id="green" oninput="colors()">
+        </div>
+        <div class="wrapper">
+            B<input type="range" min="0" max="255" value="0" id="blue" oninput="colors()">
+        </div>
+        <span id="output">rgb(0, 0, 0)</span>
+       
+          <div class="footer">
+          <a href="https://www.youtube.com/watch?v=h4sIKiyEo6k " target="_blank" class="youtube-tutorial-btn"> 
+            Youtube Tutorial
+          </a>
+          </div>
+        <script>
+            function colors(){
+                var red= document.getElementById("red").value;
+                var green = document.getElementById("green").value;
+                var blue = document.getElementById("blue").value;
+                document.body.style.backgroundColor = 
+                'rgb(' + red + ',' + green + ',' + blue + ')';
+                document.getElementById("output").innerHTML =  'rgb(' + red + ',' + green + ',' + blue + ')' ;
+            }
+        </script>
+   </div>
+</body>
+</html>

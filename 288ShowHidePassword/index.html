@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Show/Hide Password Toggle</title>
+	<link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+	<div class="wrapper">
+		<input type="Password" placeholder="Password" id="password">
+		<span>
+			<i class="fa fa-eye" aria-hidden="true" id="eye" onclick="toggle()"></i>
+		</span>
+	</div>
+	<div class="footer">
+		<a href="https://www.youtube.com/watch?v=kUpoxmSo82E " target="_blank" class="youtube-tutorial-btn"> 
+			Youtube Tutorial
+		</a>
+	</div>
+	<script>
+		var state= false;
+		function toggle(){
+			if(state){
+				document.getElementById("password").setAttribute("type","password");
+				document.getElementById("eye").style.color='#7a797e';
+				state = false;
+			}
+			else{
+				document.getElementById("password").setAttribute("type","text");
+				document.getElementById("eye").style.color='#5887ef';
+				state = true;
+			}
+		}
+	</script>
+</body>
+</html>

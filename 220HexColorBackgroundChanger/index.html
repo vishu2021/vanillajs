@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta http-equiv="X-UA-Compatible" content="ie=edge">  
+ <title>Hex Color</title>
+ <link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet"> 
+ <style>
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  html, body {
+    height: 100%;
+  }
+  
+  .container {
+    height: 100%;
+    margin: auto;
+    max-width: 1200px;
+  }
+  .row {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .col-6 {
+    width: 50%;
+    flex: 0 0 auto;
+    text-align: center;
+  }
+  h1 {
+    margin: 20px 0;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+  .btn {
+    background-color: #04AA6D;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 8px;
+  border: 2px solid #fff;
+  }
+ </style>
+</head> 
+<body> 
+ <div class="container">
+  <div class="row max-height align-items-center">
+   <div class=" col-6   ">
+    <h1 >hex color :<span id="hex-value"></span></h1>
+    <a href="#" id="btn" class="btn ">click me</a>
+   </div>
+  </div>
+ </div> 
+ <script > 
+(function() {
+    const button = document.querySelector('#btn')
+    const body = document.querySelector('body')
+    const hexValues = [0,1,2,3,4,5,6,7,8,9,'A','B','C','D','E','F']
+    const value = document.querySelector('#hex-value')
+
+    button.addEventListener('click', changeHex)
+
+    function changeHex(){
+        let hex = '#'
+
+        for (let i = 0; i < 6; i++){
+            const index = Math.floor(Math.random()*hexValues.length)
+            hex += hexValues[index]
+        }
+        value.textContent = hex
+        body.style.backgroundColor = hex
+    }
+} )()
+ </script>
+</body>
+
+</html>

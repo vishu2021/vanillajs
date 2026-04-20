@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Buttons List</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html {
+      height: 100%;
+    }
+    body {
+      height: 100%;
+      background-color: #333;
+    }
+    .wrapper {
+      height: 100%;
+      display: flex; 
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .btnContainer {
+      display: flex;
+      flex-direction: column;
+    }
+    .btn {
+      padding: 10px 20px;
+      background: #fff;
+      text-align: center;
+      display: inline-block;
+      cursor: pointer;
+      margin: 10px 0;
+      width: 200px;
+      font-weight:500;
+      border-radius: 4px;
+      font-family: sans-serif;
+      transition: 0.5s all ease;
+}
+.btn.btnActive
+{ 
+  color:#fff;
+  background-color: rgb(158, 18, 18);
+}
+h1 {
+  color: #fff;
+  margin: 20px 0;
+}
+  </style>
+
+</head>
+<body>
+  <div class="wrapper">
+    <h1>
+      Click on Buttons to swicth Active State of Buttons
+    </h1>
+    <div class="btnContainer">
+
+      <div class="btn">
+        <span class="btnActive">
+              Button 1
+            </span>
+      </div>
+    
+      <div class="btn">
+        <span>
+          Button 2
+            </span>
+      </div>
+    
+      <div class="btn">
+        <span>
+          Button 3
+            </span>
+      </div>
+    
+      <div class="btn">
+        <span>
+          Button  4
+            </span>
+    
+      </div>
+    </div>
+  </div>
+  
+
+<script>
+  document.querySelectorAll('.btn').forEach(function(el) {
+  el.addEventListener('click', function(e) {
+
+var btnAll = document.querySelectorAll('.btn');
+let i = 0;
+    for (i = 0; i < btnAll.length; i++) {
+      if (btnAll[i].classList.contains('btnActive')) {
+        btnAll[i].classList.remove('btnActive');
+      }
+    }
+    el.classList.add('btnActive');
+  });
+});
+</script>
+</body>
+</html>

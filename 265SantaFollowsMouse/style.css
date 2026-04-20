@@ -1,0 +1,44 @@
+body {
+  padding: 0;
+  margin: 0;
+  background: url("bg-img.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
+}
+#my-div {
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  transition: 0.2s ease-out;
+}
+#my-div img {
+  width: 140px;
+  filter: drop-shadow(0 0 20px rgb(1, 1, 42, 0.2));
+}
+.footer {
+  position: absolute;
+  bottom: 30px;
+  width: 100%;
+  left: 0;
+  text-align: center;
+}
+.youtube-tutorial-btn {
+  font-size: 1.12em;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  font-family: "Poppins", sans-serif;
+  border-radius: 0.5em;
+  padding: 1em 1.5em;
+  cursor: pointer;
+  outline: none;
+  display: inline-block;
+  text-decoration: none;
+  transition: 1s all ease;
+  border: 4px solid #fff;
+}
+.youtube-tutorial-btn:hover {
+  background-color: #ca212a;
+}
