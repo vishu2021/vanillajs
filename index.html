@@ -1,0 +1,1573 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="favicon.png" />
+    <title>JS Projects</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap");
+      * {
+        box-sizing: border-box;
+        font-family: "Montserrat", sans-serif;
+      }
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: #222;
+      }
+      main {
+        padding: 10px 10px 0;
+      }
+      h1 {
+        text-align: center;
+        margin: 0;
+        padding: 30px;
+      }
+      h1 a {
+        color: #fff;
+        font-size: 30px;
+        line-height: 1.6;
+        display: inline-block;
+        font-weight: normal;
+        font-weight: 700;
+      }
+      h1 a strong {
+        color: yellow;
+        font-weight: 800;
+      }
+      .hero {
+        padding: 10px;
+        border-radius: 4px;
+        background-color: #333;
+      }
+      .hero ul {
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+        justify-content: center;
+        padding: 0;
+        margin: 0;
+        counter-reset: section;
+        list-style-type: none;
+      }
+      .hero ul li {
+        padding: 0;
+        flex: 0 0 auto;
+        width: 20%;
+        position: relative;
+        border: 2px solid #444;
+      }
+      .hero ul li::before {
+        color: #fff;
+        font-size: 16px;
+        font-weight: 600;
+        position: absolute;
+        left: 0;
+        top: 0;
+        counter-increment: section;
+        content: counters(section, ".") ". ";
+        background: #222;
+        width: 50px;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 0;
+        transition: all 1s ease;
+      }
+      .hero ul li:hover::before {
+        color: #000;
+        background: #d1d100;
+      }
+      .hero ul li a {
+        display: flex;
+        color: #fff;
+        font-size: 16px;
+        font-weight: 600;
+        padding: 10px 10px 10px 60px;
+        border-radius: 0;
+        text-decoration: none;
+        background-color: #000;
+        transition: all 1s ease;
+        height: 100%;
+        align-items: center;
+        width: 100%;
+      }
+      .hero ul li:hover a {
+        color: #000;
+        background-color: #ffff00;
+      }
+      /* width */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+
+      /* Track */
+      ::-webkit-scrollbar-track {
+        background: #000;
+      }
+
+      /* Handle */
+      ::-webkit-scrollbar-thumb {
+        background: #333;
+      }
+
+      /* Handle on hover */
+      ::-webkit-scrollbar-thumb:hover {
+        background: #333;
+      }
+      .new-box-wrap {
+        background-color: #333;
+        width: 100%;
+        padding: 20px;
+        margin-top: 30px;
+      }
+      .new-box-wrap p {
+        color: #fff;
+        font-size: 28px;
+        font-weight: 800;
+        margin: 0 0 10px;
+        text-align: center;
+      }
+      .new-box-wrap-btns {
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+        justify-content: center;
+        padding: 0;
+        margin: 0;
+      }
+      .new-box-wrap-btns li {
+        padding: 4px;
+        flex: 0 0 auto;
+      }
+      .new-box-wrap-btns li a {
+        display: flex;
+        color: #fff;
+        font-size: 16px;
+        padding: 10px 30px;
+        border-radius: 100px;
+        text-decoration: none;
+        background-color: #000;
+        transition: all 1s ease;
+        height: 100%;
+        align-items: center;
+        width: 100%;
+        font-weight: 600;
+      }
+      .new-box-wrap-btns li a:hover {
+        color: #000;
+        background-color: yellow;
+      }
+      @media screen and (max-width: 767px) {
+        main,
+        .hero {
+          padding: 10px;
+        }
+        .hero ul {
+          flex-direction: column;
+        }
+        .hero ul li {
+          width: 100%;
+        }
+        .new-box-wrap p {
+          font-size: 20px;
+          font-weight: 600;
+        }
+      }
+      @media screen and (min-width: 768px) and (max-width: 1200px) {
+        .hero ul li {
+          width: 33.33333%;
+        }
+        .new-box-wrap p {
+          font-size: 20px;
+          font-weight: 700;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>
+        <a> 150 Projects <strong> HTML, CSS</strong> & <strong> JS</strong></a>
+      </h1>
+      <section class="hero">
+        <ul>
+          <li>
+            <a href="01BGVideo" target="_blank"> BG Video</a>
+          </li>
+          <li>
+            <a href="02CreativeLoadingAnimation" target="_blank">
+              Creative Loading Animation
+            </a>
+          </li>
+          <li>
+            <a href="03CustomScrollbar" target="_blank"> Custom Scrollbar </a>
+          </li>
+          <li>
+            <a href="04CreativeImageHoverEffect" target="_blank">
+              Creative Image Hover Effect</a
+            >
+          </li>
+          <li>
+            <a href="05Top5CreativeButtons" target="_blank">
+              Top 5 Creative Buttons
+            </a>
+          </li>
+          <li>
+            <a href="06CreativeMenus" target="_blank"> Creative Menus</a>
+          </li>
+          <li>
+            <a href="07CreativeImageEffect" target="_blank">
+              Creative Image Effect
+            </a>
+          </li>
+          <li>
+            <a href="08CreativeCards" target="_blank"> Creative Cards </a>
+          </li>
+          <li>
+            <a href="09Tooltip" target="_blank"> Tooltip </a>
+          </li>
+          <li>
+            <a href="10Accordion" target="_blank"> Accordion with Arrow </a>
+          </li>
+          <li>
+            <a href="11Scrollbar" target="_blank"> Scrollbar</a>
+          </li>
+          <li>
+            <a href="12ImageBgText" target="_blank"> Image Bg Text </a>
+          </li>
+          <li>
+            <a href="13PageScrollIndicator" target="_blank">
+              Page Scroll Indicator
+            </a>
+          </li>
+          <li>
+            <a href="14Heart" target="_blank">Heart </a>
+          </li>
+          <li>
+            <a href="15BackgroundColorChanger" target="_blank"
+              >Background Color Changer
+            </a>
+          </li>
+          <li>
+            <a href="16AutoText" target="_blank"> Auto Text </a>
+          </li>
+          <li>
+            <a href="17Cursor" target="_blank"> Cursor</a>
+          </li>
+          <li>
+            <a href="18VideoTrailerPopup" target="_blank">
+              Video Trailer Popup</a
+            >
+          </li>
+          <li>
+            <a href="19ColorToggler" target="_blank"> Color Toggler</a>
+          </li>
+          <li>
+            <a href="20AnimatedNavigation" target="_blank">
+              Animated Navigation
+            </a>
+          </li>
+          <li>
+            <a href="21RandomEmojies" target="_blank"> Random Emojies</a>
+          </li>
+          <li>
+            <a href="22FadeOut" target="_blank"> Fade Out </a>
+          </li>
+          <li>
+            <a href="23SimpleCalculator" target="_blank"> Simple Calculator </a>
+          </li>
+          <li>
+            <a href="24CopyandMove" target="_blank"> Copy and Move </a>
+          </li>
+          <li>
+            <a href="25ProgressSteps" target="_blank"> Progress Steps </a>
+          </li>
+          <li>
+            <a href="26PopupForm" target="_blank"> Popup Form </a>
+          </li>
+          <li>
+            <a href="27LazyLoading" target="_blank"> Lazy Loading </a>
+          </li>
+          <li>
+            <a href="28ShowHidePassword" target="_blank">
+              Show Hide Password
+            </a>
+          </li>
+          <li>
+            <a href="29SelectMenu" target="_blank"> Select Menu</a>
+          </li>
+          <li>
+            <a href="30FormWave" target="_blank"> Form Wave </a>
+          </li>
+          <li>
+            <a href="31FullScreenNavigation" target="_blank">
+              Full Screen Navigation
+            </a>
+          </li>
+          <li>
+            <a href="32ThreeDNav" target="_blank"> 3D Nav </a>
+          </li>
+          <li>
+            <a href="33Counter" target="_blank"> Counter v1</a>
+          </li>
+          <li>
+            <a href="34TextsFormatter" target="_blank"> Text Formatter </a>
+          </li>
+          <li>
+            <a href="35ImageGallery" target="_blank"> Image Gallery </a>
+          </li>
+          <li>
+            <a href="36ReadMoreandReadLess" target="_blank">
+              Read More and Read Less
+            </a>
+          </li>
+          <li>
+            <a href="37ExpandingCards" target="_blank"> Expanding Cards</a>
+          </li>
+          <li>
+            <a href="38keyCode" target="_blank"> Key Code </a>
+          </li>
+          <li>
+            <a href="39Tabs" target="_blank"> Tabs </a>
+          </li>
+          <li>
+            <a href="40Accordions" target="_blank">
+              Accordions with Plus Minus
+            </a>
+          </li>
+          <li>
+            <a href="41RandomImagesFeed" target="_blank">
+              Random Images Feed
+            </a>
+          </li>
+          <li>
+            <a href="42RandomsQuote" target="_blank">42. Random Quote </a>
+          </li>
+          <li>
+            <a href="43EmailValidation" target="_blank"> Email Validation </a>
+          </li>
+          <li>
+            <a href="44InterchangeableBackgroundColor" target="_blank">
+              Interchangeable Background Color
+            </a>
+          </li>
+          <li>
+            <a href="45DigitalClock" target="_blank"> Digital Clock </a>
+          </li>
+          <li>
+            <a href="46BrowseFileUpload" target="_blank">
+              Browse File Upload
+            </a>
+          </li>
+          <li>
+            <a href="47StickyNavbar" target="_blank"> Sticky Navbar </a>
+          </li>
+          <li>
+            <a href="48SearchandHighlight" target="_blank">
+              Search and Highlight</a
+            >
+          </li>
+          <li>
+            <a href="49CustomRangeSlider" target="_blank">
+              Custom Range Slider
+            </a>
+          </li>
+          <li>
+            <a href="50Feedback" target="_blank"> Feedback</a>
+          </li>
+          <li>
+            <a href="51EyeFollow" target="_blank"> Eye Follow</a>
+          </li>
+          <li>
+            <a href="52RoundedNavbar" target="_blank"> Rounded Navbar</a>
+          </li>
+          <li>
+            <a href="53CSSClipPathAnimation" target="_blank">
+              CSS Clip Path Animation
+            </a>
+          </li>
+          <li>
+            <a href="54MiniCalendar" target="_blank"> Mini Calendar</a>
+          </li>
+          <li>
+            <a href="55TwoSidesScroll" target="_blank"> Two Sides Scroll </a>
+          </li>
+          <li>
+            <a href="56Followers" target="_blank"> Followers </a>
+          </li>
+          <li>
+            <a href="57CustomCursor" target="_blank"> Custom Cursor </a>
+          </li>
+          <li>
+            <a href="58RotatingText" target="_blank"> Rotating Text</a>
+          </li>
+          <li>
+            <a href="59BackgroundImageCarousel" target="_blank">
+              Background Image Carousel
+            </a>
+          </li>
+          <li>
+            <a href="60ModernCalculator" target="_blank"> Modern Calculator </a>
+          </li>
+          <li>
+            <a href="61SidebarAnimation" target="_blank"> Sidebar Animation </a>
+          </li>
+          <li>
+            <a href="62RotatingImageGallery" target="_blank">
+              Rotating Image Gallery
+            </a>
+          </li>
+          <li>
+            <a href="63PasswordStrengthBg" target="_blank">
+              Password Strength Bg
+            </a>
+          </li>
+          <li>
+            <a href="64GradientGenerator" target="_blank">
+              Gradient Generator
+            </a>
+          </li>
+          <li>
+            <a href="65TwoSidedForm" target="_blank">Two Sided Form </a>
+          </li>
+          <li>
+            <a href="66AnimatedSearchBar" target="_blank">
+              Animated Search Bar</a
+            >
+          </li>
+          <li>
+            <a href="67PasswordGenerator" target="_blank">
+              Password Generator</a
+            >
+          </li>
+          <li>
+            <a href="68BoxShadowGenerator" target="_blank">
+              Box Shadow Generator</a
+            >
+          </li>
+          <li>
+            <a href="69DecimalToBinaryConverter" target="_blank">
+              Decimal To Binary Converter
+            </a>
+          </li>
+          <li>
+            <a href="70CaptchaProject" target="_blank"> Captcha Project</a>
+          </li>
+          <li>
+            <a href="71DragnDrop" target="_blank"> Drag n Drop </a>
+          </li>
+          <li>
+            <a href="72UpdateCSSVariablesUsingJavaScript" target="_blank">
+              Update CSS Variables
+            </a>
+          </li>
+          <li>
+            <a href="73Light" target="_blank"> Light </a>
+          </li>
+          <li>
+            <a href="74TabedNavigation" target="_blank"> Tabed Navigation </a>
+          </li>
+          <li>
+            <a href="75TodoList" target="_blank"> ToDo List v1</a>
+          </li>
+          <li>
+            <a href="76ChuckNorris" target="_blank"> Chuck Norris</a>
+          </li>
+          <li>
+            <a href="77RandomCatImages" target="_blank"> Random Cat Images </a>
+          </li>
+          <li>
+            <a href="78DadJokes" target="_blank"> Dad Jokes v1 </a>
+          </li>
+          <li>
+            <a href="79TestimonialBoxSwitcher" target="_blank">
+              Testimonial Box Switcher
+            </a>
+          </li>
+
+          <li>
+            <a href="80LiveUserFilter" target="_blank"> Live User Filter</a>
+          </li>
+          <li>
+            <a href="81AnimatedImagesWebsite" target="_blank">
+              Animated Images Website
+            </a>
+          </li>
+          <li>
+            <a href="82EmojiCatcherGame" target="_blank"> Emoji Catcher Game</a>
+          </li>
+          <li>
+            <a href="83TwitteFowllowComponent" target="_blank">
+              Twitter Follow Component
+            </a>
+          </li>
+          <li>
+            <a href="84BookListProject" target="_blank"> BookList Project</a>
+          </li>
+          <li>
+            <a href="85Timer" target="_blank"> Timer </a>
+          </li>
+          <li>
+            <a href="86TypingGame" target="_blank"> Typing Game</a>
+          </li>
+          <li>
+            <a href="87ShapeClickerGame" target="_blank">
+              Shape Clicker Game
+            </a>
+          </li>
+          <li>
+            <a href="88WorldCounter" target="_blank"> World Counter </a>
+          </li>
+          <li>
+            <a href="89RandomUser" target="_blank"> Random User </a>
+          </li>
+          <li>
+            <a href="90ConstructionLandingPage" target="_blank">
+              Construction Landing Page</a
+            >
+          </li>
+          <li>
+            <a href="91FoodyLandingPage" target="_blank"> Foody Landing Page</a>
+          </li>
+          <li>
+            <a href="92Coffee" target="_blank"> Coffee</a>
+          </li>
+          <li>
+            <a href="93TheArt" target="_blank"> The Art</a>
+          </li>
+          <li>
+            <a href="94Hoodie" target="_blank"> Hoodie</a>
+          </li>
+          <li>
+            <a href="95Chairs" target="_blank"> Chairs</a>
+          </li>
+          <li>
+            <a href="96TheArt" target="_blank"> The Art</a>
+          </li>
+          <li>
+            <a href="97FormValidation" target="_blank"> Form Validation </a>
+          </li>
+          <li>
+            <a href="98MealFinder" target="_blank"> Meal Finder</a>
+          </li>
+          <li>
+            <a href="99GithubProfileClone" target="_blank">
+              Github Profile Clone
+            </a>
+          </li>
+          <li>
+            <a href="100WikipediaClone" target="_blank"> Wikipedia Clone</a>
+          </li>
+          <li>
+            <a href="101ColorFlipper" target="_blank"> Color Flipper</a>
+          </li>
+          <li>
+            <a href="102Counter" target="_blank"> Counter v2 </a>
+          </li>
+          <li>
+            <a href="103Reviews" target="_blank"> Reviews </a>
+          </li>
+          <li>
+            <a href="104Navbar" target="_blank"> Navbar </a>
+          </li>
+          <li>
+            <a href="105Sidebar" target="_blank"> Sidebar</a>
+          </li>
+          <li>
+            <a href="106Modal" target="_blank"> Modal </a>
+          </li>
+          <li>
+            <a href="107Questions" target="_blank"> Questions </a>
+          </li>
+          <li>
+            <a href="108Menu" target="_blank"> Menu</a>
+          </li>
+          <li>
+            <a href="109Video" target="_blank"> Video </a>
+          </li>
+          <li>
+            <a href="110Scroll" target="_blank"> Scroll </a>
+          </li>
+          <li>
+            <a href="111Tabs" target="_blank"> Tabs </a>
+          </li>
+          <li>
+            <a href="112CountdownTimer" target="_blank"> Countdown Timer v1</a>
+          </li>
+          <li>
+            <a href="113LoremIpsum" target="_blank"> Lorem Ipsum</a>
+          </li>
+          <li>
+            <a href="114GroceryBud" target="_blank"> Grocery Bud</a>
+          </li>
+          <li>
+            <a href="115Slider" target="_blank"> Image Slider </a>
+          </li>
+          <li>
+            <a href="116Counter" target="_blank"> Counter v3 </a>
+          </li>
+          <li>
+            <a href="117Gallery" target="_blank"> Gallery </a>
+          </li>
+          <li>
+            <a href="118Numbers" target="_blank"> Numbers</a>
+          </li>
+          <li>
+            <a href="119DarkMode" target="_blank"> Dark Mode </a>
+          </li>
+          <li>
+            <a href="120Filters" target="_blank"> Filters</a>
+          </li>
+          <li>
+            <a href="121DadJokes" target="_blank"> Dad Jokes v2</a>
+          </li>
+          <li>
+            <a href="122Products" target="_blank"> Products </a>
+          </li>
+          <li>
+            <a href="123RandomUser" target="_blank"> Random User </a>
+          </li>
+          <li>
+            <a href="124Cocktails" target="_blank"> Cocktails</a>
+          </li>
+          <li>
+            <a href="125Slider" target="_blank"> Reviews Slider</a>
+          </li>
+          <li>
+            <a href="126StripeSubmenus" target="_blank"> Stripe Submenus </a>
+          </li>
+          <li>
+            <a href="127Pagination" target="_blank"> Pagination v1 </a>
+          </li>
+          <li>
+            <a href="128Wikipedia" target="_blank"> Wikipedia </a>
+          </li>
+          <li>
+            <a href="129ComfyStore" target="_blank"> Comfy Store </a>
+          </li>
+          <li>
+            <a href="130RandomPassword" target="_blank"> Random Password</a>
+          </li>
+          <li>
+            <a href="131Slider" target="_blank"> Vertical Slider </a>
+          </li>
+          <li>
+            <a href="132ToDo" target="_blank"> ToDo List v2</a>
+          </li>
+          <li>
+            <a href="133CountDown" target="_blank"> Countdown Timer v2 </a>
+          </li>
+          <li>
+            <a href="134GitHub" target="_blank"> Git Hub </a>
+          </li>
+          <li>
+            <a href="135MovieSearchApp" target="_blank"> Movie Search App</a>
+          </li>
+          <li>
+            <a href="136NoteApp" target="_blank"> Note App</a>
+          </li>
+          <li>
+            <a href="137QuizApp" target="_blank"> Quiz App </a>
+          </li>
+          <li>
+            <a href="138RandomColor" target="_blank"> Random Color </a>
+          </li>
+          <li>
+            <a href="139RandomPara" target="_blank"> Random Para </a>
+          </li>
+          <li>
+            <a href="140DrawingApp" target="_blank"> Drawing App </a>
+          </li>
+          <li>
+            <a href="141GithubProfiles" target="_blank"> Git Hub Profiles </a>
+          </li>
+          <li>
+            <a href="142MovieApp" target="_blank"> Movie App </a>
+          </li>
+          <li>
+            <a href="143NotesApp" target="_blank"> Notes App </a>
+          </li>
+          <li>
+            <a href="144PasswordGenerator" target="_blank">
+              Password Generator
+            </a>
+          </li>
+          <li>
+            <a href="145QuizApp" target="_blank"> Quiz App </a>
+          </li>
+          <li>
+            <a href="146RecipeApp" target="_blank"> Recipe App </a>
+          </li>
+          <li>
+            <a href="147TodoApp" target="_blank"> ToDo List v3 </a>
+          </li>
+          <li>
+            <a href="148CountdownTimer" target="_blank"> Countdown Timer </a>
+          </li>
+          <li>
+            <a href="149WeatherApp" target="_blank"> Weather App v1</a>
+          </li>
+          <li>
+            <a href="150WeatherApp" target="_blank"> Weather App v2</a>
+          </li>
+          <li>
+            <a href="151Pagination" target="_blank"> Pagination v2 </a>
+          </li>
+          <li>
+            <a href="152Pagination" target="_blank"> Pagination v3 </a>
+          </li>
+          <li>
+            <a href="153ModernCalculator" target="_blank">
+              Modern Calculator
+            </a>
+          </li>
+          <li>
+            <a href="154UserInactive" target="_blank"> User Inactive </a>
+          </li>
+          <li>
+            <a href="155DigitalClock" target="_blank">  Digital Clock</a>
+          </li>
+          <li>
+            <a href="156MiniCalculator" target="_blank">  Mini Calculator</a>
+          </li>
+          <li>
+            <a href="157SlidingPuzzle" target="_blank"> Sliding Puzzle </a>
+          </li>
+          <li>
+            <a href="158StepWiseRegistrationForm" target="_blank"> Step Wise Registration   </a>
+          </li>
+          <li>
+            <a href="159SpeechRecognition " target="_blank">  Speech Recognition    </a>
+          </li>
+          <li>
+            <a href="160MusicPlayer " target="_blank"> Music Player     </a>
+          </li>
+          <li>
+            <a href="161ColorPickerFromImage " target="_blank"> Color Picker From Image     </a>
+          </li>
+          <li>
+            <a href="162CardHoverEffect3D " target="_blank"> Card Hover Effect 3D     </a>
+          </li>
+          <li>
+            <a href="163ScreenRecorder " target="_blank">   Screen Recorder   </a>
+          </li>
+          <li>
+            <a href="164ToastNotify " target="_blank"> Toast Notification     </a>
+          </li>
+          <li>
+            <a href="165FormValidation " target="_blank"> Form Validation      </a>
+          </li>
+          <li>
+            <a href="166HangManGame " target="_blank">  Hang Man Game     </a>
+          </li>
+          <li>
+            <a href="167MiniCalculator " target="_blank">  Mini Calculator     </a>
+          </li>
+          <li>
+            <a href="168MusicEvents " target="_blank">  Music Events     </a>
+          </li>
+          <li>
+            <a href="169PhotoDetailsDisplay " target="_blank">  Photo Details Display     </a>
+          </li>
+          <li>
+            <a href="170SPA " target="_blank">  SPA     </a>
+          </li>
+          <li>
+            <a href="171NotesApp " target="_blank">  Notes App      </a>
+          </li>
+          <li>
+            <a href="172LoginSignupForm " target="_blank"> Login Signup Form       </a>
+          </li>
+          <li>
+            <a href="173KanbanBoard " target="_blank"> Kanban Board       </a>
+          </li>
+          <li>
+            <a href="174MicroCodeEditor " target="_blank"> Micro Code Editor       </a>
+          </li>
+          <li>
+            <a href="175ElectionMap " target="_blank"> Election Map      </a>
+          </li>
+          <li>
+            <a href="176EpicMixPlaylist " target="_blank"> Epic Mix Playlist       </a>
+          </li>
+          <li>
+            <a href="177PetRescue " target="_blank">  Pet Rescue      </a>
+          </li>
+          <li>
+            <a href="178BouncingBall " target="_blank">  Bouncing Ball      </a>
+          </li>
+          <li>
+            <a href="179CatClock " target="_blank">  Cat Clock      </a>
+          </li>
+          <li>
+            <a href="180TicTacToeGame " target="_blank"> Tic Tac Toe Game       </a>
+          </li>
+          <li>
+            <a href="181ToDoList " target="_blank"> ToDo List       </a>
+          </li>
+          <li>
+            <a href="182ArrayCardioDay1 " target="_blank"> Array Cardio   v1      </a>
+          </li>
+          <li>
+            <a href="183ArrayCardioDay2 " target="_blank"> Array Cardio   v2        </a>
+          </li>
+          <li>
+            <a href="184ClickAndDrag " target="_blank">  Click N Drag      </a>
+          </li>
+          <li>
+            <a href="185Clock " target="_blank">  Clock      </a>
+          </li>
+          <li>
+            <a href="186Copying " target="_blank">   Copying     </a>
+          </li>
+          <li>
+            <a href="187CountdownTimer " target="_blank">  Countdown Timer      </a>
+          </li>
+          <li>
+            <a href="188CssVariables " target="_blank"> Css Variables       </a>
+          </li>
+          <li>
+            <a href="189CustomVideoPlayer " target="_blank"> Custom Video Player       </a>
+          </li>
+          <li>
+            <a href="190DevToolsDomination " target="_blank"> Dev Tools Domination       </a>
+          </li>
+          <li>
+            <a href="191DrumKit " target="_blank">  Drum Kit      </a>
+          </li>
+          <li>
+            <a href="192EventCapturePropagation " target="_blank">  Event Capture Propagation      </a>
+          </li>
+          <li>
+            <a href="193FlexPanelGallery " target="_blank">  Flex Panel Gallery      </a>
+          </li>
+          <li>
+            <a href="194FollowAlongLinkHighlighter " target="_blank"> Follow Along Link Highlighter       </a>
+          </li>
+          <li>
+            <a href="195GeoLocation1 " target="_blank"> Geolocation v1       </a>
+          </li>
+          <li>
+            <a href=" 196GeoLocation2" target="_blank">  Geolocation v2      </a>
+          </li>
+          <li>
+            <a href="197HTML5Canvas " target="_blank"> HTML5 Canvas       </a>
+          </li>
+          <li>
+            <a href="198KeySequenceDetection " target="_blank"> Key Sequence Detection       </a>
+          </li>
+          <li>
+            <a href="199LiveSearch " target="_blank"> Live Search       </a>
+          </li>
+          <li>
+            <a href="200LocalStorage " target="_blank"> Local Storage       </a>
+          </li>
+          <li>
+            <a href="201MouseMoveShadow " target="_blank"> Mouse Move Shadow       </a>
+          </li>
+          <li>
+            <a href="202SlideNScroll " target="_blank"> Slide N Scroll       </a>
+          </li>
+          <li>
+            <a href="203SortWithoutArticles " target="_blank">  Sort Without Articles      </a>
+          </li>
+          <li>
+            <a href="204SpeechDetection " target="_blank"> Speech Detection       </a>
+          </li>
+          <li>
+            <a href="205SpeechSynthesis " target="_blank"> Speech Synthesis       </a>
+          </li>
+          <li>
+            <a href=" 206StickyNav" target="_blank">  Sticky Nav      </a>
+          </li>
+          <li>
+            <a href=" 207StripeFollowAlongNav" target="_blank">  Stripe Follow Along Nav      </a>
+          </li>
+          <li>
+            <a href="208TypeAhead " target="_blank"> Type Ahead       </a>
+          </li>
+          <li>
+            <a href="209VideoSpeedController " target="_blank">  Video Speed Controller      </a>
+          </li>
+          <li>
+            <a href="210WebcamFun " target="_blank"> Webcam Fun       </a>
+          </li>
+          <li>
+            <a href="211WhackAMole " target="_blank"> Whack a Mole       </a>
+          </li>
+          <li>
+            <a href="212ModernCalculator " target="_blank"> Modern Calculator        </a>
+          </li>
+          <li>
+            <a href="213ReactCounter " target="_blank">  React Counter       </a>
+          </li>
+          <li>
+            <a href="214TabsMaster " target="_blank"> Tabs Master        </a>
+          </li>
+          <li>
+            <a href="215FaceDetection " target="_blank">  Face Detection       </a>
+          </li>
+          <li>
+            <a href="216AnimatedProgressBar " target="_blank">  Animated Progress Bar       </a>
+          </li>
+          <li>
+            <a href="217ToDoMaster " target="_blank">    ToDo Master     </a>
+          </li>
+          <li>
+            <a href="218CardEffectMaster3D " target="_blank"> Card Effect Master 3D       </a>
+          </li>
+          <li>
+            <a href="219RandomQuoteGenerator " target="_blank">  Random Quote Generator       </a>
+          </li>
+          <li>
+            <a href="220HexColorBackgroundChanger " target="_blank"> Hex Color Background Changer        </a>
+          </li>
+          <li>
+            <a href="221FormValidation " target="_blank"> Form Validation        </a>
+          </li>
+          <li>
+            <a href="222ToDoList " target="_blank">  ToDo List       </a>
+          </li>
+          <li>
+            <a href="223BmiCalculator " target="_blank">  BMI Calculator       </a>
+          </li>
+          <li>
+            <a href="224SpeechRecognition " target="_blank">  Speech Recognition       </a>
+          </li>
+          <li>
+            <a href="225LoanCalculatorReact " target="_blank"> Loan Calculator React        </a>
+          </li>
+          <li>
+            <a href="226ShoppingCart " target="_blank"> Shopping Cart       </a>
+          </li>
+         
+          <li>
+            <a href="227CrudAppBasics " target="_blank"> Crud App Basics       </a>
+          </li>
+          <li>
+            <a href="228ToDoAppWithModal " target="_blank"> ToDo App With Modal        </a>
+          </li>
+          <li>
+            <a href="229GuessNumberGame " target="_blank">  Guess Number Game       </a>
+          </li>
+          <li>
+            <a href="230FilterMaster " target="_blank">  Filter Master       </a>
+          </li>
+          <li>
+            <a href="231DigitalClock " target="_blank">  Digital Clock       </a>
+          </li>
+          <li>
+            <a href="232VanillaSPAsetup " target="_blank">  Vanilla SPA Setup       </a>
+          </li>
+          <li>
+            <a href="233CurrencyConverter " target="_blank">  Currency Converter       </a>
+          </li>
+          <li>
+            <a href="234QuizApp " target="_blank">   Quiz App      </a>
+          </li>
+          <li>
+            <a href="235Dictionary " target="_blank">   Dictionary     </a>
+          </li>
+          <li>
+            <a href="236WeatherApp " target="_blank"> Weather App      </a>
+          </li>
+          <li>
+            <a href="237WhackAMole " target="_blank">   Whack A Mole      </a>
+          </li>
+          <li>
+            <a href="238BrickBreakerGame " target="_blank">   Brick Breaker Game      </a>
+          </li>
+          <li>
+            <a href="239RockPaperScissorsGame " target="_blank">   Rock Paper Scissors Game      </a>
+          </li>
+          <li>
+            <a href="240FormValidation " target="_blank">   Form Validation      </a>
+          </li>
+          <li>
+            <a href="241AnalogClock " target="_blank">   Analog Clock      </a>
+          </li>
+          <li>
+            <a href="242TipCalculator " target="_blank">   Tip Calculator      </a>
+          </li>
+          <li>
+            <a href="243GroceryList " target="_blank"> Grocery List       </a>
+          </li>
+          <li>
+            <a href="244BmiCalculator " target="_blank">   BMI Calculator      </a>
+          </li>
+          <li>
+            <a href="245NumberGuessGame " target="_blank">  Number Guess Game       </a>
+          </li>
+          <li>
+            <a href="246StopWatch " target="_blank">  Stop Watch       </a>
+          </li>
+          <li>
+            <a href="247PalindromeChecker " target="_blank">  Palindrome Checker       </a>
+          </li>
+          <li>
+            <a href="248DigitalClock " target="_blank"> Digital Clock        </a>
+          </li>
+          <li>
+            <a href="249HeartsTrailOnMouseMove " target="_blank"> Hearts Trail On Mouse Move        </a>
+          </li>
+          <li>
+            <a href="250DragNDropSortableList " target="_blank">  Drag N Drop Sortable List       </a>
+          </li>
+          <li>
+            <a href="251CustomMouseHoverEffect " target="_blank"> Custom Mouse Hover Effect        </a>
+          </li>
+          <li>
+            <a href="252OTPGenerator " target="_blank"> OTP Generator       </a>
+          </li>
+          <li>
+            <a href="253WeightOnEachPlanet " target="_blank">   Weight On Each Planet     </a>
+          </li>
+          <li>
+            <a href="254MouseClickDetect " target="_blank"> Mouse Click Detect        </a>
+          </li>
+          <li>
+            <a href="255RandomQuoteGenerator " target="_blank"> Random Quote Generator        </a>
+          </li>
+          <li>
+            <a href="256MinionEyesFollowMouse " target="_blank">  Minion Eyes Follow Mouse       </a>
+          </li>
+          <li>
+            <a href="257DetectMouseClick " target="_blank"> Detect Mouse Click       </a>
+          </li>
+          <li>
+            <a href="258CountUpAnimation " target="_blank"> Count Up Animation        </a>
+          </li>
+          <li>
+            <a href="259GeometricArtGenerator " target="_blank"> Geometric Art Generator        </a>
+          </li>
+          <li>
+            <a href="260CountUpDownAnimation " target="_blank">  Count Up Down Animation       </a>
+          </li> 
+          <li>
+            <a href="261DoubleRangeSlider " target="_blank"> Double Range Slider        </a>
+          </li> 
+
+          <li>
+            <a href="262DragNDropFileUpload " target="_blank">  Drag N Drop File Upload       </a>
+          </li> 
+
+          <li>
+            <a href="263FlashcardApp" target="_blank"> Flashcard App        </a>
+          </li> 
+
+          <li>
+            <a href="264RandomChoicePicker " target="_blank">  Random Choice Picker       </a>
+          </li> 
+
+          <li>
+            <a href="265SantaFollowsMouse " target="_blank"> Santa Follows Mouse        </a>
+          </li> 
+
+          <li>
+            <a href="266TestimonialSlider " target="_blank"> Testimonial Slider        </a>
+          </li> 
+
+          <li>
+            <a href="267CircularProgressbar " target="_blank">  Circular Progressbar       </a>
+          </li> 
+
+          <li>
+            <a href="268CompareDates " target="_blank"> Compare Dates        </a>
+          </li> 
+
+          <li>
+            <a href="269PlaceholderAnimation " target="_blank"> Placeholder Animation        </a>
+          </li> 
+
+          <li>
+            <a href="270TakeScreeshotsNDownload " target="_blank">  Take Screeshots N Download       </a>
+          </li> 
+
+          <li>
+            <a href="271MemoryGame " target="_blank"> Memory Game        </a>
+          </li> 
+
+          <li>
+            <a href="272ImagePreviewBeforeUpload " target="_blank"> Image Preview Before Upload        </a>
+          </li> 
+          <li>
+            <a href="273HangmanGame " target="_blank">  Hangman Game       </a>
+          </li> 
+          <li>
+            <a href="274GlassmorphismDigitalClock " target="_blank">    Glassmorphism Digital Clock     </a>
+          </li> 
+          <li>
+            <a href=" 275DogMakeover" target="_blank">    Dog Makeover     </a>
+          </li> 
+          <li>
+            <a href="276NumberToRomanConverter " target="_blank"> Number To Roman Converter        </a>
+          </li> 
+          <li>
+            <a href="277PredictiveTextOnInputFields " target="_blank">  Predictive Text On Input Fields       </a>
+          </li> 
+          <li>
+            <a href="278InputStepper " target="_blank"> Input Stepper        </a>
+          </li> 
+          <li>
+            <a href="279TypingSpeedReact " target="_blank">  Typing Speed React       </a>
+          </li> 
+          <li>
+            <a href="280TabsInteractive " target="_blank">  Tabs Interactive       </a>
+          </li> 
+          <li>
+            <a href="281DraggableBox " target="_blank"> Draggable Box       </a>
+          </li> 
+          <li>
+            <a href="282SimpleInterestCalculator " target="_blank"> Simple Interest Calculator       </a>
+          </li> 
+          <li>
+            <a href="283Accordions " target="_blank"> Accordions       </a>
+          </li> 
+          <li>
+            <a href="284GetFileExtension " target="_blank"> Get File Extension       </a>
+          </li> 
+          <li>
+            <a href="285DetermineIdenticalArray " target="_blank"> Determine Identical Array       </a>
+          </li> 
+          <li>
+            <a href="286GetMousePosition " target="_blank">  Get Mouse Position      </a>
+          </li> 
+          <li>
+            <a href=" 287PredictGenderByName" target="_blank">  Predict Gender By Name      </a>
+          </li> 
+          <li>
+            <a href="288ShowHidePassword " target="_blank">  Show Hide Password     </a>
+          </li> 
+          <li>
+            <a href="289DetectMouseHold " target="_blank"> Detect Mouse Hold       </a>
+          </li> 
+          <li>
+            <a href="290PaintApp " target="_blank">  Paint App      </a>
+          </li> 
+          <li>
+            <a href="291TextSimilarityChecker " target="_blank">  Text Similarity Checker     </a>
+          </li> 
+          <li>
+            <a href="292WordCounter " target="_blank">  Word Counter      </a>
+          </li> 
+          <li>
+            <a href="293ToastNotification " target="_blank">  Toast Notification      </a>
+          </li> 
+          <li>
+            <a href="294CurrencyFormatter " target="_blank">  Currency Formatter      </a>
+          </li> 
+          <li>
+            <a href="295DetectKeyPressed " target="_blank">  Detect Key Pressed     </a>
+          </li> 
+          <li>
+            <a href="296CartoonifyImage " target="_blank">   Cartoonify Image     </a>
+          </li> 
+          <li>
+            <a href="297CountdownToSpecificDate " target="_blank"> Countdown To Specific Date       </a>
+          </li> 
+          <li>
+            <a href="298RandomNumberGenerator " target="_blank">  Random Number Generator      </a>
+          </li> 
+          <li>
+            <a href="299CountryGuideApp " target="_blank"> Country GuideApp       </a>
+          </li> 
+          <li>
+            <a href="300ImageEditorWithImageDownload " target="_blank"> Image Editor With Image Download       </a>
+          </li> 
+          <li>
+            <a href=" 301MultipleDiceRoller" target="_blank">    Multiple Dice Roller    </a>
+          </li> 
+
+          <li>
+            <a href="302DetectBatteryStatus " target="_blank">   Detect Battery Status    </a>
+          </li> 
+          <li>
+            <a href="303CookieConsentBanner " target="_blank">  Cookie Consent Banner      </a>
+          </li> 
+          <li>
+            <a href="304FlashlightEffect " target="_blank"> Flashlight Effect      </a>
+          </li> 
+          <li>
+            <a href=" 305DetectUserBrowserOS" target="_blank"> Detect User Browser OS       </a>
+          </li> 
+          <li>
+            <a href="306RichTextEditor " target="_blank"> Rich Text Editor      </a>
+          </li> 
+          <li>
+            <a href="307PlayablePiano " target="_blank"> Playable Piano       </a>
+          </li> 
+          <li>
+            <a href="308WordleGame " target="_blank"> Wordle Game       </a>
+          </li> 
+          <li>
+            <a href="309GuessTheNumberGame " target="_blank">  Guess The Number Game      </a>
+          </li> 
+          <li>
+            <a href="310GetMousePosition " target="_blank">   Get Mouse Position     </a>
+          </li> 
+          <li>
+            <a href="311RndomBackgroundColorChanger " target="_blank">  Rndom Background Color Changer      </a>
+          </li> 
+          <li>
+            <a href="312EmailValidation " target="_blank">  Email Validation      </a>
+          </li> 
+          <li>
+            <a href="313DetectTabChange " target="_blank">  Detect Tab Change      </a>
+          </li> 
+          <li>
+            <a href="314CocktailApp " target="_blank"> Cocktail App       </a>
+          </li> 
+          <li>
+            <a href="315DropFlagsGame " target="_blank"> Drop Flags Game       </a>
+          </li> 
+          <li>
+            <a href="316ExpandingMenu " target="_blank"> Expanding Menu       </a>
+          </li> 
+          <li>
+            <a href="317DetectSwipeDirection " target="_blank"> Detect Swipe Direction       </a>
+          </li> 
+          <li>
+            <a href="318RollTheDice " target="_blank">  Roll The Dice      </a>
+          </li> 
+          <li>
+            <a href="319WristWatch " target="_blank"> Wrist Watch       </a>
+          </li> 
+          <li>
+            <a href="320EmojiMaker " target="_blank"> Emoji Maker       </a>
+          </li> 
+          <li>
+            <a href="321IcecreamMaker " target="_blank"> Ice Cream Maker       </a>
+          </li> 
+          <li>
+            <a href="322ScratchCard " target="_blank">  Scratch Card      </a>
+          </li> 
+          <li>
+            <a href="323DetectDeviceOrientation " target="_blank">  Detect Device Orientation      </a>
+          </li> 
+          <li>
+            <a href="324InteractivePandaForm " target="_blank">  Interactive Panda Form      </a>
+          </li> 
+          <li>
+            <a href="325FakeSalesNotification " target="_blank">  Fake Sales Notification      </a>
+          </li> 
+          <li>
+            <a href="326BasicImageEditor " target="_blank"> Basic Image Editor       </a>
+          </li> 
+          <li>
+            <a href="327DigitsGame2048 " target="_blank">  Digits Game 2048     </a>
+          </li> 
+          <li>
+            <a href="328WordGuessingGame " target="_blank">   Word Guessing Game     </a>
+          </li> 
+          <li>
+            <a href="329WhoThatPokemon " target="_blank">  Who That Pokemon      </a>
+          </li> 
+          <li>
+            <a href="330MoodSlider " target="_blank"> Mood Slider       </a>
+          </li> 
+          <li>
+            <a href="331RGBColorSlider " target="_blank">  RGB Color Slider     </a>
+          </li> 
+          <li>
+            <a href=" 332ScrollToTopWithScrollProgress" target="_blank">  Scroll To Top With Scroll Progress      </a>
+          </li> 
+          <li>
+            <a href="333RandomPasswordGenerator " target="_blank"> Random Password Generator       </a>
+          </li> 
+          <li>
+            <a href="334FunWithText " target="_blank"> Fun With Text      </a>
+          </li> 
+          <li>
+            <a href="335WeightConverter " target="_blank">  Weight Converter      </a>
+          </li> 
+          <li>
+            <a href="336PasswordStrengthChecker " target="_blank">  Password Strength Checker      </a>
+          </li> 
+          <li>
+            <a href="337TicTacToeGame " target="_blank"> Tic Tac Toe Game       </a>
+          </li> 
+          <li>
+            <a href="338CheckboxCheckedOrNot " target="_blank">  Checkbox Checked Or Not      </a>
+          </li> 
+          <li>
+            <a href="339RecordPlayer " target="_blank">    Record Player    </a>
+          </li> 
+          <li>
+            <a href="340GetUserLocation " target="_blank">  Get User Location      </a>
+          </li> 
+          <li>
+            <a href="341NumberTriviaApp " target="_blank"> Number Trivia App      </a>
+          </li> 
+          <li>
+            <a href="342TipCalculator " target="_blank">  Tip Calculator     </a>
+          </li> 
+          <li>
+            <a href="343CopyToClipboard " target="_blank">     Copy To Clipboard    </a>
+          </li> 
+          <li>
+            <a href="344ResponsiveNavigationBar " target="_blank"> Responsive Navigation Bar       </a>
+          </li> 
+          <li>
+            <a href="345ProductImageZoom " target="_blank">  Product Image Zoom      </a>
+          </li> 
+          <li>
+            <a href="346PlaceholderTypingEffect " target="_blank">   Placeholder Typing Effect      </a>
+          </li> 
+          <li>
+            <a href="347CustomContextMenu " target="_blank"> Custom Context Menu       </a>
+          </li> 
+          <li>
+            <a href="348BoxShadowGenerator " target="_blank"> Box Shadow Generator       </a>
+          </li> 
+          <li>
+            <a href="349RandomJokeGenerator " target="_blank">  Random Joke Generator      </a>
+          </li> 
+          <li>
+            <a href="350Scoreboard " target="_blank">  Scoreboard      </a>
+          </li> 
+          <li>
+            <a href="351MiniDateTimeWidget " target="_blank"> Mini Date Time Widget      </a>
+          </li> 
+          <li>
+            <a href="352AnalogClock " target="_blank">    Analog Clock    </a>
+          </li> 
+          <li>
+            <a href="353ImageAccordion " target="_blank">  Image Accordion      </a>
+          </li> 
+          <li>
+            <a href="354DetectCapslock " target="_blank">  Detect CapsLock      </a>
+          </li> 
+          <li>
+            <a href="355RandomHexColorCode " target="_blank"> Random Hex Color Code      </a>
+          </li> 
+          <li>
+            <a href="356DecimalBinaryConverter " target="_blank">  Decimal Binary Converter      </a>
+          </li> 
+          <li>
+            <a href="357CornerMenu " target="_blank">  Corner Menu     </a>
+          </li> 
+          <li>
+            <a href="358ConfirmPassword " target="_blank">   Confirm Password    </a>
+          </li> 
+          <li>
+            <a href="359MultipleReadMoreReadLess " target="_blank">   Multiple Read More Read Less     </a>
+          </li> 
+          <li>
+            <a href="360CheckInternetConnectionStatus " target="_blank">     Check Internet Connection Status   </a>
+          </li> 
+          <li>
+            <a href="361RandomQuoteGenerator " target="_blank">  Random Quote Generator      </a>
+          </li> 
+          <li>
+            <a href=" 362ImageColorPicker" target="_blank">     Image Color Picker  </a>
+          </li> 
+          <li>
+            <a href="363LiveCharacterCount " target="_blank">   Live Character Count    </a>
+          </li> 
+          <li>
+            <a href="364ExpenseTracker " target="_blank">  Expense Tracker      </a>
+          </li> 
+          <li>
+            <a href="365Sparkles " target="_blank">  Sparkles    </a>
+          </li> 
+          <li>
+            <a href="366ActiveButtonsList " target="_blank"> Active Buttons List       </a>
+          </li> 
+          <li>
+            <a href="367YoutubeSuggestionUI " target="_blank">   Youtube Suggestion UI     </a>
+          </li> 
+          <li>
+            <a href="368ColorMatchingGame " target="_blank">   Color Matching Game     </a>
+          </li> 
+          <li>
+            <a href="369VanillaJsSPA " target="_blank"> Vanilla JS SPA       </a>
+          </li> 
+          <li>
+            <a href="370VanillaSPA " target="_blank"> Vanilla SPA       </a>
+          </li> 
+          <li>
+            <a href="371ExpressJsSPA " target="_blank">   Express JS SPA     </a>
+          </li> 
+          <li>
+            <a href="372VanillaRouter " target="_blank"> Vanilla Router      </a>
+          </li> 
+          <li>
+            <a href=" " target="_blank">       </a>
+          </li> 
+          <li>
+            <a href=" " target="_blank">       </a>
+          </li> 
+          <li>
+            <a href=" " target="_blank">       </a>
+          </li> 
+          <li>
+            <a href=" " target="_blank">       </a>
+          </li> 
+          <li>
+            <a href=" " target="_blank">       </a>
+          </li> 
+          <li>
+            <a href=" " target="_blank">       </a>
+          </li> 
+          <li>
+            <a href=" " target="_blank">       </a>
+          </li> 
+          <li>
+            <a href=" " target="_blank">       </a>
+          </li> 
+          <li>
+            <a href=" " target="_blank">       </a>
+          </li> 
+          <li>
+            <a href=" " target="_blank">       </a>
+          </li> 
+          <li>
+            <a href=" " target="_blank">       </a>
+          </li> 
+          <li>
+            <a href=" " target="_blank">       </a>
+          </li> 
+          <li>
+            <a href=" " target="_blank">       </a>
+          </li> 
+          <li>
+            <a href=" " target="_blank">       </a>
+          </li> 
+          <li>
+            <a href=" " target="_blank">       </a>
+          </li> 
+          <li>
+            <a href=" " target="_blank">       </a>
+          </li> 
+          <li>
+            <a href=" " target="_blank">       </a>
+          </li> 
+          <li>
+            <a href=" " target="_blank">       </a>
+          </li> 
+          <li>
+            <a href=" " target="_blank">       </a>
+          </li> 
+          <li>
+            <a href=" " target="_blank">       </a>
+          </li> 
+          <li>
+            <a href=" " target="_blank">       </a>
+          </li> 
+          <li>
+            <a href=" " target="_blank">       </a>
+          </li> 
+          <li>
+            <a href=" " target="_blank">       </a>
+          </li> 
+          <li>
+            <a href=" " target="_blank">       </a>
+          </li> 
+          <li>
+            <a href=" " target="_blank">       </a>
+          </li> 
+          <li>
+            <a href=" " target="_blank">       </a>
+          </li> 
+          <li>
+            <a href=" " target="_blank">       </a>
+          </li> 
+          <li>
+            <a href=" " target="_blank">       </a>
+          </li> 
+
+
+
+
+ 
+        </ul>
+      </section>
+    </main>
+    <section class="new-box-wrap">
+      <div class="new-box-wrap-container">
+        <p>For Explanation: Watch Videos Here:</p>
+        <ul class="new-box-wrap-btns">
+          <li>
+            <a
+              href="https://www.youtube.com/playlist?list=PLSDeUiTMfxW7lm7P7GZ8qtNFffHAR5d_w"
+              target="_blank"
+              >1-100</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.youtube.com/watch?v=3PHXvlpOkf4"
+              target="_blank"
+              >101-129</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.youtube.com/watch?v=swEsvQcIJW0&list=PLjVLYmrlmjGcZJ0oMwKkgwJ8XkCDAb9aG"
+              target="_blank"
+              >130-139</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.youtube.com/watch?v=dtKciwk_si4"
+              target="_blank"
+              >140-149</a
+            >
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="new-box-wrap">
+      <div class="new-box-wrap-container">
+        <p>GitHub, Blogs and Codepen for More Projects</p>
+        <ul class="new-box-wrap-btns">
+          <li>
+            <a
+              href="https://github.com/sahandghavidel/HTML-CSS-JavaScript-projects-for-beginners/tree/main/projects"
+              target="_blank"
+              >Sahand
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.florin-pop.com/blog/2019/09/100-days-100-projects/"
+              target="_blank"
+              >Flor in Pop</a
+            >
+          </li> 
+          <li>
+            <a
+              href="https://webtips.dev/100-javascript-project-ideas"
+              target="_blank"
+              >React Projects</a
+            >
+          </li>
+       
+         
+          <li>
+            <a
+              href="https://www.freecodecamp.org/news/javascript-projects-for-beginners/ "
+              target="_blank"
+              >FreeCodeCamp
+            </a>
+          </li> 
+         
+        </ul>
+      </div>
+    </section>
+    <h1>
+      <a> Animation Projects</a>
+    </h1>
+    <section class="hero">
+      <ul>
+        <li>
+          <a href="animation/01AnimatedLandingPage " target="_blank"> GSAP Landing Page</a>
+        </li>
+      </ul>
+    </section>
+  </body>
+</html>
