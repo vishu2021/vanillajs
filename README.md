@@ -2,6 +2,8 @@
 A curated collection of **350+ modern UI components and creative effects** built using **pure HTML, CSS, and JavaScript (Vanilla JS)**.
 This repository showcases reusable frontend patterns, animations, and interactive elements commonly used in real-world web applications.
 ---
+![Vanilla JS Demo](https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F1uf9hnp02zsbjwxufync.png)
+---
 ## 🌟 Features
 - ⚡ Built with **Vanilla JavaScript** (No frameworks)
 - 🎨 Modern UI/UX components
@@ -46,6 +48,8 @@ Each folder contains an independent component or feature:
 | 30 | Form Wave Animation |
 ---
 Many More...
+---
+![Vanilla JS Demo](https://miro.medium.com/v2/1*2T2-TMJHLPYxwfjA8S4Urg.jpeg)
 ---
 ## 🛠 Tech Stack
 - 🌐 HTML5  
